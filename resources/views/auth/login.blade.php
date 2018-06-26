@@ -1,4 +1,4 @@
-@extends('layours.app')
+@extends('layouts.app')
 
 @section('content')
 
@@ -6,7 +6,7 @@
     <div class ="col-xs-offset-3 col-xs-6">
         <div class ="panel-heading">ログイン</div>
         <div class="panel-body">
-                {!! Form:open(['route' =>'login.post']) !!}
+                {!! Form::open(['route' =>'login.post']) !!}
                     <div class ="form-group">
                          {!! form::label('email', 'メールアドレス') !!}
                         {!! form::email('email', old('email'), ['class' => 'form-control']) !!}
