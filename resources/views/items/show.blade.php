@@ -28,7 +28,7 @@
                         Wantしたユーザ
                     </div>
                     <div class="panel-body">
-                        @foreach ($want_users as $user)
+                        @foreach ($have_users as $user)
                             <a href="{{ route('users.show', $user->id) }}">{{ $user->name }}</a>
                         @endforeach
                     </div>
@@ -39,10 +39,11 @@
                     <div class="panel-heading text-center">
                         Haveしたユーザ
                     </div>
+                    <div class="panel-body">
                         @foreach ($have_users as $user)
                             <a href ="{{ route('users.show', $user->id)}}">{{$user->name}}</a>
                         @endforeach
-                    <div class="panel-body">
+                    
                     </div>
                 </div>
             </div>
