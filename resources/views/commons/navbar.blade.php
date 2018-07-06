@@ -21,9 +21,9 @@
                             <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                <li><a>カフェテリア</a></li>
-                                <li><a>移動中</a></li>
-                                <li><a>デスク</a></li>
+                                <li><a href="{{ route('Exercise.cafeteria') }}">カフェテリア</a></li>
+                                <li><a href="{{ route('Exercise.way') }}">移動中</a></li>
+                                <li><a href="{{ route('Exercise.office') }}">OFFICE</a></li>
                                 </ul>
                             </li>
 
@@ -34,7 +34,7 @@
                             <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                <li><a>楽天市場</a></li>
+                                <li><a href="{{ route('fitnessgoods.ichiba') }}">楽天市場</a></li>
                                 </ul>
                             </li>
 
