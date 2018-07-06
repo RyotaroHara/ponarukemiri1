@@ -11,14 +11,14 @@
         <div class="status text-center">
             <ul>
                 <li>
-                    <div class="status-label">WANT</div>
+                    <div class="status-label">目標消費カロリー</div>
                 
                 </li>
                 <li>
-                    <div class="status-label">HAVE</div>
+                    <div class="status-label">' ' kg減量まであと' 'kcal！！</div>
                   
                 </li>
             </ul>
         </div>
     </div>
-s@endsection
+@endsection
