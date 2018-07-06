@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/logo.png") }}" alt="OFFIC EXCERSISE"></a>
+                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/titled.png") }}" alt="OFFICE EXERCISE"></a>
             </div>
        
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -18,14 +18,14 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
-                                今週の消費カロリー
+                                MENU
                                 <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a>エクササイズ一覧</a></li>
-                            
-                                <li><a>食事</a></li>
-                            </ul>
+                                <li><a>今週の消費カロリー</a></li>
+                                <li><a>お薦めのエクササイズ</a></li>
+                                <li><a>エクササイズ一覧</a></li>
+                                </ul>
                         </li>
                    
                    
