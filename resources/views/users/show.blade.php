@@ -12,19 +12,13 @@
             <ul>
                 <li>
                     <div class="status-label">WANT</div>
-                    <div id="want_count" class="status-value">
-                        {{ $count_want }}
-                    </div>
+                
                 </li>
                 <li>
                     <div class="status-label">HAVE</div>
-                    <div id="have_count" class="status-value">
-                        {{ $count_have }}
-                    </div>
+                  
                 </li>
             </ul>
         </div>
     </div>
-    @include('items.items', ['items' => $items])
-    {!! $items->render() !!}
-@endsection
+s@endsection
