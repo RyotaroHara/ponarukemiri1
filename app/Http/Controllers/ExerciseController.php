@@ -8,14 +8,13 @@ use App\Http\Controllers\Controller;
 
 use App\Item;
 
-class ExerciseController extends Controller
+class ExerciseController extends Controller{
 
     
-        public function cafeteria1()
+    public function cafeteria1()
     {
         return view('cafeteria.cafeteria1');
     }
-<<<<<<< HEAD
     
     public function cafeteria2()
     {
@@ -51,12 +50,8 @@ class ExerciseController extends Controller
     {
         return view('cafeteria.cafeteria8');
     }
-    
-     public function way()
-=======
 
 public function way()
->>>>>>> 4ce1c710fd7e60767cb65b22243f995353ba797a
     {
         return view('Exercise.way');
     }
