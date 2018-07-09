@@ -10,6 +10,11 @@ use App\Item;
 
 class ExerciseController extends Controller{
 
+    public function cafeteria()
+    {
+        return view('Exercise.cafeteria');
+    }
+
     
     public function cafeteria1()
     {
