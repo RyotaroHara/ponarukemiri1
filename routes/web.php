@@ -29,11 +29,25 @@ Route::get('cafeteria/cafeteria8', 'ExerciseController@cafeteria8')->name('cafet
 Route::get('Exercise/way', 'ExerciseController@way')->name('Exercise.way');
 //way nakami
 Route::get('way/way1', 'ExerciseController@way1')->name('way.way1');
+Route::get('way/way2', 'ExerciseController@way2')->name('way.way2');
+Route::get('way/way3', 'ExerciseController@way3')->name('way.way3');
+Route::get('way/way4', 'ExerciseController@way4')->name('way.way4');
+Route::get('way/way5', 'ExerciseController@way5')->name('way.way5');
+Route::get('way/way6', 'ExerciseController@way6')->name('way.way6');
+Route::get('way/way7', 'ExerciseController@way7')->name('way.way7');
+Route::get('way/way8', 'ExerciseController@way8')->name('way.way8');
 
 //Exercise office
 Route::get('Exercise/office', 'ExerciseController@office')->name('Exercise.office');
 //office nakami
 Route::get('office/office1', 'ExerciseController@office1')->name('office.office1');
+Route::get('office/office2', 'ExerciseController@office2')->name('office.office2');
+Route::get('office/office3', 'ExerciseController@office3')->name('office.office3');
+Route::get('office/office4', 'ExerciseController@office4')->name('office.office4');
+Route::get('office/office5', 'ExerciseController@office5')->name('office.office5');
+Route::get('office/office6', 'ExerciseController@office6')->name('office.office6');
+Route::get('office/office7', 'ExerciseController@office7')->name('office.office7');
+Route::get('office/office8', 'ExerciseController@office8')->name('office.office8');
 
 //fitnessgoods 
 Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnessgoods.ichiba');
