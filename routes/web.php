@@ -16,7 +16,13 @@ Route::get('/', 'WelcomeController@index');
 //Exercise 
 Route::get('Exercise/cafeteria', 'ExerciseController@cafeteria')->name('Exercise.cafeteria');
 Route::get('cafeteria/cafeteria1', 'ExerciseController@cafeteria1')->name('cafeteria.cafeteria1');
-
+Route::get('cafeteria/cafeteria2', 'ExerciseController@cafeteria2')->name('cafeteria.cafeteria2');
+Route::get('cafeteria/cafeteria3', 'ExerciseController@cafeteria3')->name('cafeteria.cafeteria3');
+Route::get('cafeteria/cafeteria4', 'ExerciseController@cafeteria4')->name('cafeteria.cafeteria4');
+Route::get('cafeteria/cafeteria5', 'ExerciseController@cafeteria5')->name('cafeteria.cafeteria5');
+Route::get('cafeteria/cafeteria6', 'ExerciseController@cafeteria6')->name('cafeteria.cafeteria6');
+Route::get('cafeteria/cafeteria7', 'ExerciseController@cafeteria7')->name('cafeteria.cafeteria7');
+Route::get('cafeteria/cafeteria8', 'ExerciseController@cafeteria8')->name('cafeteria.cafeteria8');
 
 Route::get('Exercise/way', 'ExerciseController@way')->name('Exercise.way');
 

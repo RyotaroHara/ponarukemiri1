@@ -20,6 +20,41 @@ class ExerciseController extends Controller
         return view('cafeteria.cafeteria1');
     }
     
+    public function cafeteria2()
+    {
+        return view('cafeteria.cafeteria2');
+    }
+    
+    public function cafeteria3()
+    {
+        return view('cafeteria.cafeteria3');
+    }
+    
+    public function cafeteria4()
+    {
+        return view('cafeteria.cafeteria4');
+    }
+    
+    public function cafeteria5()
+    {
+        return view('cafeteria.cafeteria5');
+    }
+    
+    public function cafeteria6()
+    {
+        return view('cafeteria.cafeteria6');
+    }
+    
+    public function cafeteria7()
+    {
+        return view('cafeteria.cafeteria7');
+    }
+    
+    public function cafeteria8()
+    {
+        return view('cafeteria.cafeteria8');
+    }
+    
      public function way()
     {
         return view('Exercise.way');
