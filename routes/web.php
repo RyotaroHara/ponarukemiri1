@@ -38,6 +38,7 @@ Route::get('office/office1', 'ExerciseController@office1')->name('office.office1
 //fitnessgoods 
 Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnessgoods.ichiba');
 
+
 // User registration
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
@@ -48,7 +49,7 @@ Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::resource('users', 'UsersController', ['only' => ['show']]);
+Route::resource('users', 'UsersController', ['only' => ['show']]);
 
     
 });
