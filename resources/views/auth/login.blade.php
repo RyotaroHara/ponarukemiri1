@@ -8,8 +8,8 @@
         <div class="panel-body">
                 {!! Form::open(['route' =>'login.post']) !!}
                     <div class ="form-group">
-                         {!! form::label('name', 'メールアドレス') !!}
-                        {!! form::name('name', old('name'), ['class' => 'form-control']) !!}
+                         {!! form::label('name', 'ユーザー名') !!}
+                        {!! form::text('name', old('name'), ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group">
                         {!! form::label('password', 'パスワード') !!}

@@ -3,7 +3,7 @@
 @section('content')
     <div class="user-profile">
         <div class="icon text-center">
-            <img src="{{ Gravatar::src($user->email, 100) . '&d=mm' }}" alt="" class="img-circle">
+            <img src="{{ Gravatar::src($user->name, 100) . '&d=mm' }}" alt="" class="img-circle">
         </div>
         <div class="name text-center">
             <h1>{{ $user->name }}</h1>
@@ -11,14 +11,14 @@
         <div class="status text-center">
             <ul>
                 <li>
-                    <div class="status-label">WANT</div>
+                    <div class="status-label">目標消費カロリー</div>
                 
                 </li>
                 <li>
-                    <div class="status-label">HAVE</div>
+                    <div class="status-label">' ' kg減量まであと' 'kcal！！</div>
                   
                 </li>
             </ul>
         </div>
     </div>
-s@endsection
+@endsection

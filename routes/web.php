@@ -13,6 +13,19 @@
 
 Route::get('/', 'WelcomeController@index');
 
+//Exercise 
+Route::get('Exercise/cafeteria', 'ExerciseController@cafeteria')->name('Exercise.cafeteria');
+Route::get('cafeteria/cafeteria1', 'ExerciseController@cafeteria1')->name('cafeteria.cafeteria1');
+
+
+Route::get('Exercise/way', 'ExerciseController@way')->name('Exercise.way');
+
+
+Route::get('Exercise/office', 'ExerciseController@office')->name('Exercise.office');
+
+//fitnessgoods 
+Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnessgoods.ichiba');
+
 // User registration
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');

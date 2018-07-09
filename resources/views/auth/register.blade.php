@@ -8,7 +8,7 @@
             <div class="panel-body">
                 {!! Form::open(['route' => 'signup.post']) !!}
                     <div class="form-group">
-                        {!! Form::label('name', 'お名前') !!}
+                        {!! Form::label('name', 'ユーザー名') !!}
                         {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
                     </div>
 

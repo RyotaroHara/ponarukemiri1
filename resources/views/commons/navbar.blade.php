@@ -8,35 +8,45 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/logo.png") }}" alt="OFFIC EXCERSISE"></a>
+                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/titled.png") }}" alt="OFFICE EXERCISE"></a>
             </div>
        
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    @if (Auth::check())
-
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        @if (Auth::check())
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
-                                今週の消費カロリー
-                                <span class="caret"></span>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                エクササイズ場所
+                            <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a>エクササイズ一覧</a></li>
-                            
-                                <li><a>食事</a></li>
-                            </ul>
-                        </li>
-                   
-                   
+                                <li><a href="{{ route('Exercise.cafeteria') }}">カフェテリア</a></li>
+                                <li><a href="{{ route('Exercise.way') }}">移動中</a></li>
+                                <li><a href="{{ route('Exercise.office') }}">OFFICE</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                            フィットネス用品
+                            <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                <li><a href="{{ route('fitnessgoods.ichiba') }}">楽天市場</a></li>
+                                </ul>
+                            </li>
+
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="gravatar">
-                                    <img src="{{ Gravatar::src(Auth::user()->email, 20) . '&d=mm' }}" alt="" class="img-circle">
+                                    <img src="{{ Gravatar::src(Auth::user()->name, 20) . '&d=mm' }}" alt="" class="img-circle">
                                 </span>
                                 {{ Auth::user()->name }}
                                 <span class="caret"></span>
                             </a>
+                          
                             <ul class="dropdown-menu">
                                 <li>
                 <a href="{{ route('users.show', Auth::user()->id) }}">マイページ</a>
