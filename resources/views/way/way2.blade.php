@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>カフェテリア1</h1>
+    <h1>移動中２</h1>
     
     @if (Auth::check())
                             
-                        <li>歩きながら仕事する</a></li>
+                        <li>sorry about</a></li>
 
 　　@else
                         <li>このでぶが！</li>

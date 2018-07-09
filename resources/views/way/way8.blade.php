@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>カフェテリア1</h1>
+    <h1>移動中1</h1>
     
     @if (Auth::check())
                             
