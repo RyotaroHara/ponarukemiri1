@@ -21,7 +21,7 @@
                             <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                <li><a href="{{ route('Execrsie.cafeteria') }}">カフェテリア</a></li>
+                                <li><a href="{{ route('Exercise.cafeteria') }}">カフェテリア</a></li>
                                 <li><a href="{{ route('Exercise.way') }}">移動中</a></li>
                                 <li><a href="{{ route('Exercise.office') }}">OFFICE</a></li>
                                 </ul>
