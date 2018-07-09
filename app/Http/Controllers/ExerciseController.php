@@ -9,18 +9,14 @@ use App\Http\Controllers\Controller;
 use App\Item;
 
 class ExerciseController extends Controller
-{
-    public function cafeteria()
-    {
-        return view('Exercise.cafeteria');
-    }
+
     
         public function cafeteria1()
     {
         return view('cafeteria.cafeteria1');
     }
-    
-     public function way()
+
+public function way()
     {
         return view('Exercise.way');
     }
