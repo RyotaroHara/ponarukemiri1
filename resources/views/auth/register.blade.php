@@ -4,13 +4,17 @@
 <div class="row">
     <div class="col-xs-offset-3 col-xs-6">
         <div class="panel panel-default">
-            <div class="panel-heading">会員登録</div>
+            <div class="panel-heading">ユーザー登録</div>
             <div class="panel-body">
                 {!! Form::open(['route' => 'signup.post']) !!}
                     <div class="form-group">
-                        {!! Form::label('name', 'お名前') !!}
+                        {!! Form::label('name', 'ユーザー名') !!}
                         {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
                     </div>
+                    
+                    
+                    
+                    
 
                     <div class="form-group">
                         {!! Form::label('password', 'パスワード') !!}
