@@ -17,6 +17,9 @@
   
   <div class="col-7 col-md-6">
         <div style="padding:10px;width:700px;height:570px;background:#ced;border:1px solid #a7e;">
+
+            
+=======
         
       
             <h3>ふくらはぎのストレッチ</h3>
@@ -26,6 +29,7 @@
             準備体操でお馴染みのストレッチですが、アキレス腱を伸ばすだけではなく全身の血行を良くする効果があります。</h4>
         　　
         　　
+
         </div>
             
   </div>
