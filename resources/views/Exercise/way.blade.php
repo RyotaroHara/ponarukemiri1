@@ -2,6 +2,7 @@
 
 @section('content')
     <h1>移動中</h1>
+    
 　　@if (Auth::check())
                         <li><a href="{{ route('way.way1') }}">移動1</a></li>
                         <li><a href="{{ route('way.way2') }}">移動2</a></li>
@@ -14,6 +15,6 @@
 
 
     @else
-                        <li><a>このでぶが！</a></li>
+                        <li>このでぶが！</li>
     @endif
 @endsection
