@@ -10,7 +10,7 @@
         <div class=a>
             @include('Exercise.commons.office')
             @include('Exercise.commons.way')
-            @include('Exercise.commons.cafeteria')
+            @include('Exercise.commons.present location.cafeteria')
         </div>
   </div>
   <div class="col-7 col-md-5">
