@@ -33,7 +33,7 @@ class RegisterController extends Controller
      * Create a new controller instance.
      *
      * @return void
-     */
+     **/
     public function __construct()
     {
         $this->middleware('guest');
@@ -50,6 +50,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'password' => 'required|string|min:6|confirmed',
+            'Weight'=> 'required|string|max:3',
+            'IdealWeight'=>'required|string|max:3' 
         ]);
     }
 
@@ -64,6 +66,8 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'password' => bcrypt($data['password']),
+            'Weight'=>$data['Weight'],
+            'IdealWeight'=>$data['IdealWeight'],
         ]);
     }
 }
