@@ -48,6 +48,9 @@ Route::get('office/office5', 'ExerciseController@office5')->name('office.office5
 Route::get('office/office6', 'ExerciseController@office6')->name('office.office6');
 Route::get('office/office7', 'ExerciseController@office7')->name('office.office7');
 Route::get('office/office8', 'ExerciseController@office8')->name('office.office8');
+Route::get('office/office9', 'ExerciseController@office9')->name('office.office9');
+Route::get('office/office10', 'ExerciseController@office10')->name('office.office10');
+
 
 //fitnessgoods 
 Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnessgoods.ichiba');

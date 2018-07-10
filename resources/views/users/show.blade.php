@@ -15,7 +15,7 @@
                 
                 </li>
                 <li>
-                    <div class="status-label">' ' kg減量まであと' 'kcal！！</div>
+                    <div class="status-label">' {{$user->Weight-$user->IdealWeight}}' kg減量まであと'{{($user->Weight-$user->IdealWeight)*7000 }} 'kcal！！</div>
                   
                 </li>
             </ul>

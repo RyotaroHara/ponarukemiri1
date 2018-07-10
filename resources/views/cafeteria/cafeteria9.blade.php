@@ -17,9 +17,8 @@
   
   <div class="col-7 col-md-6">
         <div style="padding:10px;width:700px;height:570px;background:#ced;border:1px solid #a7e;">
-            カフェテリア６
+            カフェテリア９
         </div>
             
   </div>
-  
 @endsection

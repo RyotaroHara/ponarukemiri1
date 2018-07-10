@@ -11,11 +11,15 @@
                         {!! Form::label('name', 'ユーザー名') !!}
                         {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
                     </div>
-                    
-                    
-                    
-                    
-
+                    <div class="form-group">
+                        {!! Form::label('Weight', 'Weight') !!}
+                        {!! Form::text('Weight', old('Weight'), ['class' => 'form-control']) !!}
+                    </div>
+                    <div class="form-group">
+                        {!! Form::label('IdealWeight', 'IdealWeight') !!}
+                        {!! Form::text('IdealWeight', old('IdealWeight'), ['class' => 'form-control']) !!}
+                    </div>                    
+                
                     <div class="form-group">
                         {!! Form::label('password', 'パスワード') !!}
                         {!! Form::password('password', ['class' => 'form-control']) !!}
