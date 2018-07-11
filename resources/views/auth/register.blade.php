@@ -13,11 +13,11 @@
                     </div>
                     <div class="form-group">
                         {!! Form::label('Weight', 'Weight') !!}
-                        {!! Form::text('Weight', old('Weight'), ['class' => 'form-control']) !!}
+                        {!! Form::number('Weight', old('Weight'), ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('IdealWeight', 'IdealWeight') !!}
-                        {!! Form::text('IdealWeight', old('IdealWeight'), ['class' => 'form-control']) !!}
+                        {!! Form::number('IdealWeight', old('IdealWeight'), ['class' => 'form-control']) !!}
                     </div>                    
                 
                     <div class="form-group">
