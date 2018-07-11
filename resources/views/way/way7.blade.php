@@ -7,7 +7,7 @@
   <div class="col-4 col-md-1">
         <div class=a>
             @include('Exercise.commons.office')
-            @include('Exercise.commons.way')
+            @include('Exercise.commons.present location.way')
             @include('Exercise.commons.cafeteria')
         </div>
   </div>
