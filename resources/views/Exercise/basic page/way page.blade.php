@@ -13,14 +13,19 @@
         </div>
   </div>
   <div class="col-7 col-md-5">
-        <div style="padding:10px;width:450px;height:570px;background:#DDDDDD;">
+        <div style="padding:10px;width:450px;height:570px;background:#FFD5EC;">
             @include('Exercise.link_to_exercise.links_way')
         </div>
   </div>
   
   <div class="col-7 col-md-6">
-        <div style="padding:10px;width:700px;height:570px;background:#ced;border:1px solid #a7e;">
-            考えろ
+        <div style="padding:10px;width:700px;height:570px;background:#EAD9FF;">
+            
+            <img class="card-img-top" src="{{ asset('images/way/top_way1.jpg') }}" alt="office" style="width:670px;">
+            <h4>【階段を利用した場合の消費カロリー(1分間)】</h4>
+            <h5>上り：0.135（kcal）×体重（kg）/ 下り：0.066（kcal）×体重（kg）<br><br>
+                通勤や社内でも、意識して歩けば習慣に！　　※日本体育協会スポーツ科学委員会 発表<br><br>
+                </h5>
         </div>
             
   </div>

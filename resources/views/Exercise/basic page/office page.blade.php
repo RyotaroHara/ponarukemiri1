@@ -22,9 +22,11 @@
         <div style="padding:10px;width:700px;height:570px;background:#EAD9FF;">
             
         
-            <img class="card-img-top" src="{{ asset('images/office/top_office.jpg') }}" alt="office" style="width:680px;">
-            
-            <h4>仕事中にもできることはたくさん！簡単ながらエクササイズをこっそりやってみよう</h4></h4>
+            <img class="card-img-top" src="{{ asset('images/office/top_office1.jpg') }}" alt="office" style="width:337px;">
+            <img class="card-img-top" src="{{ asset('images/office/top_office4.jpg') }}" alt="office" style="width:337px;">
+            <img class="card-img-top" src="{{ asset('images/office/top_office2.jpg') }}" alt="office" style="width:337px;">
+            <img class="card-img-top" src="{{ asset('images/office/top_office3.jpg') }}" alt="office" style="width:337px;">
+            <img class="card-img-top" src="{{ asset('images/office/icon1.jpg') }}" alt="office" style="width:670px;">
         </div>
             
   </div>
