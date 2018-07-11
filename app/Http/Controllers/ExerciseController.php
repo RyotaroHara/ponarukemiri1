@@ -145,4 +145,14 @@ public function office()
     {
         return view('Exercise.exercise explanation.office.office8');
     }
+    
+    public function office9()
+    {
+        return view('Exercise.exercise explanation.office.office9');
+    }
+    
+    public function office10()
+    {
+        return view('Exercise.exercise explanation.office.office10');
+    }
 }
