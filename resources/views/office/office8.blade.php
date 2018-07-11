@@ -6,7 +6,7 @@
 <div class="row">
   <div class="col-4 col-md-1">
         <div class=a>
-            @include('Exercise.commons.office')
+            @include('Exercise.commons.present location.office')
             @include('Exercise.commons.way')
             @include('Exercise.commons.cafeteria')
         </div>
@@ -19,6 +19,13 @@
   
   <div class="col-7 col-md-6">
         <div style="padding:10px;width:700px;height:570px;background:#ced;border:1px solid #a7e;">
+            <h3>肩のストレッチ</h3>
+            <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
+    
+            <h4>PCの見過ぎで肩こりに悩まされている人向けのストレッチです。<br>
+            まずは指先をそれぞれ肩に乗せます。<br>
+            その後、両肘がくっつく所まで前に出し、そのまま肩甲骨の動きを意識しながら、円を描くように大きく回しましょう。<br>
+            肩こりの解消には、肩甲骨周りの筋肉を柔らかくすることがとても重要です。　</h4>
         </div>
             
   </div>

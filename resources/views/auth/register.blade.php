@@ -19,7 +19,8 @@
                         {!! Form::label('IdealWeight', 'IdealWeight') !!}
                         {!! Form::number('IdealWeight', old('IdealWeight'), ['class' => 'form-control']) !!}
                     </div>                    
-                
+
+
                     <div class="form-group">
                         {!! Form::label('password', 'パスワード') !!}
                         {!! Form::password('password', ['class' => 'form-control']) !!}
