@@ -18,8 +18,24 @@
                     <div class="form-group">
                         {!! Form::label('IdealWeight', 'IdealWeight') !!}
                         {!! Form::number('IdealWeight', old('IdealWeight'), ['class' => 'form-control']) !!}
-                    </div>                    
-
+                    </div>
+                    <div class="form-group　col-xs-6 ">
+                    {!! Form::label('date', '何日までにやせたい？') !!}
+                    </div>
+            
+                    <div class="form-group col-xs-4">
+                        {!! Form::label('year', 'year') !!}
+                        {!! Form::number('year', old('year'), ['class' => 'form-control']) !!}
+                    </div>
+                    <div class="form-group col-xs-4">
+                        {!! Form::label('month', 'month') !!}
+                        {!! Form::number('month', old('month'), ['class' => 'form-control']) !!}
+                    </div>    
+                    <div class="form-group col-xs-4">
+                        {!! Form::label('day', 'day') !!}
+                        {!! Form::number('day', old('day'), ['class' => 'form-control']) !!}
+                    </div>    
+                    
 
                     <div class="form-group">
                         {!! Form::label('password', 'パスワード') !!}
@@ -30,41 +46,7 @@
                         {!! Form::label('password_confirmation', 'パスワード（確認）') !!}
                         {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                     </div>
-                    
-                    
-                    <div class="form-group">
-                        <form method=post action="<?=$_SERVER["PHP_SELF"]?>">
-　                        　<table>
-                                <tr>
-                                    <td>
-                                        <select name= "yyyy"> ;
-                                            <?php
-                                                //年
-                                                      for ($i =2005; $i <=2020; $i++) {
-                                                      echo "<option>$i";
-                                                      }
-                                                      echo "</select>年"; 
-
-                                                //月
-                                                      echo "<select name= \"mm\">" ;
-                                                      for ($i =1; $i <=12; $i++) {
-                                                      echo "<option>$i";
-                                                      }
-                                                      echo "</select>月";
-
-
-                                                //日
-                                                      echo "<select name= \"dd\">" ;
-                                                      for ($i =1; $i <=31; $i++) {
-                                                      echo "<option>$i";
-                                                      }
-                                                      echo "</select>日";
-                                            ?>
-                                    </td>
-                                </tr>
-                            </table>
-                    </div>
-                    
+                                        
                     <div class="text-right">
                         {!! Form::submit('登録する', ['class' => 'btn btn-success']) !!}
                     </div>
