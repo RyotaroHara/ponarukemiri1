@@ -16,7 +16,8 @@
                 </li>
                 <li>
                     <div class="status-label">'{{$user->Weight-$user->IdealWeight}}'kg減量まであと'{{($user->Weight-$user->IdealWeight)*7200}}'kcal!!</div>
-                  
+  <div class="status-label">{{($user->finishdate}}にはやせている</div>
+
                 </li>
             </ul>
         </div>

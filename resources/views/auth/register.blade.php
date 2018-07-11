@@ -33,6 +33,8 @@
                     
                     
                     <div class="form-group">
+                        {!! Form::label('date', '何日まで？') !!}
+
                         <form method=post action="<?=$_SERVER["PHP_SELF"]?>">
 　                        　<table>
                                 <tr>

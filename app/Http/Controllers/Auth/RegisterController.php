@@ -51,7 +51,8 @@ class RegisterController extends Controller
             'name' => 'required|string|max:20|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'Weight'=> 'required|min:1|max:200|digits_between:1,3',
-            'IdealWeight'=>'required|min:1|max:200|digits_between:1,3' 
+            'IdealWeight'=>'required|min:1|max:200|digits_between:1,3' ,
+            'finishdate'=>'required|string'
         ]);
     }
 
@@ -68,6 +69,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'Weight'=>$data['Weight'],
             'IdealWeight'=>$data['IdealWeight'],
+            'finishdate'=>$data['finish_date']
         ]);
     }
 }
