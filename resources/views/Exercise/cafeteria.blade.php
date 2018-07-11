@@ -1,10 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-<<<<<<< HEAD
-
-@endsection
-=======
 <div class="row">
   <div class="col-4 col-md-1">
         <div class=a>
