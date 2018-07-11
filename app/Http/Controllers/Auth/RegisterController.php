@@ -50,9 +50,11 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:20|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'Weight'=> 'required|min:1|max:200|digits_between:1,3',
-            'IdealWeight'=>'required|min:1|max:200|digits_between:1,3' ,
-            'finishdate'=>'required|string'
+            'Weight'=> 'required|integer|between:1,200|digits_between:1,3',
+            'IdealWeight'=>'required|integer|between:1,200|digits_between:1,3',
+            'year'=>'present|integer|between:2018,2023|digits:4',
+            'month'=>'present|integer|between:1,12|digits_between:1,2',
+            'day'=>'required|integer|between:1,31|digits_between:1,2',
         ]);
     }
 
@@ -69,7 +71,9 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'Weight'=>$data['Weight'],
             'IdealWeight'=>$data['IdealWeight'],
-            'finishdate'=>$data['finish_date']
+            'year'=>$data['year'],
+            'month'=>$data['month'],
+            'day'=>$data['day'],
         ]);
     }
 }

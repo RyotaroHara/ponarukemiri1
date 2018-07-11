@@ -14,7 +14,9 @@ class AddDatestampsToUsersTable extends Migration
     public function up()
     {
             Schema::table('users', function (Blueprint $table) {
-            $table->Timestamp('finishdate');
+            $table->string('year','4');
+            $table->string('month','2');
+            $table->string('day','2');
 
     });
     }
@@ -26,6 +28,9 @@ class AddDatestampsToUsersTable extends Migration
     public function down()
     {
             Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('finishdate');
-    });
+            $table->dropColumn('year');
+            $table->dropColumn('month');
+            $table->dropColumn('day');
+                
+            });
     }}

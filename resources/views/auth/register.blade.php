@@ -19,8 +19,6 @@
                         {!! Form::label('IdealWeight', 'IdealWeight') !!}
                         {!! Form::number('IdealWeight', old('IdealWeight'), ['class' => 'form-control']) !!}
                     </div>                    
-
-
                     <div class="form-group">
                         {!! Form::label('password', 'パスワード') !!}
                         {!! Form::password('password', ['class' => 'form-control']) !!}
@@ -30,6 +28,16 @@
                         {!! Form::label('password_confirmation', 'パスワード（確認）') !!}
                         {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                     </div>
+                      <div class="form-group">
+                        {!! Form::label('year', 'year') !!}
+                        {!! Form::number('year', old('year'), ['class' => 'form-control']) !!}
+                    </div>      <div class="form-group">
+                        {!! Form::label('month', 'month') !!}
+                        {!! Form::number('month', old('month'), ['class' => 'form-control']) !!}
+                    </div>      <div class="form-group">
+                        {!! Form::label('day', 'day') !!}
+                        {!! Form::number('day', old('day'), ['class' => 'form-control']) !!}
+                    </div>    
                     
                     
                     <div class="form-group">
