@@ -1,4 +1,3 @@
-
-<div style="padding:30px;text-align:center;writing-mode:vertical-rl;width:80px;height:190px;background:#DDDDDD;">
-    <a href="{{ route('Exercise.office') }}">オフィス</a>
-</div>
+<a href="{{ route('Exercise.office') }}" style="text-decoration:none;">
+<div class="tab_box">オフィス</div>    
+</a>
