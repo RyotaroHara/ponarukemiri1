@@ -7,40 +7,27 @@
             <table class="table table-borderless" style="margin-left:25px; margin-top:10px;">
     
                 <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('cafeteria.cafeteria1') }}">カフェテリア1</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria2') }}">カフェテリア2</a></button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('cafeteria.cafeteria1') }}">ふくらはぎのストレッチ</a></button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria2') }}">ふくらはぎの引き締め</a></button></td>
                     
                 </tr>
                 
                 <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('cafeteria.cafeteria1') }}">カフェテリア3</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria2') }}">カフェテリア4</a></button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('cafeteria.cafeteria3') }}">ヒップアップ</a></button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria4') }}">足首ストラップ</a></button></td>
                     
                 </tr>
     
     
                 <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('cafeteria.cafeteria4') }}">カフェテリア5</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria5') }}">カフェテリア6</a></button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria5') }}">いただきますで<br>バストアップ</br></a></button></td>
                     
                 </tr>
     
-                <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('cafeteria.cafeteria7') }}">カフェテリア7</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria8') }}">カフェテリア8</a></button></td>
-                    
                 
-                <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;">Primary</button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";>Primary</button></td>
-                    
-                </tr>
+               
                 
-                <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;">Primary</button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";>Primary</button></td>
-                    
-                </tr>
+                
                 
                 
             </table>

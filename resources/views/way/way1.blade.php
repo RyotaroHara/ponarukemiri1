@@ -19,7 +19,7 @@
   
   <div class="col-7 col-md-6">
         <div style="padding:10px;width:700px;height:570px;background:#ced;border:1px solid #a7e;">
-            <h3>階段を上る(朝:2階から4階へ、昼休憩:4階から9階へ</h3>
+            <h3>階段を上る(朝:2階から4階へ、昼休憩:4階から9階へ)</h3>
             <img class="card-img-top" src="{{ asset('images/way/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
     
             <h4>階段を上る時は、前かがみにならないよう背筋をまっすぐに伸ばし、目線は下げずに前を見ます。<br>

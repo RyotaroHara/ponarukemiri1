@@ -7,34 +7,24 @@
             <table class="table table-borderless" style="margin-left:25px; margin-top:10px;">
     
                 <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('way.way1') }}">移動1</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('way.way2') }}">移動2</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE;"><a href="{{ route('way.way3') }}">移動3</a></button></td>
-                </tr>
-    
-                <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('way.way4') }}">移動4</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('way.way5') }}">移動5</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE;"><a href="{{ route('way.way6') }}">移動6</a></button></td>
-                </tr>
-    
-                <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('way.way7') }}">移動7</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('way.way8') }}">移動8</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE;">Primary</button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('way.way1') }}">2階から4階へ上る/<br>4階から9階へ上る</br></a></button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('way.way2') }}">4階から9階へ下る/<br>9階から4階へ下る</br></a></button></td>
                 </tr>
                 
                 <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;">Primary</button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";>Primary</button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE;">Primary</button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE;"><a href="{{ route('way.way3') }}">PCの持ち方</a></button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('way.way4') }}">電車内でのつま先立ち</a></button></td>
                 </tr>
                 
+    
                 <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;">Primary</button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";>Primary</button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE;">Primary</button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('way.way5') }}">おなかの引き締め</a></button></td>
+                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE;"><a href="{{ route('way.way6') }}">内ももシェイプアップ</a></button></td>
                 </tr>
+    
+               
+                
+               
                 
                 
             </table>

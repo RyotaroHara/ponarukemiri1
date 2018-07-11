@@ -18,10 +18,11 @@
   <div class="col-7 col-md-6">
         <div style="padding:10px;width:700px;height:570px;background:#ced;border:1px solid #a7e;">
          
-         <h3>ふくらはぎの引き締め</h3>
-         <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
-         <h4>こちらも食事中にできるエクササイズ!<br>
-         つま先をゆっくり上げて5秒キープ、かかとを上げて5秒キープを繰り返しましょう。</h4>
+        <h3>ヒップアップ</h3>
+             <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
+            <h4>食事中の短い時間でも気軽にヒップアップ！<br>
+            お尻の穴を締めるように意識して、全体に力を入れて30秒キープしましょう。<br>
+            カロリーを摂取している間にも運動を欠かさないことが、ダイエットへのコツです。</h4>
         </div>
             
   </div>
