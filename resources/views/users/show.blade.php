@@ -11,11 +11,11 @@
         <div class="status text-center">
             <ul>
                 <li>
-                    <div class="status-label">目標消費カロリー</div>
+                    <div class="status-label">理想の身体を手に入れろ！！</div>
                 
                 </li>
                 <li>
-                    <div class="status-label">' {{$user->Weight-$user->IdealWeight}}' kg減量まであと'{{($user->Weight-$user->IdealWeight)*7000 }} 'kcal！！</div>
+                    <div class="status-label">'{{$user->Weight-$user->IdealWeight}}'kg減量まであと'{{($user->Weight-$user->IdealWeight)*7200}}'kcal!!</div>
                   
                 </li>
             </ul>
