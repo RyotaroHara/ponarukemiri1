@@ -17,11 +17,12 @@
   
   <div class="col-7 col-md-6">
         <div style="padding:10px;width:700px;height:570px;background:#ced;border:1px solid #a7e;">
-            <h3>足首ストラップ</h3>
+            <h3>いただきますでバストアップ</h3>
             <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
 
-            <h4>足首をぐるぐると回すことで、むくみ軽減、冷え症改善に繋がります。<br>
-            むくみが溜まり、足首周りが硬くなるだけで下半身太りに繋がるので、まずはお昼休憩中に軽く動かしましょう。</h4>
+            <h4>その名の通り、いただきますをしながらバストアップを目指しましょう。<br>
+            やり方は簡単、いただきますのポーズをしながら肘を手首の高さまで上げ、15秒押し合うだけ！<br>
+            位置を変えて秒数を増やすと、更なる効果が期待できます。</h4>
         </div>
             
   </div>

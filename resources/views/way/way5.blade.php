@@ -19,7 +19,7 @@
   
   <div class="col-7 col-md-6">
         <div style="padding:10px;width:700px;height:570px;background:#ced;border:1px solid #a7e;">
-            <h3>1駅区間でのおなか引き締め</h3>
+            <h3>おなか引き締め</h3>
             <img class="card-img-top" src="{{ asset('images/way/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
             <h4>"ずっと鍛えるのはちょっとしんどい、という人におすすめなのが、「１駅区間エクササイズ」。<br>
             区間を決めてしまうことで、時間を区切って集中して引き締めることができます。<br>
