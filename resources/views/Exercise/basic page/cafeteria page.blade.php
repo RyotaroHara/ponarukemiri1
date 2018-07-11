@@ -1,7 +1,10 @@
 @extends('layouts.app')
+
 @section('content')
 
-@if<div class="row">
+@if(Auth::check())
+
+<div class="row">
   <div class="col-4 col-md-1">
         <div class=a>
             @include('Exercise.tab.normal.tab_office')
@@ -17,9 +20,12 @@
   
   <div class="col-7 col-md-6">
         <div style="padding:10px;width:700px;height:570px;background:#ced;border:1px solid #a7e;">
-            最初に何か表示させるために文章を考えたい所存
+            最初に考えるべきものを表示させたい所存
         </div>
             
   </div>
-@endsection
+    
+@endif
 
+   
+@endsection
