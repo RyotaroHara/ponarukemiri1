@@ -34,7 +34,13 @@ $amari = $sa%(24*60*60);
 $hi = ($sa - $amari)/(24*60*60);
 print $hi . PHP_EOL;
 $cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)/$hi;
-print $cal
+print $cal;
+
+$day_cal = DB::table('battle')->where('user_id','1')->value('cal')->sum();
+print $day_cal;
+
+
+
 ?>
 </div>
 
