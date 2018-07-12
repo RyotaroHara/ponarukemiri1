@@ -1,6 +1,6 @@
 
 <div class="card" style="width: 45rem;">
-  <img class="card-img-top" src="{{ asset('images/office.jpg') }}" alt="Card image cap" style="width:430px;">
+  <img class="card-img-top" src="{{ asset('images/office/top_office2.jpg') }}" alt="Card image cap" style="width:430px;">
   
   <div class="card-body">
      <div class="row">

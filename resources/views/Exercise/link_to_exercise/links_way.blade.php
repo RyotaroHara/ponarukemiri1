@@ -1,6 +1,6 @@
 
 <div class="card" style="width: 45rem;">
-  <img class="card-img-top" src="{{ asset('images/viber image.jpg') }}" alt="Card image cap" style="width:430px;">
+  <img class="card-img-top" src="{{ asset('images/way/way1.jpg') }}" alt="Card image cap" style="width:430px;">
   
   <div class="card-body">
      <div class="row">

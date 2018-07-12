@@ -50,7 +50,7 @@
                           
                             <ul class="dropdown-menu">
                                 <li>
-                <a href="{{ route('users.show', Auth::user()->name) }}">マイページ</a>
+                <a href="{{ route('users.show', Auth::user()->id) }}">マイページ</a>
                                 </li>
                                 <li role="separator" class="divider"></li>
                                 <li>
