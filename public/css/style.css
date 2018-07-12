@@ -11,7 +11,7 @@ footer {
 
 /*navbar*/
 .navbar{
-    background-color:#FF99CC;
+    background-color:#CCEBFF;
 }
 .navbar-header img{
     margin-top: 5px;
@@ -150,4 +150,15 @@ h4{
     text-align:center;
 }
 
+.medium1 {
+    background:#E6F5FF;
+}
+
+.medium2 {
+    background:#E6F5FF;
+}   
+
+.footer {
+    background:#7D9DB2;
+}
 

@@ -13,13 +13,13 @@
         </div>
   </div>
   <div class="col-7 col-md-5">
-        <div style="padding:10px;width:450px;height:570px;background:#FFD5EC;">
+        <div class=medium1 style="padding:10px;width:450px;height:570px;">
             @include('Exercise.link_to_exercise.links_way')
         </div>
   </div>
   
   <div class="col-7 col-md-6">
-        <div style="padding:10px;width:700px;height:570px;background:#EAD9FF;">
+        <div class=medium2 style="padding:10px;width:700px;height:570px;">
             
             <img class="card-img-top" src="{{ asset('images/way/top_way1.jpg') }}" alt="office" style="width:680px;">
             <br>

@@ -13,13 +13,13 @@
         </div>
   </div>
   <div class="col-7 col-md-5">
-        <div style="padding:10px;width:450px;height:570px;background:#DDDDDD;">
+        <div class=medium1 style="padding:10px;width:450px;height:570px;">
             @include('Exercise.link_to_exercise.links_office')
         </div>
   </div>
   
   <div class="col-7 col-md-6">
-        <div style="padding:10px;width:700px;height:570px;background:#ced;border:1px solid #a7e;">
+        <div class=medium2 style="padding:10px;width:700px;height:570px;">
                 <h3>小顔になるエクササイズ</h3>
                 <img class="card-img-top" src="{{ asset('images/office/face.jpg') }}" alt="otameshi" style="width:430px;">
     
