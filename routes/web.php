@@ -51,6 +51,10 @@ Route::get('office/office8', 'ExerciseController@office8')->name('office.office8
 Route::get('office/office9', 'ExerciseController@office9')->name('office.office9');
 Route::get('office/office10', 'ExerciseController@office10')->name('office.office10');
 
+//battle page
+Route::get('battle/battle', 'BattleController@cafeteria_genre')->name('battle.battle');
+Route::get('battle/office', 'BattleController@office_genre')->name('battle.office');
+Route::get('battle/way', 'BattleController@way_genre')->name('battle.way');
 
 //fitnessgoods 
 Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnessgoods.ichiba');
