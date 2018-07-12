@@ -23,7 +23,8 @@
         <h3>ウエストの引き締め</h3>
         <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
     
-        <h4>まずはゆっくり呼吸をしてみましょう。息を吐き切った時には、グッとお腹に力を入れるよう注意します。<br>
+        <h4>まずはゆっくり呼吸をしてみましょう。<br>
+        息を吐き切った時には、グッとお腹に力を入れるよう注意します。<br>
         息を吸う時は、ゆっくり吸いましょう。</h4>
         </div>
             

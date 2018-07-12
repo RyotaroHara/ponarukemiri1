@@ -24,7 +24,8 @@
              <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
             <h4>食事中の短い時間でも気軽にヒップアップ！<br>
             お尻の穴を締めるように意識して、全体に力を入れて30秒キープしましょう。<br>
-            カロリーを摂取している間にも運動を欠かさないことが、ダイエットへのコツです。</h4>
+            カロリーを摂取している間にも運動を欠かさないことが、<br>
+            ダイエットへのコツです。</h4>
         </div>
             
   </div>

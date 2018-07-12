@@ -24,7 +24,8 @@
        <h3>ふくらはぎの引き締め</h3>
        <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
     
-       <h4>つま先をゆっくり上げて5秒キープ、かかとを上げて5秒キープを繰り返しましょう!<br>
+       <h4>つま先をゆっくり上げて5秒キープ、<br>
+       かかとを上げて5秒キープを繰り返しましょう!<br>
        むくみ防止効果があります。</h4>
         </div>
             

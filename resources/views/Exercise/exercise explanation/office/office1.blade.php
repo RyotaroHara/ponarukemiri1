@@ -24,7 +24,8 @@
                 <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
     
                 <h4>歯茎をなぞるようにして、舌をぐるぐる回しましょう。<br>
-                左右20回ずつ、気がついたときでもいいのでやっていると徐々にリフトラインがシェイプアップされてきます</h4>
+                左右20回ずつ、気がついたときでもいいのでやっていると<br>
+                徐々にリフトラインがシェイプアップされてきます</h4>
         </div>
             
   </div>
