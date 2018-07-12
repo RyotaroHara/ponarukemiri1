@@ -6,9 +6,19 @@ use Illuminate\Http\Request;
 
 class BattleController extends Controller
 {
-    public function battle()
+    public function cafeteria_genre()
     {
-        return view('battle.battle');
+        return view('battle.basic page.cafeteria battle');
+    }
+    
+    public function office_genre()
+    {
+        return view('battle.basic page.office battle');
+    }
+    
+    public function way_genre()
+    {
+        return view('battle.basic page.way battle');
     }
 
 }
