@@ -7,15 +7,19 @@
             <div class="panel-heading">ユーザー登録</div>
             <div class="panel-body">
                 {!! Form::open(['route' => 'signup.post']) !!}
-                    <div class="form-group">
+                    <div class="form-group ">
                         {!! Form::label('name', 'ユーザー名') !!}
                         {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group">
+                        {!! Form::label('sex', '性別  (・1,male  ・2,female)') !!}
+                        {!! Form::number('sex', old('sex'), ['class' => 'form-control']) !!}
+                    </div>
+                    <div class="form-group col-xs-6 ">
                         {!! Form::label('Weight', 'Weight') !!}
                         {!! Form::number('Weight', old('Weight'), ['class' => 'form-control']) !!}
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-xs-6">
                         {!! Form::label('IdealWeight', 'IdealWeight') !!}
                         {!! Form::number('IdealWeight', old('IdealWeight'), ['class' => 'form-control']) !!}
                     </div>

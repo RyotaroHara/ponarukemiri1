@@ -55,6 +55,7 @@ class RegisterController extends Controller
             'year'=>'present|integer|between:2018,2023|digits:4',
             'month'=>'present|integer|between:1,12|digits_between:1,2',
             'day'=>'required|integer|between:1,31|digits_between:1,2',
+            'sex'=>'required|integer|between:1,2|digits:1',
         ]);
     }
 
@@ -74,6 +75,7 @@ class RegisterController extends Controller
             'year'=>$data['year'],
             'month'=>$data['month'],
             'day'=>$data['day'],
+            'sex'=>$data['sex'],
         ]);
     }
 }
