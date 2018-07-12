@@ -11,10 +11,19 @@
                         {!! Form::label('name', 'ユーザー名') !!}
                         {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-xs-6">
                         {!! Form::label('sex', '性別  (・1,male  ・2,female)') !!}
                         {!! Form::number('sex', old('sex'), ['class' => 'form-control']) !!}
                     </div>
+                    <div class="form-group col-xs-6">
+                        {!! Form::label('age', '年齢') !!}
+                        {!! Form::number('age', old('age'), ['class' => 'form-control']) !!}
+                    </div>
+                    <div class="form-group">
+                        {!! Form::label('height', '身長') !!}
+                        {!! Form::number('height', old('height'), ['class' => 'form-control']) !!}
+                    </div>
+                    
                     <div class="form-group col-xs-6 ">
                         {!! Form::label('Weight', 'Weight') !!}
                         {!! Form::number('Weight', old('Weight'), ['class' => 'form-control']) !!}
