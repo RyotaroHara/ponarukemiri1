@@ -25,7 +25,7 @@
             <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
     
             <h4>下半身全体に引き締め効果のある簡単エクササイズです! <br>
-            膝が90度になるくらいまで腰を落としましょう。眠気覚ましにもなるので、デスクでやるのに適した動きです。</h4>
+            膝が90度になるくらいまで腰を落としましょう。<br>眠気覚ましにもなるので、デスクでやるのに適した動きです。</h4>
         </div>
             
   </div>
