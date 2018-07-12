@@ -6,7 +6,7 @@
             <div class="cover-contents">
                 <h1>OFFICEで健康ルンルンルン</h1>
                  @if (!Auth::check())
-                    <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">エクササイズを始める</a>
+                    <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">Start Exercise</a>
                 @endif
             </div>
         </div>
