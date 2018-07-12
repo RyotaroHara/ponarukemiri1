@@ -23,7 +23,8 @@
         <h3>二の腕の引き締め</h3>
         <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
     
-        <h4>始めに、両手を胸の前でしっかり組みましょう。次に、力を入れて両側に腕を引っ張ります。</h4>
+        <h4>始めに、両手を胸の前でしっかり組みましょう。<br>
+        次に、力を入れて両側に腕を引っ張ります。</h4>
         </div>
             
   </div>

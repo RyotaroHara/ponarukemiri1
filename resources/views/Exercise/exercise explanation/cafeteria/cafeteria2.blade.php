@@ -23,7 +23,8 @@
              <h3>ふくらはぎの引き締め</h3>
          <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
          <h4>こちらも食事中にできるエクササイズ!<br>
-         つま先をゆっくり上げて5秒キープ、かかとを上げて5秒キープを繰り返しましょう。</h4>
+         つま先をゆっくり上げて5秒キープ、<br>
+         かかとを上げて5秒キープを繰り返しましょう。</h4>
         　　
         </div>
             
