@@ -1,7 +1,7 @@
 
 
-<div style="margin-top:20px;
-            min-width:1000px;height:45px;background:#DDDDDD;">
+<div class=footer style="margin-top:20px;
+            min-width:1000px;height:45px;">
 
     <div class=b style="text-align:center;margin-top:20px;"><a href="{{ route('battle.battle')}}"><h3>Battle</h3></div>
 
