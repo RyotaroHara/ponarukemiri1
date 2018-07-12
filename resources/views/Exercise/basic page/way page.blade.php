@@ -21,11 +21,16 @@
   <div class="col-7 col-md-6">
         <div style="padding:10px;width:700px;height:570px;background:#EAD9FF;">
             
-            <img class="card-img-top" src="{{ asset('images/way/top_way1.jpg') }}" alt="office" style="width:670px;">
-            <h4>【階段を利用した場合の消費カロリー(1分間)】</h4>
-            <h5>上り：0.135（kcal）×体重（kg）/ 下り：0.066（kcal）×体重（kg）<br><br>
-                通勤や社内でも、意識して歩けば習慣に！　　※日本体育協会スポーツ科学委員会 発表<br><br>
-                </h5>
+            <img class="card-img-top" src="{{ asset('images/way/top_way1.jpg') }}" alt="office" style="width:680px;">
+            <br>
+            <br>
+            
+            <div class="aaa" style="text-align:center;">
+                 <p style="color:#983181;">【階段を利用した場合の消費カロリー(1分間)】  ※日本体育協会スポーツ科学委員会 発表</p>   
+                 <p style="color:#BA2F7D;">上り：0.135（kcal）×体重（kg）/ 下り：0.066（kcal）×体重（kg）</p>
+                 <p style="color:#983181;">通勤や社内でも、意識して歩けば習慣に！運動不足な時こそ、階段を使ってみましょう！</p>
+            </div>
+            
         </div>
             
   </div>
