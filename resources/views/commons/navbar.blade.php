@@ -24,6 +24,7 @@
                                 <li><a href="{{ route('Exercise.cafeteria') }}">カフェテリア</a></li>
                                 <li><a href="{{ route('Exercise.way') }}">移動中</a></li>
                                 <li><a href="{{ route('Exercise.office') }}">OFFICE</a></li>
+                                <li><a href="{{ route('battle.battle')}}">Battle</a></li>
                                 </ul>
                             </li>
 
@@ -49,7 +50,7 @@
                           
                             <ul class="dropdown-menu">
                                 <li>
-                <a href="{{ route('users.show', Auth::user()->id) }}">マイページ</a>
+                <a href="{{ route('users.show', Auth::user()->name) }}">マイページ</a>
                                 </li>
                                 <li role="separator" class="divider"></li>
                                 <li>
