@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateExerciseUserTable extends Migration
+class CreateBattle extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateExerciseUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('exercise_user', function (Blueprint $table) {
+         Schema::create('battle', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->string('cal');
             $table->timestamps();
+            
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -26,6 +30,6 @@ class CreateExerciseUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exercise_user');
+        Schema::dropIfExists('battle');
     }
 }
