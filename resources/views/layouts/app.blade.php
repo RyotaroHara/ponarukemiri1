@@ -24,10 +24,8 @@
             @yield('content')
         </div>
         
-        @if(Auth::check())
         <div class=footer>
             @include('commons.footer')
         </div>
-        @endif
     </body>
 </html>

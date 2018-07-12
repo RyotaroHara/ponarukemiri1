@@ -1,11 +1,12 @@
 <?php
+$stmt = $pdo->query('SELECT * FROM users');
 
-class Character {
+class User {
     // クラス変数
     public static $type = '';
 
     // インスタンス変数
-    public $hp = 1;
+    public $hp = $Weight;
     public $power = 1;
 
     function __construct($hp, $power) {
@@ -19,21 +20,21 @@ class Character {
         return $this::$type;
     }
 
-    function attack($character) {
-        $character->hp = $character->hp - $this->power;
-        print $this->name() . 'が' . $character->name() . 'を攻撃して' . $this->power . 'ポイントのダメージを与えた！' . PHP_EOL;
+    function attack($user) {
+        $user->hp = $user->hp - $this->power;
+        print $this->name() . 'が' . $user->name() . 'を攻撃して' . $this->power . 'ポイントのダメージを与えた！' . PHP_EOL;
 
-        if ($character->hp <= 0) {
-            $this->defeat($character);
+        if ($user->hp <= 0) {
+            $this->defeat($user);
         }
     }
 
-    function defeat($character) {
-        print $this->name() . 'は' . $character->name() . 'を倒した！' . PHP_EOL;
+    function defeat($user) {
+        print $this->name() . 'は' . $user->name() . 'を倒した！' . PHP_EOL;
     }
 }
 
-class Slime extends Character {
+class Slime extends User {
     // クラスの種類そのものなので、最初から代入して、以後変更しない
     public static $type = 'スライム';
 
@@ -56,7 +57,7 @@ class Slime extends Character {
     }
 }
 
-class Hero extends Character {
+class Hero extends user {
     // クラスの種類そのものなので、最初から代入して、以後変更しない
     public static $type = '主人公';
 
