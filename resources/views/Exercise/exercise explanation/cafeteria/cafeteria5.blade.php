@@ -19,16 +19,22 @@
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-            <h3>いただきますでバストアップ</h3>
-            <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
-
-            <h4>その名の通り、いただきますをしながらバストアップを目指しましょう。<br>
-            やり方は簡単、いただきますのポーズをしながら<br>
-            肘を手首の高さまで上げ、15秒押し合うだけ！<br>
-            位置を変えて秒数を増やすと、更なる効果が期待できます。</h4>
+            <div class=title_text1>
+               <p>いただきますでバストアップ</p>
+            </div>
+               <div class=images1>
+                  <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
+               </div>
+                  <div class=ex_text1>
+                    <p>その名の通り、いただきますをしながらバストアップを目指しましょう。<br>
+                       やり方は簡単、いただきますのポーズをしながら<br>
+                       肘を手首の高さまで上げ、15秒押し合うだけ！<br>
+                       位置を変えて秒数を増やすと、更なる効果が期待できます。</p>
+                  </div>
         </div>
             
   </div>
+</div>
 
 @endif
   

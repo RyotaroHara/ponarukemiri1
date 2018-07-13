@@ -20,15 +20,25 @@
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-                <h3>小顔になるエクササイズ</h3>
-                <img class="card-img-top" src="{{ asset('images/office/face.jpg') }}" alt="otameshi" style="width:430px;">
-    
-                <h4>歯茎をなぞるようにして、舌をぐるぐる回しましょう。<br>
-                左右20回ずつ、気がついたときでもいいのでやっていると<br>
-                徐々にリフトラインがシェイプアップされてきます</h4>
+                <div class=title_text>
+                   <p>小顔になるExercise</p>
+                </div>   
+                     <div class=images>
+                        <img src="{{ asset('images/office/face.jpg') }}" alt="otameshi" style="width:350px;" "height:310px;">
+                     </div>
+                         <div class=ex_text>
+                           <p>
+                           【手順】<br>
+                           歯茎をなぞるようにして、舌をぐるぐる回しましょう。<br>
+                           左右20回ずつから始めると、習慣づけることができます。<br><br>
+                           【効果】<br>
+                           回数を重ねるごとに、リフトラインがシェイプアップされていきます。
+                           </p>
+                         </div>
         </div>
             
   </div>
+</div>
 
 @endif
 

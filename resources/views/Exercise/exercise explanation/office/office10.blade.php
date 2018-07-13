@@ -20,15 +20,20 @@
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-       
-       <h3>PC斜め打ち</h3>
-       <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
-    
-       <h4>PCに対して正面に座るのではなく、全身を椅子ごと斜めに向けましょう。<br>
-       その後、姿勢を正し、腹筋に力を入れるよう意識してひねりながら作業をすると、腹斜筋が鍛えられ血行も促進されます。</h4>
+            <div class=title_text>
+               <p>PC斜め打ち</p>
+            </div>
+               <div class=images>
+                  <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
+               </div>
+                   <div class=ex_text>
+                      <p>PCに対して正面に座るのではなく、全身を椅子ごと斜めに向けましょう。<br>
+                        その後、姿勢を正し、腹筋に力を入れるよう意識してひねりながら作業をすると、腹斜筋が鍛えられ血行も促進されます。</p>
+                   </div>
         </div>
             
   </div>
+</div>
 
 @endif
 

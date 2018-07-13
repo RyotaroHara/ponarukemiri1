@@ -20,16 +20,22 @@
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-        <h3>頭のマッサージ</h3>
-        <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
-    
-        <h4>目が疲れた時は、頭のマッサージをしてみましょう。<br>頭皮が固くなっていたら、疲労が蓄積している証拠です。<br>
-        頭皮全体を柔らかくする様にマッサージしましょう。　<br>
-        コツは優しくシャンプーするように指の腹で刺激することです。　<br>
-        首の後ろやこめかみも軽く押すことで更なる効果が期待できます。</h4>
+            <div class=title_text>
+              <p>頭のマッサージ</p>
+            </div>
+               <div class=images>
+                 <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
+               </div>
+                  <div class=ex_text>
+                     <p>目が疲れた時は、頭のマッサージをしてみましょう。<br>頭皮が固くなっていたら、疲労が蓄積している証拠です。<br>
+                        頭皮全体を柔らかくする様にマッサージしましょう。　<br>
+                        コツは優しくシャンプーするように指の腹で刺激することです。　<br>
+                        首の後ろやこめかみも軽く押すことで更なる効果が期待できます。</p>
+                  </div>
         </div>
             
-  </div>
+</div>
+</div>
 
 @endif
 

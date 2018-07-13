@@ -20,14 +20,20 @@
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px">
-        <h3>二の腕の引き締め</h3>
-        <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
-    
-        <h4>始めに、両手を胸の前でしっかり組みましょう。<br>
-        次に、力を入れて両側に腕を引っ張ります。</h4>
+            <div class=title_text>
+               <p>二の腕の引き締め</p>
+            </div>
+               <div class=images>
+                 <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
+               </div>
+                  <div class=ex_text>
+                    <p>始めに、両手を胸の前でしっかり組みましょう。<br>
+                       次に、力を入れて両側に腕を引っ張ります。</p>
+                  </div>
         </div>
             
   </div>
+</div>
   
 @endif
 

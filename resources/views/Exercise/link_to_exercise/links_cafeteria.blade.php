@@ -8,20 +8,18 @@
     
                 <tr>
                     <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('cafeteria.cafeteria1') }}">ふくらはぎのストレッチ</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria2') }}">ふくらはぎの引き締め</a></button></td>
-                    
                 </tr>
-                
+                <tr>
+                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria2') }}">ふくらはぎの引き締め</a></button></td>
+                </tr>
                 <tr>
                     <td style="border:none;"><button type="button" class="btn btn-light" style="background-color:#EEEEEE;"><a href="{{ route('cafeteria.cafeteria3') }}">ヒップアップ</a></button></td>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria4') }}">足首ストラップ</a></button></td>
-                    
                 </tr>
-    
-    
                 <tr>
-                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria5') }}">いただきますで<br>バストアップ</br></a></button></td>
-                    
+                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria4') }}">足首ストラップ</a></button></td>
+                </tr>
+                <tr>
+                    <td style="border:none;"><button type="button" class="btn btn-outline-primary" style="background-color:#EEEEEE";><a href="{{ route('cafeteria.cafeteria5') }}">いただきますでバストアップ</br></a></button></td>
                 </tr>
     
                 

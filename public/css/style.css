@@ -2,17 +2,16 @@
 
 /* body */
 body {
-    background: #f2f2f2;
+    background-image: url("/images/back2.jpg");
     font-family: 'メイリオ',sans-serif;
 }
 footer {
     margin-top: 40px;
+    position: absolute;
+    bottom: 0;
 }
 
 /*navbar*/
-.navbar{
-    background-color:#CCEBFF;
-}
 .navbar-header img{
     margin-top: 5px;
     height: 40px;
@@ -134,31 +133,116 @@ footer {
     writing-mode:vertical-rl;
     width:80px;
     height:190px;
-    background:#66FF99;
+    background:#FFDBE6;
 }
 
-
-/*エクササイズのレイアウト*/
-h3 {
+/*エクサイズ詳細のレイアウト設定(office)*/
+.title_text{
     text-align:center;
     font-family:Yu Gothic UI;
+    font-size: 180%;
+    color:#FFFFFF;
+    width:682px;
+    height:70px;
+    background:#8BD7F5;
+    margin-bottom: 5px;
+}
+
+.ex_text{
+    text-align:center;
+    font-family:Yu Gothic UI;
+    font-size: 120%;
+    color:#FFFFFF;
+    width:682px;
+    height:150px;
+    background:#8BD7F5;
+    margin-top: 5px;
+}
+
+.images {
+    text-align:center;
+    height:320px;
     
 }
 
-
-h4{
+/*エクサイズ詳細のレイアウト設定(cafeteria)*/
+.title_text1{
     text-align:center;
+    font-family:Yu Gothic UI;
+    font-size: 180%;
+    color:#FFFFFF;
+    width:682px;
+    height:70px;
+    background:#ACCFCC;
+    margin-bottom: 5px;
 }
 
+.ex_text1{
+    text-align:center;
+    font-family:Yu Gothic UI;
+    font-size: 120%;
+    color:#FFFFFF;
+    width:682px;
+    height:150px;
+    background:#ACCFCC;
+    margin-top: 5px;
+}
+
+.images1 {
+    text-align:center;
+    height:320px;
+    
+}
+
+/*エクサイズ詳細のレイアウト設定(way)*/
+.title_text2{
+    text-align:center;
+    font-family:Yu Gothic UI;
+    font-size: 180%;
+    color:#FFFFFF;
+    width:682px;
+    height:70px;
+    background:#8EABD3;
+    margin-bottom: 5px;
+}
+
+.ex_text2{
+    text-align:center;
+    font-family:Yu Gothic UI;
+    font-size: 120%;
+    color:#FFFFFF;
+    width:682px;
+    height:150px;
+    background:#8EABD3;
+    margin-top: 5px;
+}
+
+.images2 {
+    text-align:center;
+    height:320px;
+    
+}
+/*カラー設定*/
 .medium1 {
     background:#E6F5FF;
 }
 
 .medium2 {
-    background:#E6F5FF;
+    background:#FFFFFF;
 }   
+
+.navbar {
+    background-color:#CCEBFF;
+}
 
 .footer {
     background:#7D9DB2;
 }
 
+/*画像設定*/
+.card-img-top {
+   text-align:center;    
+}
+.row {
+	margin: 0 auto;
+}

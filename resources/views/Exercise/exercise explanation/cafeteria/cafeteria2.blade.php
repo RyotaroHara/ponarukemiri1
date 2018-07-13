@@ -19,17 +19,21 @@
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-            
-             <h3>ふくらはぎの引き締め</h3>
-         <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
-         <h4>こちらも食事中にできるエクササイズ!<br>
-         つま先をゆっくり上げて5秒キープ、<br>
-         かかとを上げて5秒キープを繰り返しましょう。</h4>
-        　　
+              <div class=title_text1>
+                <p>ふくらはぎの引き締め</p>
+              </div>
+                <div class=images1>
+                   <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
+                </div>
+                   <div class=ex_text1>
+                     <p>こちらも食事中にできるエクササイズ!<br>
+                        つま先をゆっくり上げて5秒キープ、<br>
+                        かかとを上げて5秒キープを繰り返しましょう。</p>
+        　　         </div>
         </div>
             
   </div>
-
+</div>
 @endif
 
 @endsection
