@@ -47,9 +47,15 @@ $start = strtotime("{$user->created_at}");
 $sa = $finish - $start;
 $amari = $sa%(24*60*60);
 $hi = ($sa - $amari)/(24*60*60);
+
 print $hi . PHP_EOL;
+
 $cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)/$hi;
-print $cal;
+
+print $cal . PHP_EOL;
+
+
+
 
 $day_cal = DB::table('battle')->where('user_id','1')->value('cal');
 print $day_cal;
