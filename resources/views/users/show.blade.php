@@ -50,23 +50,25 @@ $hi = ($sa - $amari)/(24*60*60);
 
 print $hi . PHP_EOL;
 
-$cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)/$hi;
+$day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)%$hi;
+$day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $day_cal_amari)/$hi;
 
-print $cal . PHP_EOL;
+print $day_cal . PHP_EOL;
 
-$day_cal = 0;
-for ($i=1; $i<1000; $i++) {
+$sum_cal = 0;
+for ($i=2; $i<1000; $i++) {
     
     $cal = DB::table('battle')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
     
-    $day_cal += $cal;
-    
-    
+    $sum_cal += $cal;
 }
-print $day_cal;
 
+print $sum_cal . PHP_EOL;
+$damage = $sum_cal*100/$day_cal;
+$nokori = $day_cal - $sum_cal;
+print "<br />あと".$nokori."kcal";
 ?>
-
+<meter class="vertical" min="0" max="100" value="<?php print 100 - $damage?>">100%</meter>
 
 
 </div>
