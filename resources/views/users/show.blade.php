@@ -57,7 +57,7 @@ print $cal . PHP_EOL;
 $day_cal = 0;
 for ($i=1; $i<1000; $i++) {
     
-    $cal = DB::table('battle')->where('user_id','2')->where('id',"$i")->value('cal');
+    $cal = DB::table('battle')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
     
     $day_cal += $cal;
     
