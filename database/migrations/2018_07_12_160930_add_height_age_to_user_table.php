@@ -26,11 +26,19 @@ class AddHeightAgeToUserTable extends Migration
      */
     public function down()
     {
+<<<<<<< HEAD
         Schema::table('users', function (Blueprint $table) { 
         
+=======
+        Schema::table('users', function (Blueprint $table) {
+>>>>>>> 54a488ec022c37e54d97efa6f1ae79a192fa7497
         $table->dropColumn('height');
         $table->dropColumn('age');
 
     });
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 54a488ec022c37e54d97efa6f1ae79a192fa7497
+}
 }

@@ -25,8 +25,15 @@ class AddSexToUserTable extends Migration
      */
     public function down()
     {
+<<<<<<< HEAD
         Schema::table('users', function (Blueprint $table) {
         $table->dropColumn('sex');
     });
     }
+=======
+    Schema::table('users', function (Blueprint $table) {
+        $table->dropColumn('sex');
+    });
+>>>>>>> 54a488ec022c37e54d97efa6f1ae79a192fa7497
+}
 }
