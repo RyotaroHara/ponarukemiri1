@@ -64,6 +64,9 @@ Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnes
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
 
+//battle post
+Route::post('battle/battle', 'BattleController@cafeteria_genre')->name('battle.post');
+
 // Login authentication
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login')->name('login.post');
