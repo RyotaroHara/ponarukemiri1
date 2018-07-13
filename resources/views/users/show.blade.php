@@ -39,22 +39,22 @@
                      <div class="staus-label">
     
 <?php
-//予定日と登録日の日数差を出す計算
+//予定日（$finish）と登録日（$start）の日数差を出す計算　（日数差$hi）
 $finish = strtotime("{$user->year}-{$user->month}-{$user->day}");
 $start = strtotime("{$user->created_at}");
-//print $finish . PHP_EOL;
-//print $start . PHP_EOL;
 $sa = $finish - $start;
 $amari = $sa%(24*60*60);
 $hi = ($sa - $amari)/(24*60*60);
 
-print $hi . PHP_EOL;
+print "期日まであと".$hi."日";
 
+//1日あたりの消費カロリー（$day_cal）の計算　
 $day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)%$hi;
 $day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $day_cal_amari)/$hi;
 
-print $day_cal . PHP_EOL;
+print "<br />今日のノルマまで、あと".$day_cal."kcal";
 
+//今日消費したカロリー（$sum_cal）の計算
 $sum_cal = 0;
 for ($i=2; $i<1000; $i++) {
     
@@ -62,8 +62,10 @@ for ($i=2; $i<1000; $i++) {
     
     $sum_cal += $cal;
 }
+print "<br />今日は".$sum_cal."kcal消費したよ";
 
-print $sum_cal . PHP_EOL;
+
+//HPゲージの作成
 $damage = $sum_cal*100/$day_cal;
 $nokori = $day_cal - $sum_cal;
 print "<br />あと".$nokori."kcal";
