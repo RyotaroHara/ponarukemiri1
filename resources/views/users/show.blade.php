@@ -54,15 +54,17 @@ $cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)/$hi;
 
 print $cal . PHP_EOL;
 
-
-
-
 $day_cal = DB::table('battle')->where('user_id','1')->value('cal');
 print $day_cal;
 
 
-
+echo "# 配列の値の合計を計算\n";
+$a = array(DB::table('battle')->where('user_id','1')->value('cal'));
+print_r($a);
 ?>
+
+
+
 </div>
 
                 </li>
