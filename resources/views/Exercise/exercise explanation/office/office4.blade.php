@@ -20,13 +20,19 @@
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-        <h3>ヒップアップ</h3>
-        <img class="card-img-top" src="{{ asset('images/office/hips.jpg') }}" alt="otameshi" style="width:430px;">
-    
-        <h4>お尻の穴を締めるように意識して、全体に力を入れて30秒キープしましょう！</h4>
+            <div class=title_text>
+                <p>ヒップアップ</p>
+            </div>
+               <div class=images>
+                   <img class="card-img-top" src="{{ asset('images/office/hips.jpg') }}" alt="otameshi" style="width:430px;">
+               </div>
+                  <div class=ex_text>
+                     <p>お尻の穴を締めるように意識して、全体に力を入れて30秒キープしましょう！</p>
+                  </div>
         </div>
             
   </div>
+</div>
 
 @endif
 

@@ -20,17 +20,22 @@
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-            <h3>肩のストレッチ</h3>
-            <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
-    
-            <h4>PCの見過ぎで肩こりに悩まされている人向けのストレッチです。<br>
-            まずは指先をそれぞれ肩に乗せます。<br>
-            その後、両肘がくっつく所まで前に出し、そのまま肩甲骨の動きを意識しながら、円を描くように大きく回しましょう。<br>
-            肩こりの解消には、肩甲骨周りの筋肉を柔らかくすることがとても重要です。　</h4>
+            <div class=title_text>
+               <p>肩のストレッチ</p>
+            </div>
+               <div class=images>
+                   <img class="card-img-top" src="{{ asset('images/office/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
+               </div>
+                   <div class=ex_text>
+                     <p>PCの見過ぎで肩こりに悩まされている人向けのストレッチです。<br>
+                        まずは指先をそれぞれ肩に乗せます。<br>
+                        その後、両肘がくっつく所まで前に出し、そのまま肩甲骨の動きを意識しながら、円を描くように大きく回しましょう。<br>
+                        肩こりの解消には、肩甲骨周りの筋肉を柔らかくすることがとても重要です。　</p>
+                   </div>
         </div>
             
   </div>
-
+</div>
 @endif
 
 

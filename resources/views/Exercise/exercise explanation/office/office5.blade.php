@@ -20,15 +20,21 @@
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-        <h3>ウエストの引き締め</h3>
-        <img class="card-img-top" src="{{ asset('images/office/ab.jpg') }}" alt="otameshi" style="width:430px;">
-    
-        <h4>まずはゆっくり呼吸をしてみましょう。<br>
-        息を吐き切った時には、グッとお腹に力を入れるよう注意します。<br>
-        息を吸う時は、ゆっくり吸いましょう。</h4>
+          <div class=title_text>
+              <p>ウエストの引き締め</p>
+          </div>
+             <div class=images>
+               <img class="card-img-top" src="{{ asset('images/office/ab.jpg') }}" alt="otameshi" style="width:430px;">
+             </div>
+                <div class=ex_text>
+                  <p>まずはゆっくり呼吸をしてみましょう。<br>
+                     息を吐き切った時には、グッとお腹に力を入れるよう注意します。<br>
+                     息を吸う時は、ゆっくり吸いましょう。</p>
+                </div>
         </div>
             
   </div>
+</div>
 
 @endif
 

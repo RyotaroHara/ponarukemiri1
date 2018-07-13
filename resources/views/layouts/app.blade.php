@@ -13,6 +13,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
+        <script src="{{ url('js/footerFixed.js') }}"></script>
     </head>
     <body>
         @include('commons.navbar')
@@ -24,7 +25,7 @@
             @yield('content')
         </div>
         
-        <div class=footer>
+        <div id=footer>
             @include('commons.footer')
         </div>
     </body>

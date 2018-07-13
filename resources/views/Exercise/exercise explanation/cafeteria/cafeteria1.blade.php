@@ -19,21 +19,23 @@
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-
-            <h3>ふくらはぎのストレッチ</h3>
-            
-            <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
-            <h4>デスクワークでは夕方気になるのが足のむくみ。<br>
-            ふくらはぎのストレッチを行い、事前に防ぎましょう。<br>
-            真っ直ぐ立った状態から片足を後ろに引き、前の足に体重をかけます。<br>
-            準備体操でお馴染みのストレッチですが、<br>
-            アキレス腱を伸ばすだけではなく全身の血行を良くする効果があります。</h4>
-        　　
-        　　
-
+             <div class=title_text1>
+               <p>ふくらはぎのストレッチ</p>
+             </div>
+               <div class=images1>
+                 <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
+               </div>
+                  <div class=ex_text1>
+                     <p>デスクワークでは夕方気になるのが足のむくみ。<br>
+                        ふくらはぎのストレッチを行い、事前に防ぎましょう。<br>
+                        真っ直ぐ立った状態から片足を後ろに引き、前の足に体重をかけます。<br>
+                        準備体操でお馴染みのストレッチですが、<br>
+                         アキレス腱を伸ばすだけではなく全身の血行を良くする効果があります。</p>
+        　　      </div>
         </div>
             
   </div>
+</div>
 
 @endif
 
