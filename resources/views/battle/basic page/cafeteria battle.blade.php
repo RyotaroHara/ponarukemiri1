@@ -14,8 +14,16 @@
   </div>
   <div class="col-7 col-md-5">
         <div style="padding:10px;width:450px;height:570px;background:#FFD5EC;">
-            
+            {!! Form::open(['route' => 'battle.post']) !!}
+            {!! Form::label('cal', 'カロリー') !!}
+            {!! Form::number('cal', old('cal'), ['class' => 'form-control']) !!}
+            <div class="text-right">
+            {!! Form::submit('攻撃', ['class' => 'btn btn-success']) !!}
+            </div>  
+        {!! Form::close() !!}
+        
         </div>
+        
   </div>
   
   <div class="col-7 col-md-6">

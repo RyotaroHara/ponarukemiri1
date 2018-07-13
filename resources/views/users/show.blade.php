@@ -69,7 +69,6 @@ print $day_cal;
 
 
 
-
 </div>
 
                 </li>

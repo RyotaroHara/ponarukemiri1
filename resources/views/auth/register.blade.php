@@ -33,7 +33,7 @@
                         {!! Form::number('IdealWeight', old('IdealWeight'), ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group　col-xs-6 ">
-                    {!! Form::label('date', '何日までにやせたい？') !!}
+                        {!! Form::label('date', '何日までにやせたい？') !!}
                     </div>
             
                     <div class="form-group col-xs-4">
