@@ -54,14 +54,22 @@ $cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)/$hi;
 
 print $cal . PHP_EOL;
 
-
-
-
-//$day_cal = DB::table('battle')->where('user_id','1')->value('cal');
-//print $day_cal;
-
+$day_cal = 0;
+for ($i=1; $i<1000; $i++) {
+    
+    $cal = DB::table('battle')->where('user_id','2')->where('id',"$i")->value('cal');
+    
+    $day_cal += $cal;
+    
+    
+}
+print $day_cal;
 
 ?>
+
+
+
+
 </div>
 
                 </li>
