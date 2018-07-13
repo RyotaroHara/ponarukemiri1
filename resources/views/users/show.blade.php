@@ -15,7 +15,7 @@
                 
                 </li>
                 <li>
-                    <div class="status-label">'{{$user->Weight-$user->IdealWeight}}'kg減量まであと'{{($user->Weight-$user->IdealWeight)*7200}}'kcal!!</div>
+                    <div class="status-label">{{$user->Weight-$user->IdealWeight}}kg減量まであと{{($user->Weight-$user->IdealWeight)*7200}}kcal!!</div>
                     <div class=>{{$user->year}}年{{$user->month}}月{{$user->day}}日までに結果が欲しい</div>
 
                 </li>
@@ -54,13 +54,17 @@ $cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)/$hi;
 
 print $cal . PHP_EOL;
 
-$day_cal = DB::table('battle')->where('user_id','1')->value('cal');
+$day_cal = 0;
+for ($i=1; $i<1000; $i++) {
+    
+    $cal = DB::table('battle')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
+    
+    $day_cal += $cal;
+    
+    
+}
 print $day_cal;
 
-
-echo "# 配列の値の合計を計算\n";
-$a = array(DB::table('battle')->where('user_id','1')->value('cal'));
-print_r($a);
 ?>
 
 
