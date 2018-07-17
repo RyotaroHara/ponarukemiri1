@@ -259,5 +259,6 @@ class ExercisesTableSeeder extends Seeder
         
         
         
+        
     }
 }

@@ -14,12 +14,25 @@ class ExerciseController extends Controller{
 
 public function place($name)
     {
-        $menu = Exercise::select('id','exe_name')->where('place',  $name)->get();
+        $menu = Exercise::select('id','list')->where('place',  $name)->get();
         
         return view('Exercise.exercise', [
                 'menu' => $menu,
             ]);
     }
+
+public function index($id)
+    {   
+        $content = Exercise::select('id','exe_name', 'explanation')->where('id', $id)->get();
+    
+        return view('Exercise.show' , [
+            'content' =>$content,
+            ]);
+    }
+    
+    
+    
+    
 
 public function cafeteria()
     {
