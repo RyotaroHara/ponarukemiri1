@@ -23,7 +23,8 @@
                <p>ふくらはぎのストレッチ</p>
              </div>
                <div class=images1>
-                 <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:430px;">
+                 <img class="card-img-top" src="{{ asset('images/cafeteria/otameshi.jpg') }}" alt="otameshi" style="width:337px;">
+                 <img class="card-img-top" src="{{ asset('images/office/top_office1.jpg') }}" alt="office" style="width:337px;">
                </div>
                   <div class=ex_text1>
                      <p>デスクワークでは夕方気になるのが足のむくみ。<br>
