@@ -18,11 +18,20 @@
             {!! Form::label('cal', 'カロリー') !!}
             {!! Form::number('cal', old('cal'), ['class' => 'form-control']) !!}
             <div class="text-right">
-            {!! Form::submit('攻撃', ['class' => 'btn btn-success']) !!}
+            {!! Form::submit('攻撃', ['sclass' => 'btn btn-success']) !!}
             </div>  
         {!! Form::close() !!}
-        
-        </div>
+<?php
+        $day_cal = 0;
+        for ($i=1; $i<1000; $i++) {
+    
+        $cal = DB::table('battle')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
+    
+        $day_cal += $cal;
+        }
+    print $day_cal;
+    ?>
+            </div>
         
   </div>
   

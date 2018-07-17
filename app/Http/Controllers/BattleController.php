@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Battle;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class BattleController extends Controller
 {
+    
     protected $redirectTo = 'battle.battle';
 
     protected function validator(array $data)

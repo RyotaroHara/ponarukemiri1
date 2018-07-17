@@ -65,15 +65,21 @@ Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('sign
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
 
 //battle post
-Route::post('battle/battle', 'BattleController@cafeteria_genre')->name('battle.post');
+Route::get('battle', 'BattleController@battle')->name('battle.post');
+Route::post('battle', 'BattleController@battle');
+Route::resource('users', 'UsersController');
+Route::resource('battle', 'BattleController');
 
+
+    
 // Login authentication
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function () {
-Route::resource('users', 'UsersController', ['only' => ['show']]);
+Route::resource('users', 'UsersController', ['only' => ['show','battle']]);
+Route::resource('battle', 'BattleController');
 
     
 });
