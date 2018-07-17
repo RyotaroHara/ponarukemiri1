@@ -14,6 +14,7 @@ class ExercisesTableSeeder extends Seeder
         $exercise= new \App\Exercise([
             'id'=>'1',
             'exe_name'=>'ふくらはぎのストレッチ',   
+            'pic_name'=>'ab.jpg',
             'explanation'=>'デスクワークでは夕方気になるのが足のむくみ。
                         ふくらはぎのストレッチを行い、事前に防ぎましょう。
                         真っ直ぐ立った状態から片足を後ろに引き、前の足に体重をかけます。
@@ -25,7 +26,8 @@ class ExercisesTableSeeder extends Seeder
             
         $exercise= new \App\Exercise([
             'id'=>'2',
-            'exe_name'=>'ふくらはぎの引き締め',   
+            'exe_name'=>'ふくらはぎの引き締め',
+            'pic_name'=>'calf.jpg',
             'explanation'=>'こちらも食事中にできるエクササイズ!
                         つま先をゆっくり上げて5秒キープ、
                         かかとを上げて5秒キープを繰り返しましょう。',
@@ -36,6 +38,7 @@ class ExercisesTableSeeder extends Seeder
         $exercise= new \App\Exercise([
             'id'=>'3',
             'exe_name'=>'ヒップアップ',   
+            'pic_name'=>'hips.jpg',
             'explanation'=>'食事中の短い時間でも気軽にヒップアップ！
                        お尻の穴を締めるように意識して、全体に力を入れて30秒キープしましょう。
                        カロリーを摂取している間にも運動を欠かさないことが、ダイエットへのコツです。',

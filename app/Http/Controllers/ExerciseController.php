@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\Exercise;
 
 class ExerciseController extends Controller{
+    
+
 
 public function place($name)
     {
