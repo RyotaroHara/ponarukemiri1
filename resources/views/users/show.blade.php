@@ -12,12 +12,10 @@
             <ul>
                 <li>
                     <div class="status-label">理想の身体を手に入れろ！！</div>
-                
                 </li>
                 <li>
                     <div class="status-label">{{$user->Weight-$user->IdealWeight}}kg減量まであと{{($user->Weight-$user->IdealWeight)*7200}}kcal!!</div>
                     <div class=>{{$user->year}}年{{$user->month}}月{{$user->day}}日までに結果が欲しい</div>
-
                 </li>
                 <li>
                     <div class="status-label">あなたの基礎代謝は <br>
@@ -30,14 +28,13 @@
                     {{(9.247)*($user->Weight)+(3.098)*($user->height)-(4.33)*($user->age)+447.593}}kcalです。
                     
                     @endif 
-                    
-                    
-                    
+                　　
                     </div>
                 </li>
                 <li>
                      <div class="staus-label">
-    
+
+
 <?php
 //予定日（$finish）と登録日（$start）の日数差を出す計算　（日数差$hi）
 $finish = strtotime("{$user->year}-{$user->month}-{$user->day}");
@@ -54,7 +51,7 @@ $day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $day_cal_amari)/$h
 
 print "<br />今日のノルマまで、あと".$day_cal."kcal";
 
-//今日消費したカロリー（$sum_cal）の計算
+//今日消費したカロリー（$sum_cal）の計算　
 $sum_cal = 0;
 for ($i=2; $i<1000; $i++) {
     

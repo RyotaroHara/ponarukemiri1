@@ -13,6 +13,15 @@
 
 Route::get('/', 'WelcomeController@index');
 
+
+Route::get('Exercise/{space_name}', 'ExerciseController@space')->name('Exercise.{space_name}');
+
+
+
+
+
+
+
 //Exercise cafeteria
 Route::get('Exercise/cafeteria', 'ExerciseController@cafeteria')->name('Exercise.cafeteria');
 //cafeteria nakami

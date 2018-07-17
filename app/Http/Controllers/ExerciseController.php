@@ -9,6 +9,30 @@ use App\Http\Controllers\Controller;
 use App\Item;
 
 class ExerciseController extends Controller{
+    
+    
+    
+public function space()
+    {
+        $space_id = '{space_id}' ;
+        
+        return view('Exercise.basic');
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 public function cafeteria()
     {
