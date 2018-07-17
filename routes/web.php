@@ -14,6 +14,16 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('place/{name)', 'ExerciseController@place');
+<<<<<<< HEAD
+=======
+
+//Route::get('place/{place}', 'ExerciseController@place')->name('Exercise.place');
+
+Route::get('Exercises/{id}','ExerciseControler@index')->name('Exercise.index');
+
+
+
+>>>>>>> dc16fa2c4a5137c94dc65ae602fd07e3a4ec36f9
 
 //Exercise cafeteria
 Route::get('Exercise/cafeteria', 'ExerciseController@cafeteria')->name('Exercise.cafeteria');
