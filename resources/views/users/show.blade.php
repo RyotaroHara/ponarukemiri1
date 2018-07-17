@@ -56,14 +56,13 @@ print "<br />今日のノルマまで、あと".$day_cal."kcal";
 
 //今日消費したカロリー（$sum_cal）の計算
 $sum_cal = 0;
-for ($i=2; $i<1000; $i++) {
+for ($i=1; $i<1000; $i++) {
     
     $cal = DB::table('battle')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
     
     $sum_cal += $cal;
 }
 print "<br />今日は".$sum_cal."kcal消費したよ";
-
 
 //HPゲージの作成
 $damage = $sum_cal*100/$day_cal;

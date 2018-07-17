@@ -6,9 +6,18 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 
-use App\Item;
+use App\Exercise;
 
 class ExerciseController extends Controller{
+
+public function place($name)
+    {
+        $menu = Exercise::select('id','exe_name')->where('place',  $name)->get();
+        
+        return view('Exercise.exercise', [
+                'menu' => $menu,
+            ]);
+    }
 
 public function cafeteria()
     {
