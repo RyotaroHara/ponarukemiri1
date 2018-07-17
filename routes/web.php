@@ -13,14 +13,7 @@
 
 Route::get('/', 'WelcomeController@index');
 
-
-Route::get('Exercise/{space_name}', 'ExerciseController@space')->name('Exercise.{space_name}');
-
-
-
-
-
-
+Route::get('place/{name)', 'ExerciseController@place');
 
 //Exercise cafeteria
 Route::get('Exercise/cafeteria', 'ExerciseController@cafeteria')->name('Exercise.cafeteria');
