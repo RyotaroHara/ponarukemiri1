@@ -11,7 +11,7 @@ class ExercisesTableSeeder extends Seeder
      */
     public function run()
     {
-        $exercise= new \App\Exercises([
+        $exercise= new \App\Exercise([
             'id'=>'1',
             'exe_name'=>'ふくらはぎのストレッチ',   
             'explanation'=>'デスクワークでは夕方気になるのが足のむくみ。
@@ -23,7 +23,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'cafeteria' ]);
             $exercise->save();
             
-        $exercise= new \App\Exercises([
+        $exercise= new \App\Exercise([
             'id'=>'2',
             'exe_name'=>'ふくらはぎの引き締め',   
             'explanation'=>'こちらも食事中にできるエクササイズ!
@@ -33,7 +33,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'cafeteria' ]);
             $exercise->save();
             
-        $exercise= new \App\Exercises([
+        $exercise= new \App\Exercise([
             'id'=>'3',
             'exe_name'=>'ヒップアップ',   
             'explanation'=>'食事中の短い時間でも気軽にヒップアップ！
@@ -43,7 +43,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'cafeteria' ]);
             $exercise->save();
         
-        $exercise= new \App\Exercises([
+        $exercise= new \App\Exercise([
             'id'=>'4',
             'exe_name'=>'足首ストラップ',   
             'explanation'=>'足首をぐるぐると回すことで、むくみ軽減、冷え症改善に繋がります。
@@ -53,7 +53,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'cafeteria' ]);
             $exercise->save();
             
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'5',
             'exe_name'=>'いただきますでバストアップ',   
             'explanation'=>'その名の通り、いただきますをしながらバストアップを目指しましょう。
@@ -64,7 +64,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'cafeteria' ]);
             $exercise->save();
             
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'6',
             'exe_name'=>'小顔になるExercise',   
             'explanation'=>'歯茎をなぞるようにして、舌をぐるぐる回しましょう。
@@ -75,7 +75,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'office' ]);
             $exercise->save();
             
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'7',
             'exe_name'=>'ふくらはぎの引き締め',   
             'explanation'=>'つま先をゆっくり上げて5秒キープ、
@@ -85,7 +85,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'office' ]);
             $exercise->save();
             
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'8',
             'exe_name'=>'太ももの引き締め',   
             'explanation'=>'浅めに腰かけ、膝にクッションや雑誌を挟んでみましょう！
@@ -95,7 +95,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'office' ]);
             $exercise->save();
             
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'9',
             'exe_name'=>'ヒップアップ',   
             'explanation'=>'お尻の穴を締めるように意識して、全体に力を入れて30秒キープしましょう！',
@@ -104,7 +104,7 @@ class ExercisesTableSeeder extends Seeder
             $exercise->save();
             
             
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'10',
             'exe_name'=>'ウエストの引き締め',   
             'explanation'=>'まずはゆっくり呼吸をしてみましょう。
@@ -114,7 +114,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'office' ]);
             $exercise->save();
         
-        $exercise= new \App\Exercises([
+        $exercise= new \App\Exercise([
             'id'=>'11',
             'exe_name'=>'二の腕の引き締め',   
             'explanation'=>'始めに、両手を胸の前でしっかり組みましょう。
@@ -123,7 +123,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'office' ]);
             $exercise->save();
         
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'12',
             'exe_name'=>'空気椅子',   
             'explanation'=>'下半身全体に引き締め効果のある簡単エクササイズです! 
@@ -133,7 +133,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'office' ]);
             $exercise->save();
             
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'13',
             'exe_name'=>'肩のストレッチ',   
             'explanation'=>'PCの見過ぎで肩こりに悩まされている人向けのストレッチです。
@@ -145,7 +145,7 @@ class ExercisesTableSeeder extends Seeder
             $exercise->save();
             
             
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'14',
             'exe_name'=>'頭のマッサージ',   
             'explanation'=>'目が疲れた時は、頭のマッサージをしてみましょう。頭皮が固くなっていたら、疲労が蓄積している証拠です。
@@ -156,7 +156,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'office' ]);
             $exercise->save();
         
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'15',
             'exe_name'=>'PC斜め打ち',   
             'explanation'=>'PCに対して正面に座るのではなく、全身を椅子ごと斜めに向けましょう。
@@ -165,7 +165,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'office' ]);
             $exercise->save();
         
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'16',
             'exe_name'=>'階段を上る(朝:2階から4階へ、昼休憩:4階から9階へ)',   
             'explanation'=>'階段を上る時は、前かがみにならないよう背筋をまっすぐに伸ばし、
@@ -176,7 +176,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'way' ]);
             $exercise->save();
             
-        $exercise= new \App\Exercises([
+        $exercise= new \App\Exercise([
             'id'=>'17',
             'exe_name'=>'階段を下る(朝/昼休憩:9階から4階へ、帰り/4階から2階へ)',   
             'explanation'=>'下る時も背筋をまっすぐにすることを意識しながら、つま先から降ろします。
@@ -185,7 +185,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'way' ]);
             $exercise->save();
             
-        $exercise= new \App\Exercises([
+        $exercise= new \App\Exercise([
             'id'=>'18',
             'exe_name'=>'PCの持ち方',   
             'explanation'=>'「誰かにPCの画面を見せたい」
@@ -196,7 +196,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'way' ]);
             $exercise->save();
             
-        $exercise= new \App\Exercises([
+        $exercise= new \App\Exercise([
             'id'=>'19',
             'exe_name'=>'電車でのつま先立ち',   
             'explanation'=>'つり革や手すりにつかまり、最寄り駅から二子玉川駅まで
@@ -206,7 +206,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'way' ]);
             $exercise->save();
         
-        $exercise= new \App\Exercises([
+        $exercise= new \App\Exercise([
             'id'=>'20',
             'exe_name'=>'おなか引き締め',   
             'explanation'=>'"ずっと鍛えるのはちょっとしんどい"、という人におすすめなのが、
@@ -219,7 +219,7 @@ class ExercisesTableSeeder extends Seeder
             'place'=>'way' ]);
             $exercise->save();
             
-         $exercise= new \App\Exercises([
+         $exercise= new \App\Exercise([
             'id'=>'21',
             'exe_name'=>'内ももシェイプアップ',   
             'explanation'=>'座った状態で足先をクロスし、膝と膝で押し合います。
