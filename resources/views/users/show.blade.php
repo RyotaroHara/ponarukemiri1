@@ -17,10 +17,7 @@
                 
                 <li>
                     <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>アドレス登録</title>
-</head>
+
 <body>
     <form action="/battles" method="post">
     エクササイズ選択：<br />
@@ -73,11 +70,19 @@ $day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $day_cal_amari)/$h
 
 print "<br />今日のノルマまで、あと".$day_cal."kcal";
 
+//今日の範囲を算出
+//$today_amari = time()%(24*60*60);
+//$today_start = time()-$today_amari;
+//$today_end = time()-$today_amari+(24*60*60);
+
+$timestamp = time() ;
+$today = date( "Y-m-d" , $timestamp ) ;
+echo $today;
 //今日消費したカロリー（$sum_cal）の計算　
 $sum_cal = 0;
 for ($i=1; $i<1000; $i++) {
     
-    $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
+    $cal = DB::table('battles')->where('user_id',"$user->id")->whereDate('created_at', '=', "$today")->where('id',"$i")->value('cal');
     
     $sum_cal += $cal;
 }
