@@ -15,7 +15,7 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('place/{name)', 'ExerciseController@place');
 
-Route::get('Exercises/{id}','ExerciseControler@index')->name('Exercise.index');
+Route::get('Exercises/{id}','ExerciseController@index')->name('Exercise.index');
 
 //Exercise cafeteria
 Route::get('Exercise/cafeteria', 'ExerciseController@cafeteria')->name('Exercise.cafeteria');
@@ -56,9 +56,9 @@ Route::get('office/office9', 'ExerciseController@office9')->name('office.office9
 Route::get('office/office10', 'ExerciseController@office10')->name('office.office10');
 
 //battle page
-Route::get('battle/battle', 'BattleController@cafeteria_genre')->name('battle.battle');
-Route::get('battle/office', 'BattleController@office_genre')->name('battle.office');
-Route::get('battle/way', 'BattleController@way_genre')->name('battle.way');
+Route::get('battle/battle', 'BattlesController@cafeteria_genre')->name('battle.battle');
+Route::get('battle/office', 'BattlesController@office_genre')->name('battle.office');
+Route::get('battle/way', 'BattlesController@way_genre')->name('battle.way');
 
 //fitnessgoods 
 Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnessgoods.ichiba');
@@ -69,11 +69,11 @@ Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('sign
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
 
 //battle post
-Route::get('battle', 'BattleController@battle')->name('battle.post');
-Route::post('battle', 'BattleController@battle');
+Route::get('battles', 'BattlesController@battle')->name('battle.post');
+Route::post('battles', 'BattlesController@battle');
 Route::resource('users', 'UsersController');
-Route::resource('battle', 'BattleController');
-
+Route::resource('battles', 'BattleController');
+// 
 
     
 // Login authentication
@@ -83,7 +83,15 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function () {
 Route::resource('users', 'UsersController', ['only' => ['show','battle']]);
-Route::resource('battle', 'BattleController');
+Route::resource('battles', 'BattlesController');
+
+});
+
+// cal 入力
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
+    Route::resource('battles', 'BattlesController', ['only' => ['store', 'destroy']]);
+});
 
     
-});

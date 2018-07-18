@@ -28,5 +28,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    
+    public function battles()
+    {
+        return $this->hasMany(Battle::class);
+    }
+
+
+
 }
+

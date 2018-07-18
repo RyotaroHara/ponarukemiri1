@@ -13,6 +13,28 @@
                 <li>
                     <div class="status-label">理想の身体を手に入れろ！！</div>
                 </li>
+                
+                
+                <li>
+                    <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>アドレス登録</title>
+</head>
+<body>
+    <form action="/battles" method="post">
+    エクササイズ選択：<br />
+  
+    {!! Form::open(['route' => 'battles.store']) !!}
+    <input type="hidden" name="cal" value="12">
+                    {!! Form::submit('腕立て') !!}
+    {!! Form::close() !!}
+</form>
+</body>
+</html>
+                </li>
+                
+                
                 <li>
                     <div class="status-label">{{$user->Weight-$user->IdealWeight}}kg減量まであと{{($user->Weight-$user->IdealWeight)*7200}}kcal!!</div>
                     <div class=>{{$user->year}}年{{$user->month}}月{{$user->day}}日までに結果が欲しい</div>
@@ -55,7 +77,7 @@ print "<br />今日のノルマまで、あと".$day_cal."kcal";
 $sum_cal = 0;
 for ($i=1; $i<1000; $i++) {
     
-    $cal = DB::table('battle')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
+    $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
     
     $sum_cal += $cal;
 }
