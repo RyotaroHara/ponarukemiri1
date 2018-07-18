@@ -42,5 +42,19 @@ class BattleController extends Controller
     {
         return view('battle.basic page.way battle');
     }
+    
+    
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'cal' => 'required|max:3',
+        ]);
+        
+        $request->user()->battles()->create([
+            'cal' => $request->cal,
+        ]);
+    
+        return redirect('/');
+    }
 
 }

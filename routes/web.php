@@ -69,11 +69,11 @@ Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('sign
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
 
 //battle post
-Route::get('battle', 'BattleController@battle')->name('battle.post');
-Route::post('battle', 'BattleController@battle');
+Route::get('battles', 'BattleController@battle')->name('battle.post');
+Route::post('battles', 'BattleController@battle');
 Route::resource('users', 'UsersController');
-Route::resource('battle', 'BattleController');
-
+Route::resource('battles', 'BattleController');
+// 
 
     
 // Login authentication
@@ -83,7 +83,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function () {
 Route::resource('users', 'UsersController', ['only' => ['show','battle']]);
-Route::resource('battle', 'BattleController');
+Route::resource('battles', 'BattleController');
 
     
 });

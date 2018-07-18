@@ -5,16 +5,13 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
+
 class Battle extends Model
 {
-    use Notifiable;
+    protected $fillable = ['cal'];
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'cal',
-    ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
