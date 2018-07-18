@@ -22,16 +22,12 @@
 <title>アドレス登録</title>
 </head>
 <body>
-<form action="battle_button.php" method="post">
-  エクササイズ選択：<br />
-  <input type="hidden" name="cal" value="350" />
-  <input type="submit" value="腕立て" />
+    <form action="/battles" method="post">
+    エクササイズ選択：<br />
   
     {!! Form::open(['route' => 'battles.store']) !!}
-                    <div class="form-group">
-                        {!! Form::textarea('cal', old('cal'), ['class' => 'form-control', 'rows' => '5']) !!}
-                    </div>
-                    {!! Form::submit('Post', ['class' => 'btn btn-primary btn-block']) !!}
+    <input type="hidden" name="cal" value="12">
+                    {!! Form::submit('腕立て') !!}
     {!! Form::close() !!}
 </form>
 </body>
