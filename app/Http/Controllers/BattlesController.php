@@ -16,6 +16,7 @@ class BattlesController extends Controller
     {
         return Validator::make($data, [
             'cal'=>'required|integer|between:1,1000|digits_between:1,2,3,4',
+            'num'=>'required|integer|between:1,1000|digits_between:1,2,3,4',
         ]);
     }
     
@@ -23,6 +24,7 @@ class BattlesController extends Controller
     {
         return Battle::create([
             'cal' => $data['cal'],
+            'num' => $data['num'],
         ]);
     }
     
@@ -49,10 +51,12 @@ class BattlesController extends Controller
 
         $this->validate($request, [
             'cal' => 'required|max:255',
+            'num' => 'required|max:255',
         ]);
         
         $request->user()->battles()->create([
             'cal' => $request->cal,
+            'num' => $request->num,
         ]);
         return redirect('/users/'.$request->user()->id);
     }
