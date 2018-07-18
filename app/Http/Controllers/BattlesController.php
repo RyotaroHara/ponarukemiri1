@@ -7,7 +7,7 @@ use App\Battle;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BattleController extends Controller
+class BattlesController extends Controller
 {
     
     protected $redirectTo = 'battle.battle';
@@ -41,6 +41,20 @@ class BattleController extends Controller
     public function way_genre()
     {
         return view('battle.basic page.way battle');
+    }
+    
+    
+    public function store(Request $request)
+    {
+
+        $this->validate($request, [
+            'cal' => 'required|max:255',
+        ]);
+        
+        $request->user()->battles()->create([
+            'cal' => $request->cal,
+        ]);
+        return redirect('/users/'.$request->user()->id);
     }
 
 }

@@ -14,7 +14,6 @@
   </div>
   <div class="col-7 col-md-5">
         <div class=medium1 style="padding:10px;width:450px;height:570px;">
-            @include('Exercise.link_to_exercise."<?php{$space_id}?>"')
         </div>
   </div>
   

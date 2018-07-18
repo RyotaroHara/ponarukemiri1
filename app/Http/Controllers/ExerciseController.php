@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Exercise;
 
 class ExerciseController extends Controller{
-    
+
 
 
 public function place($name)
@@ -39,7 +39,7 @@ public function cafeteria()
         return view('Exercise.basic page.cafeteria page');
     }
 
-    
+
     public function cafeteria1()
     {
         return view('Exercise.exercise explanation.cafeteria.cafeteria1');
