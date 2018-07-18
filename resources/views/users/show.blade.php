@@ -26,8 +26,10 @@
     エクササイズ選択：<br />
   
     {!! Form::open(['route' => 'battles.store']) !!}
-    <input type="hidden" name="cal" value={{ ($user->Weight)*(2/3)*(0.7/3600)*3.8 }} >
-                    {!! Form::submit('腕立て 10回') !!}
+
+    <input type="hidden" name="cal" value="{{ variant_fix(($user->Weight)*(35*3.4/216)*(0.7/3600)*3.8) }}">
+    <input type="number" name="num" value="">回
+                    {!! Form::submit('腕立て') !!}をした。
     {!! Form::close() !!}
 </form>
 </body>
@@ -77,9 +79,11 @@ print "<br />今日のノルマまで、あと".$day_cal."kcal";
 $sum_cal = 0;
 for ($i=1; $i<1000; $i++) {
     
-    $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
-    
-    $sum_cal += $cal;
+
+    $cal = DB::table('battles')->where('user_id',"$user->id")->whereDate('created_at', '=', "$today")->where('id',"$i")->value('cal');
+    $num = DB::table('battles')->where('user_id',"$user->id")->whereDate('created_at', '=', "$today")->where('id',"$i")->value('num');
+    $sum_cal += $cal*$num;
+
 }
 print "<br />今日は".$sum_cal."kcal消費したよ";
 

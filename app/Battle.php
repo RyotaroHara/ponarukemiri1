@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 
 class Battle extends Model
 {
-    protected $fillable = ['cal'];
+    protected $fillable = ['cal','num'];
 
     public function user()
     {
