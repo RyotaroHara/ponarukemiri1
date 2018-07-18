@@ -16,24 +16,6 @@
                 
                 
                 <li>
-                    <html>
-
-<body>
-    <form action="/battles" method="post">
-    エクササイズ選択：<br />
-  
-    {!! Form::open(['route' => 'battles.store']) !!}
-    <input type="hidden" name="cal" value="{{ variant_fix(($user->Weight)*(35*3.4/216)*(0.7/3600)*3.8) }}">
-    <input type="number" name="num" value="">回
-                    {!! Form::submit('腕立て') !!}をした。
-    {!! Form::close() !!}
-</form>
-</body>
-</html>
-                </li>
-                
-                
-                <li>
                     <div class="status-label">{{$user->Weight-$user->IdealWeight}}kg減量まであと{{($user->Weight-$user->IdealWeight)*7200}}kcal!!</div>
                     <div class=>{{$user->year}}年{{$user->month}}月{{$user->day}}日までに結果が欲しい</div>
                 </li>
@@ -51,6 +33,24 @@
                 　　
                     </div>
                 </li>
+                
+                <li>
+<html>
+
+<body>
+<form action="/battles" method="post">
+    エクササイズ選択：<br />
+
+    {!! Form::open(['route' => 'battles.store']) !!}
+    <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0005 }}">
+    <input type="number" name="num" value="">回
+                    {!! Form::submit('腕立て') !!}をした。
+    {!! Form::close() !!}
+</form>
+</body>
+</html>
+                </li>
+                
                 <li>
                      <div class="staus-label">
 
@@ -65,7 +65,7 @@ $hi = ($sa - $amari)/(24*60*60);
 
 print "期日まであと".$hi."日";
 
-//1日あたりの消費カロリー（$day_cal）の計算　
+//1日あたりの消費カロリー（$day_cal）の計算
 $day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)%$hi;
 $day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $day_cal_amari)/$hi;
 
@@ -96,6 +96,20 @@ print "<br />あと".$nokori."kcal";
 ?>
 <meter class="vertical" min="0" max="100" value="<?php print 100 - $damage?>">100%</meter>
 
+<?php
+$all_cal = 0;
+for ($i=1; $i<2000; $i++) {
+    
+    $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
+    $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
+    $all_cal += $cal*$num;
+}
+
+$level = floor($all_cal/((("{$user->Weight}"-"{$user->IdealWeight}")*7200)/100));
+
+print "<br />今".$level."レベルだよ";
+
+?>
 
 </div>
 

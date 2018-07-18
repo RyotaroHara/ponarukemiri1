@@ -15,8 +15,8 @@ class BattlesController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'cal'=>'required|integer|between:1,1000|digits_between:1,2,3,4',
-            'num'=>'required|integer|between:1,1000|digits_between:1,2,3,4',
+            'cal'=>'required|integer|between:1,10000|digits_between:1,2,3,4,5',
+            'num'=>'required|integer|between:1,10000|digits_between:1,2,3,4,5',
         ]);
     }
     
