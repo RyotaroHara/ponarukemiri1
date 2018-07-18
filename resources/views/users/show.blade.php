@@ -23,7 +23,7 @@
     エクササイズ選択：<br />
   
     {!! Form::open(['route' => 'battles.store']) !!}
-    <input type="hidden" name="cal" value="{{ ($user->Weight)*(2/3)*(0.7/3600)*3.8 }}">
+    <input type="hidden" name="cal" value="{{ variant_fix(($user->Weight)*(35*3.4/216)*(0.7/3600)*3.8) }}">
     <input type="number" name="num" value="">回
                     {!! Form::submit('腕立て') !!}をした。
     {!! Form::close() !!}
