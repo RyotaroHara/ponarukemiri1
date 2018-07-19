@@ -8,6 +8,7 @@
         <div class="name text-center">
             <h1>{{ $user->name }}</h1>
         </div>
+        
         <div class="status text-center">
             <ul>
                 
@@ -26,13 +27,12 @@
                     {{(9.247)*($user->Weight)+(3.098)*($user->height)-(4.33)*($user->age)+447.593}}kcalです。
                     
                     @endif 
-                    </div>
-                    <div class="status-label">　
-                　　あなたの除脂肪体重は{{ ($user->Weight)*(100-($user->fat))/100 }}kg <br>
-                　　あなたの体脂肪率をもとに計算した基礎代謝は {{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。
-                　  <br>
-                　  運動強度が{{ $user->ExerciseIntensity}}のあなたの一日の消費カロリーは
-                　  
+                    </div></li>
+                    <li>
+                    <div class="status-label">
+                        あなたの除脂肪体重は{{ ($user->Weight)*(100-($user->fat))/100 }}kg <br> <br>
+                        あなたの体脂肪率をもとに計算した基礎代謝は {{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。<br> <br>
+                        運動強度が{{ $user->ExerciseIntensity}}のあなたの一日の消費カロリーは
                 　  @if (($user->ExerciseIntensity)==1)
                 　  
                 　  {{ 370+21.6*($user->Weight)*(100-$user->fat)/100*1.2 }}
@@ -47,7 +47,7 @@
                 　  {{ 370+21.6*($user->Weight)*(100-$user->fat)/100*1.9 }}
                 　  @endif
                 　  <br>
-                　  </div>
+                　  </div></li>
 
 <html>
 
