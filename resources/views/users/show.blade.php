@@ -60,26 +60,30 @@
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0005 }}">
     <input type="number" name="num" value="">回
     {!! Form::submit('腕立て') !!}をした。 <br>
-    
+    {!! Form::close() !!}
+    {!! Form::open(['route' => 'battles.store']) !!}
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.1 }}">
     <input type="hidden" name="num" value="1">
     {!! Form::submit('4階から9階まで階段であがる') !!} <br>
-    
+    {!! Form::close() !!}
+    {!! Form::open(['route' => 'battles.store']) !!}
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0875 }}">
     <input type="hidden" name="num" value="1">
     {!! Form::submit('9階から4階まで階段でおりる') !!}<br>
-    
+    {!! Form::close() !!}
+    {!! Form::open(['route' => 'battles.store']) !!}
     <input type="hidden" name="cal" value="2.7">
     <input type="hidden" name="num" value="1">
     {!! Form::submit('電車内でつま先立ち一分') !!}<br>
-    
-    
+    {!! Form::close() !!}
+    {!! Form::open(['route' => 'battles.store']) !!}    
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.29 }}">
     <input type="hidden" name="num" value="1">
     {!! Form::submit('二子玉川駅からクリムゾンハウスまで歩く') !!}<br>
-    
-    
     {!! Form::close() !!}
+    
+    
+    
     </div>
 </form>
 </body>
