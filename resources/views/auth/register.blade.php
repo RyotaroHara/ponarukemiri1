@@ -32,10 +32,22 @@
                         {!! Form::label('IdealWeight', 'IdealWeight') !!}
                         {!! Form::number('IdealWeight', old('IdealWeight'), ['class' => 'form-control']) !!}
                     </div>
-                    <div class="form-group　col-xs-6 ">
-                        {!! Form::label('date', '何日までにやせたい？') !!}
+                    <div class="form-group col-xs-6 col-xs-offset-6">
+                        {!! Form::label('fat', '体脂肪率(%)') !!}
+                        {!! Form::number('fat', old('fat'), ['class' => 'form-control']) !!}
                     </div>
+                    <div class="form-group col-xs-12">
+                        {!! Form::label('ExerciseIntensity', '運動強度 （1＝ほぼ運動しない　　2＝週1～3回軽い運動する　
+                        3＝週3～5回運動する　　4＝アスリート並みの運動をする)') !!}
+                        {!! Form::number('ExerciseIntensity', old('ExerciseIntensity'), ['class' => 'form-control']) !!}
+                    </div>
+                  
             
+                    <div class="form-group　col-xs-12 ">
+                                {!! Form::label('date', '何日までにやせたい？') !!}
+
+                    </div>
+
                     <div class="form-group col-xs-4">
                         {!! Form::label('year', 'year') !!}
                         {!! Form::number('year', old('year'), ['class' => 'form-control']) !!}
@@ -50,17 +62,17 @@
                     </div>    
                     
 
-                    <div class="form-group">
+                    <div class="form-group col-xs-12">
                         {!! Form::label('password', 'パスワード') !!}
                         {!! Form::password('password', ['class' => 'form-control']) !!}
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group col-xs-12">
                         {!! Form::label('password_confirmation', 'パスワード（確認）') !!}
                         {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                     </div>
                                         
-                    <div class="text-right">
+                    <div class="text-right col-xs-12 ">
                         {!! Form::submit('登録する', ['class' => 'btn btn-success']) !!}
                     </div>
                 {!! Form::close() !!}
