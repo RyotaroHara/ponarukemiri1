@@ -1,3 +1,5 @@
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -13,17 +15,19 @@
         </div>
   </div>
   <div class="col-7 col-md-5">
-        <div class=medium1 style="padding:10px;width:450px;height:570px;">
-            @include('Exercise.link_to_exercise."<?php{$space_id}?>"')
+        <div class=medium1 style="padding:10px;width:450px;height:570px;">  
+           @foreach ($menus as $menu)
+                <li><a href="{{ route('Menu', ['id' => $menu->id]) }}">{{$menu->exe_name}}</a></li>
+           @endforeach
         </div>
   </div>
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-            
+         
         </div>
-            
   </div>
+  
 </div>    
 @endif
 

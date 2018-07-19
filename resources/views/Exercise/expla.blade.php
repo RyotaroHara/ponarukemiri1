@@ -14,24 +14,26 @@
   </div>
   <div class="col-7 col-md-5">
         <div class=medium1 style="padding:10px;width:450px;height:570px;">
-            @include('Exercise.link_to_exercise.links_office')
+            
+            @foreach($genres as $genre)
+                <p><a href="{{ url('Exercises/'. $genre->id) }}">{{ $genre->exe_name }}</a></p>
+            @endforeach
+         
         </div>
   </div>
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
              <div class=title_text>
-                <p>ふくらはぎの引き締め</p>
+                <p>{{$expla->exe_name}}</p>
              </div>
                  <div class=images>
                    <img class="card-img-top" src="{{ asset('images/office/calf.jpg') }}" alt="otameshi" style="width:430px;">
                  </div>
                      <div class=ex_text>
-                        <p>つま先をゆっくり上げて5秒キープ、<br>
-                           かかとを上げて5秒キープを繰り返しましょう!<br>
-                            むくみ防止効果があります。</p>
+                       <p>{{$expla->explanation}}</p>;    
                      </div>
-        </div>
+                </div>
   </div>
 </div>
   
