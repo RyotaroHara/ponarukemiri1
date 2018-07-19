@@ -16,7 +16,7 @@
                     <div class=>{{$user->year}}年{{$user->month}}月{{$user->day}}日までに結果が欲しい</div>
                 </li>
                 <li>
-                    <div class="status-label">あなたの基礎代謝は <br>
+                    <div class="status-label">あなたの骨格から計算した基礎代謝は <br>
                     
                     @if (($user->sex)==1)
                     
@@ -26,15 +26,34 @@
                     {{(9.247)*($user->Weight)+(3.098)*($user->height)-(4.33)*($user->age)+447.593}}kcalです。
                     
                     @endif 
-                　　
                     </div>
-                </li>
-                
-                <li>
+                    <div class="status-label">　
+                　　あなたの除脂肪体重は{{ ($user->Weight)*(100-($user->fat))/100 }}kg <br>
+                　　あなたの体脂肪率をもとに計算した基礎代謝は {{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。
+                　  <br>
+                　  運動強度が{{ $user->ExerciseIntensity}}のあなたの一日の消費カロリーは
+                　  
+                　  @if (($user->ExerciseIntensity)==1)
+                　  
+                　  {{ 370+21.6*($user->Weight)*(100-$user->fat)/100*1.2 }}
+                　  @elseif (($user->ExerciseIntensity)==2)
+                　  {{ 370+21.6*($user->Weight)*(100-$user->fat)/100*1.35 }}
+                　  
+                　  
+                　  @elseif (($user->ExerciseIntensity)==3)
+                　  {{ 370+21.6*($user->Weight)*(100-$user->fat)/100*1.55 }}
+                　  
+                　  @else (($user->ExerciseIntensity)==4)
+                　  {{ 370+21.6*($user->Weight)*(100-$user->fat)/100*1.9 }}
+                　  @endif
+                　  <br>
+                　  </div>
+
 <html>
 
 <body>
 <form action="/battles" method="post">
+　  <div class="status-label">　
     エクササイズ選択：<br />
 
     {!! Form::open(['route' => 'battles.store']) !!}
@@ -61,6 +80,7 @@
     
     
     {!! Form::close() !!}
+    </div>
 </form>
 </body>
 </html>
