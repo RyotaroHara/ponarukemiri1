@@ -7,8 +7,7 @@
                 <!-- <h1>OFFICEで健康ルンルンルン</h1> -->
                 
  
-                
-                
+               
                 
                  @if (!Auth::check())
                     <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg" style="margin-left:170px;margin-top:450px;">
