@@ -33,7 +33,11 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 // cal 入力
 Route::group(['middleware' => 'auth'], function () {
 
+
+    Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'edit']]);
+
     Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'battle']]);
+
     Route::resource('battles', 'BattlesController', ['only' => ['store', 'destroy']]);
 });
 // If authenticated
