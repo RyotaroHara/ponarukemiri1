@@ -10,10 +10,6 @@
         </div>
         <div class="status text-center">
             <ul>
-                <li>
-                    <div class="status-label">理想の身体を手に入れろ！！</div>
-                </li>
-                
                 
                 <li>
                     <div class="status-label">{{$user->Weight-$user->IdealWeight}}kg減量まであと{{($user->Weight-$user->IdealWeight)*7200}}kcal!!</div>
@@ -44,15 +40,25 @@
     {!! Form::open(['route' => 'battles.store']) !!}
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0005 }}">
     <input type="number" name="num" value="">回
-    {!! Form::submit('腕立て') !!}をした。}
+    {!! Form::submit('腕立て') !!}をした。 <br>
     
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.1 }}">
     <input type="hidden" name="num" value="1">
-    {!! Form::submit('4階から9階まで階段であがる') !!}
+    {!! Form::submit('4階から9階まで階段であがる') !!} <br>
     
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0875 }}">
     <input type="hidden" name="num" value="1">
-    {!! Form::submit('9階から4階まで階段でおりる') !!}
+    {!! Form::submit('9階から4階まで階段でおりる') !!}<br>
+    
+    <input type="hidden" name="cal" value="2.7">
+    <input type="hidden" name="num" value="1">
+    {!! Form::submit('電車内でつま先立ち一分') !!}<br>
+    
+    
+    <input type="hidden" name="cal" value="{{ ($user->Weight)*0.29 }}">
+    <input type="hidden" name="num" value="1">
+    {!! Form::submit('二子玉川駅からクリムゾンハウスまで歩く') !!}<br>
+    
     
     {!! Form::close() !!}
 </form>
@@ -86,7 +92,6 @@ print "<br />今日のノルマまで、あと".$day_cal."kcal";
 
 $timestamp = time() ;
 $today = date( "Y-m-d" , $timestamp ) ;
-echo $today;
 
 //今日消費したカロリー（$sum_cal）の計算　
 $sum_cal = 0;

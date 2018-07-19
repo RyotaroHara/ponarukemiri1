@@ -58,6 +58,8 @@ class RegisterController extends Controller
             'sex'=>'required|integer|between:1,2|digits:1',
             'height'=>'required|integer|between:100,200|digits:3',
             'age'=>'required|integer|between:1,100|digits_between:1,2',
+            'fat'=>'integer|between:1,50|digits_between:1,2',
+            'ExerciseIntensity'=>'present|integer|between:1,5|digits:1',
         ]);
     }
 
@@ -80,6 +82,8 @@ class RegisterController extends Controller
             'sex'=>$data['sex'],
             'height'=>$data['height'],
             'age'=>$data['age'],
+            'fat'=>$data['fat'],
+            'ExerciseIntensity'=>$data['ExerciseIntensity'],
         ]);
     }
 }
