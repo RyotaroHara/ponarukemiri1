@@ -70,6 +70,14 @@ $day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)%$hi;
 $day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $day_cal_amari)/$hi;
 
 print "<br />今日のノルマまで、あと".$day_cal."kcal";
+//今日の範囲を算出
+//$today_amari = time()%(24*60*60);
+//$today_start = time()-$today_amari;
+//$today_end = time()-$today_amari+(24*60*60);
+
+$timestamp = time() ;
+$today = date( "Y-m-d" , $timestamp ) ;
+echo $today;
 
 //今日消費したカロリー（$sum_cal）の計算　
 $sum_cal = 0;
