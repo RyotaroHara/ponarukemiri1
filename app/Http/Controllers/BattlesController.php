@@ -58,6 +58,7 @@ class BattlesController extends Controller
             'cal' => $request->cal,
             'num' => $request->num,
         ]);
+
         return redirect('/users/'.$request->user()->id);
     }
 
