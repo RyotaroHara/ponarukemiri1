@@ -14,7 +14,7 @@
                 
                 <?php
 $all_cal = 0;
-for ($i=1; $i<200; $i++) {
+for ($i=1; $i<1000; $i++) {
     
     $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
     $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
@@ -30,8 +30,8 @@ print "<br />".$user->year."年".$user->month."月".$user->day."日までに結�
                 ?>
                 
                 <li>
-                    <div class="status-label">ななさんの体重は{{$user->Weight}}kgです。</div>
-                    <div class="status-label">身長は{{$user->height}}です。</div>
+                    <div class="status-label">{{$user->Weight-$user->IdealWeight}}kg減量まであと{{($user->Weight-$user->IdealWeight)*7200}}kcal!!</div>
+                    <div class=>{{$user->year}}年{{$user->month}}月{{$user->day}}日までに結果が欲しい</div>
                 </li>
                 <li>
                     <div class="status-label">あなたの基礎代謝は <br>
@@ -83,7 +83,7 @@ print "期日まであと".$hi."日";
 $day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)%$hi;
 $day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $day_cal_amari)/$hi;
 
-print "<br />今日は".$day_cal."kcal消費しよう";
+print "<br />今日のノルマまで、あと".$day_cal."kcal";
 
 //今日の範囲を算出
 //$today_amari = time()%(24*60*60);
@@ -95,23 +95,18 @@ $today = date( "Y-m-d" , $timestamp ) ;
 //echo $today;
 //今日消費したカロリー（$sum_cal）の計算　
 $sum_cal = 0;
-for ($i=1; $i<200; $i++) {
+for ($i=1; $i<1000; $i++) {
     
     $cal = DB::table('battles')->where('user_id',"$user->id")->whereDate('created_at', '=', "$today")->where('id',"$i")->value('cal');
     $num = DB::table('battles')->where('user_id',"$user->id")->whereDate('created_at', '=', "$today")->where('id',"$i")->value('num');
     $sum_cal += $cal*$num;
 }
-print "<br />今日は".floor($sum_cal)."kcal消費したよ";
+print "<br />今日は".$sum_cal."kcal消費したよ";
 
 //HPゲージの作成
 $damage = $sum_cal*100/$day_cal;
 $nokori = $day_cal - $sum_cal;
-if ($nokori>0) {
-    print "<br />あと".floor($nokori)."kcal";
-}
-else{
-    print "<br />ノルマ達成！今日は寝て過ごそう！";
-}
+print "<br />あと".$nokori."kcal";
 ?>
 <meter class="vertical" min="0" max="100" value="<?php print 100 - $damage?>">100%</meter>
 
@@ -126,17 +121,6 @@ print "<br />今".$level."レベルだよ";
 
 </div>
 
-
-<?php if($level > 25){
-echo ' <img src = "images/cafeteria/otameshi.jpg" /> ' ;
-}else{
-echo ' <img src = "images/office/top_office1.jpg" /> ' ;
-}
-?>
-
-<img class="card-img-top" src="{{ asset('images/cafeteria/micky.jpg') }}" alt="otameshi" style="width:337px;">
-<img class="logo" src="/ponarukemiri1/nana2.jpg" alt="nana2">
-　　　　　　　   　　
                 </li>
             </ul>
         </div>

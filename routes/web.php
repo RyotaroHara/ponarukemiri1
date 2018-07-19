@@ -73,12 +73,7 @@ Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnes
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
 
-//battle post
-Route::get('battles', 'BattlesController@battle')->name('battle.post');
-Route::post('battles', 'BattlesController@battle');
-Route::resource('users', 'UsersController');
-Route::resource('battles', 'BattleController');
-// 
+
 
     
 // Login authentication
@@ -95,7 +90,7 @@ Route::resource('battles', 'BattlesController');
 // cal 入力
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
+    Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'battle']]);
     Route::resource('battles', 'BattlesController', ['only' => ['store', 'destroy']]);
 });
 
