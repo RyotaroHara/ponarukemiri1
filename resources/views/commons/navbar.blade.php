@@ -21,10 +21,11 @@
                             <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                <li><a href="{{ route('Exercise.cafeteria') }}">カフェテリア</a></li>
-                                <li><a href="{{ route('Exercise.way') }}">移動中</a></li>
-                                <li><a href="{{ route('Exercise.office') }}">OFFICE</a></li>
+                                <li><a href="{{ route('Place', ['name' => 'cafeteria']) }}">カフェテリア</a></li>
+                                <li><a href="{{ route('Place', ['name' => 'way']) }}">移動中</a></li>
+                                <li><a href="{{ route('Place', ['name' => 'office']) }}">OFFICE</a></li>
                                 <li><a href="{{ route('battle.battle')}}">Battle</a></li>
+                                
                                 </ul>
                             </li>
 

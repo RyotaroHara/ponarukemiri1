@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlaceTable extends Migration
+class AddColumnNumBattlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreatePlaceTable extends Migration
      */
     public function up()
     {
-        Schema::create('place', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::table('battles', function (Blueprint $table) {
+        $table->string('num');
         });
     }
 
@@ -26,6 +25,8 @@ class CreatePlaceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('place');
+        Schema::table('battles', function (Blueprint $table) {
+        $table->dropColumn('num');
+        });
     }
 }

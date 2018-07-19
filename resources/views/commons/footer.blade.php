@@ -7,6 +7,6 @@
 
     <div class=b style="float:right;margin-top:-20px;margin-right:15px;"><a href="{ route('users.show')}">MyPage</div>
     
-    <div class=b style="float:left;margin-top:-20px;margin-left:15px;"><a href="{{ route('Exercise.office') }}">Exercise</a></div>
+    <div class=b style="float:left;margin-top:-20px;margin-left:15px;"><a href="{{ route('Place', ['name' => 'way']) }}">Exercise</a></div>
 
 </div>
