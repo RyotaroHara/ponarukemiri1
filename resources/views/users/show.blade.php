@@ -194,6 +194,6 @@ echo ' <img src = "images/office/top_office1.jpg" /> ' ;
         </div>
     </div>
     
-
+<a href="{{route('users.edit',['id'=>$user->id]) }}">edit</a>
 
 @endsection
