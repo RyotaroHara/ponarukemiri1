@@ -10,30 +10,23 @@
         </div>
         
         <div class="status text-center">
-            <ul>
-                
-                
-                <?php
-$all_cal = 0;
-for ($i=1; $i<200; $i++) {
+        <ul>
+            <li>  
+<?php
+        $all_cal = 0;
+        for ($i=1; $i<200; $i++) {
     
-    $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
-    $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
-    $all_cal += $cal*$num;
-}
-
-
-
-$nokori_cal = floor((("{$user->Weight}"-"{$user->IdealWeight}")*7200)-$all_cal);
-
-print "目標まであと".$nokori_cal."kcalだよ";
-print "<br />".$user->year."年".$user->month."月".$user->day."日までに結果が欲しい";
-                ?>
-                
-                    <div class="status-label">{{$user->Weight-$user->IdealWeight}}kg減量まであと{{($user->Weight-$user->IdealWeight)*7200}}kcal!!</div>
-                    <div class=>{{$user->year}}年{{$user->month}}月{{$user->day}}日までに結果が欲しい</div>
-                </li>
-                <li>
+        $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
+        $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
+        $all_cal += $cal*$num;
+        }
+        $nokori_cal = floor((("{$user->Weight}"-"{$user->IdealWeight}")*7200)-$all_cal);
+        $weight_sa=("{$user->Weight}"-"{$user->IdealWeight}");
+        print $weight_sa."kg減量の目標まであと".$nokori_cal."kcalだよ";
+        print "<br />".$user->year."年".$user->month."月".$user->day."日までに結果が欲しい";
+        ?>
+            </li>
+             <li>
                     <div class="status-label">あなたの骨格から計算した基礎代謝は <br>
                     
                     @if (($user->sex)==1)
@@ -44,11 +37,12 @@ print "<br />".$user->year."年".$user->month."月".$user->day."日までに結�
                     {{(9.247)*($user->Weight)+(3.098)*($user->height)-(4.33)*($user->age)+447.593}}kcalです。
                     
                     @endif 
+                    <br> <br>
+                    あなたの体脂肪率をもとに計算した基礎代謝は {{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。
                     </div></li>
                     <li>
                     <div class="status-label">
                         あなたの除脂肪体重は{{ ($user->Weight)*(100-($user->fat))/100 }}kg <br> <br>
-                        あなたの体脂肪率をもとに計算した基礎代謝は {{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。<br> <br>
                         運動強度が{{ $user->ExerciseIntensity}}のあなたの一日の消費カロリーは
                 　  @if (($user->ExerciseIntensity)==1)
                 　  
@@ -90,8 +84,8 @@ print "<br />".$user->year."年".$user->month."月".$user->day."日までに結�
     {!! Form::close() !!}
     {!! Form::open(['route' => 'battles.store']) !!}
     <input type="hidden" name="cal" value="2.7">
-    <input type="hidden" name="num" value="1">
-    {!! Form::submit('電車内でつま先立ち一分') !!}<br>
+    <input type="number" name="num" value="">分
+    {!! Form::submit('電車内でつま先立ち') !!}<br>
     {!! Form::close() !!}
     {!! Form::open(['route' => 'battles.store']) !!}    
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.29 }}">
@@ -99,6 +93,11 @@ print "<br />".$user->year."年".$user->month."月".$user->day."日までに結�
     {!! Form::submit('二子玉川駅からクリムゾンハウスまで歩く') !!}<br>
     {!! Form::close() !!}
     
+    {!! Form::open(['route' => 'battles.store']) !!}    
+    <input type="number" name="cal" value="">
+    <input type="hidden" name="num" value="1">kcal消費する
+    {!! Form::submit('運動をした') !!}<br>
+    {!! Form::close() !!}
     
     
     </div>
