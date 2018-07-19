@@ -64,12 +64,12 @@
 
 <body>
 <form action="/battles" method="post">
-　  <div class="status-label">　
+　  <div class="status text-left">　
     エクササイズ選択：<br />
 
     {!! Form::open(['route' => 'battles.store']) !!}
-    <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0005 }}">
-    <input type="number" name="num" value="">回
+    <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0005 }}" >
+    <input type="number" name="num" value="" style="width:50px">回
     {!! Form::submit('腕立て') !!}をした。 <br>
     {!! Form::close() !!}
     {!! Form::open(['route' => 'battles.store']) !!}
@@ -84,7 +84,7 @@
     {!! Form::close() !!}
     {!! Form::open(['route' => 'battles.store']) !!}
     <input type="hidden" name="cal" value="2.7">
-    <input type="number" name="num" value="">分
+    <input type="number" name="num" value="" style="width:50px">分
     {!! Form::submit('電車内でつま先立ち') !!}<br>
     {!! Form::close() !!}
     {!! Form::open(['route' => 'battles.store']) !!}    
@@ -94,7 +94,7 @@
     {!! Form::close() !!}
     
     {!! Form::open(['route' => 'battles.store']) !!}    
-    <input type="number" name="cal" value="">
+    <input type="number" name="cal" value="" style="width:60px">
     <input type="hidden" name="num" value="1">kcal消費する
     {!! Form::submit('運動をした') !!}<br>
     {!! Form::close() !!}
