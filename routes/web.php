@@ -90,7 +90,7 @@ Route::resource('battles', 'BattlesController');
 // cal 入力
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
+    Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'edit']]);
     Route::resource('battles', 'BattlesController', ['only' => ['store', 'destroy']]);
 });
 

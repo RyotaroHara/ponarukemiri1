@@ -98,6 +98,6 @@ print "<br />あと".$nokori."kcal";
         </div>
     </div>
     
-
+<a href="{{route('users.edit',['id'=>$user->id]) }}">edit</a>
 
 @endsection

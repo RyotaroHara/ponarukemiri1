@@ -30,5 +30,19 @@ class UsersController extends Controller
   //          'count_have' => $count_have,
         ]);
     }
+    
+    public function edit($id)
+    {
+        $info = User::select('Weight') ->where('id',$id)->get();
+        return view('users.edit', ['info'=>$info]);
+        
+        
+        
+        
+        
+        
+    }
+    
+    
 }
 
