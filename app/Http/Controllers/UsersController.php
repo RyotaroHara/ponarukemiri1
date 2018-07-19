@@ -25,5 +25,10 @@ class UsersController extends Controller
             'user' => $user,
         ]);
     }
+     public function index(Request $request)
+    {
+
+        return redirect('/users/'.$request->user()->id);
+    }
 }
 
