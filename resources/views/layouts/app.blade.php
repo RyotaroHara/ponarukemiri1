@@ -22,7 +22,7 @@
         $change_image="";
         switch ($_SERVER["REQUEST_URI"]) {
             case '/':   $change_image = 'url(../images/back2.jpg)';  break;
-            case '/battle/battle': $change_image = 'url(../images/office_battle.jpg)';  break;}
+            case '/battle/menu/3': $change_image = 'url(../images/office_battle.jpg)';  break;}
         ?>
     
     <body class="background" style="background-image: <?php echo $change_image ?>;">
