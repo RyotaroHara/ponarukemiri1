@@ -15,9 +15,16 @@
         <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
         <script src="{{ url('js/footerFixed.js') }}"></script>
     </head>
-    <body>
-        
-        
+    
+        <!-- URLによって表示する背景画像を変える-->
+        <?php 
+        $change_image="";
+        switch ($_SERVER["REQUEST_URI"]) {
+            case '/':   $change_image = 'url(../images/back2.jpg)';  break;
+            case '/fitnessgoods/ichiba': $change_image = 'url(../images/office_battle.jpg)';  break;}
+        ?>
+    
+    <body class="background" style="background-image: <?php echo $change_image ?>;">
         @include('commons.navbar')
 
         @yield('cover')
@@ -26,7 +33,7 @@
             @include('commons.error_messages')
             @yield('content')
         </div>
-        
+
         @if (Auth::check())
         <div id=footer>
             @include('commons.footer')
