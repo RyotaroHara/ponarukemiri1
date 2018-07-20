@@ -30,19 +30,14 @@ class BattlesController extends Controller
     
   
   
-    public function cafeteria_genre()
+    public function battle_menu()
     {
         return view('battle.basic page.cafeteria battle');
     }
     
-    public function office_genre()
+    public function show()
     {
-        return view('battle.basic page.office battle');
-    }
-    
-    public function way_genre()
-    {
-        return view('battle.basic page.way battle');
+        return view('welcome');
     }
     
     

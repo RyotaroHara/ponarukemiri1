@@ -1,10 +1,10 @@
 @charset "utf-8";
 
-/* body */
+
 body {
-    background-image: url("/images/back2.jpg");
-    font-family: 'Yu Gothic UI',sans-serif;
+  font-family: 'Yu Gothic UI',sans-serif;
 }
+
 footer {
     margin-top: 40px;
     position: absolute;
