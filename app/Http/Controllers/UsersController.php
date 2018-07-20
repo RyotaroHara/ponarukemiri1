@@ -20,10 +20,12 @@ class UsersController extends Controller
         $user = User::find($id);
 
        // $items = \DB::table('items')->join('item_user', 'items.id', '=', 'item_user.item_id')->select('items.*')->where('item_user.user_id', $user->id)->distinct()->paginate(20);
-
-        return view('users.show', [
-            'user' => $user,
-        ]);
+ if ($user->id == \Auth::user()->id)
+             return view('users.show',[
+           'user' => $user, ]);
+         else { return redirect('/users');   }
+         
+    
     }
 
      public function index(Request $request)
@@ -33,8 +35,32 @@ class UsersController extends Controller
     }
     public function edit($id)
     {
-        $info = User::select('Weight') ->where('id',$id)->get();
+        $info = User::select('id', 'Weight','Idealweight','year','month','day','height','fat','ExerciseIntensity') ->where('id',$id)->first();
         return view('users.edit', ['info'=>$info]);
         }
-}
 
+
+    public function update(Request $request, $id)
+    {
+        $this -> validate($request, [
+            'Weight' => 'required',
+            'Idealweight' => 'required',
+            'height' => 'required',
+            'year' => 'required',
+            'month' => 'required',
+            'day' => 'required',
+            ]);
+            
+        $info = User::find($id);
+        $info ->Weight = $request -> Weight;
+        $info ->Idealweight = $request -> Idealweight;
+        $info ->height = $request -> height;
+        $info ->year = $request -> year;
+        $info ->month = $request -> month;
+        $info ->day = $request -> day;
+        $info ->save();
+        
+        return redirect('users');
+        
+    }
+}

@@ -14,15 +14,19 @@
             @include('Exercise.tab.present location.P_tab_cafeteria')
         </div>
   </div>
-  <div class="col-7 col-md-5">
-        <div class=medium1 style="padding:10px;width:450px;height:570px;">  
-           @foreach ($menus as $menu)
-                <li><a href="{{ route('Menu', ['id' => $menu->id]) }}">{{$menu->exe_name}}</a></li>
-           @endforeach
+  <div class="col-7 col-md-3">
+        <div class=medium1 style="padding:10px;width:250px;height:570px;">
+              <img class="card-img-top" src="{{ asset('images/top_office1.jpg') }}" alt="office" style="width:230px;">   
+              <br>
+                <div class=sample1>
+                 @foreach ($menus as $menu)
+                 <li><a href="{{ route('Menu', ['id' => $menu->id]) }}">{{$menu->exe_name}}</a></li>
+                 @endforeach
+                </div> 
         </div>
   </div>
   
-  <div class="col-7 col-md-6">
+  <div class="col-7 col-md-8">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
          
         </div>

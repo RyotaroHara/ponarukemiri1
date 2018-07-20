@@ -12,26 +12,30 @@
             @include('Exercise.tab.normal.tab_cafeteria')
         </div>
   </div>
-  <div class="col-7 col-md-5">
-        <div class=medium1 style="padding:10px;width:450px;height:570px;">
-            
+  <div class="col-7 col-md-3">
+        <div class=medium1 style="padding:10px;width:250px;height:570px;">
+            <img class="card-img-top" src="{{ asset('images/top_office1.jpg') }}" alt="office" style="width:230px;">   
+              <br>
+            <div class=sample1>
             @foreach($genres as $genre)
-                <p><a href="{{ url('Exercises/'. $genre->id) }}">{{ $genre->exe_name }}</a></p>
+                <li><a href="{{ url('Exercises/'. $genre->id) }}">{{ $genre->exe_name }}</a></li>
             @endforeach
-         
+            </div>
         </div>
   </div> 
   
-  <div class="col-7 col-md-6">
+  <div class="col-7 col-md-8">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
              <div class=title_text>
                 <p>{{$expla->exe_name}}</p>
              </div>
+                
                  <div class=images>
-                   <img class="card-img-top" src="{{ asset('images/office/calf.jpg') }}" alt="otameshi" style="width:430px;">
+                
+                   <img class="card-img-top" src="{{ asset("images/".$expla->pic_name) }}" alt="otameshi" style="width:430px;">
                  </div>
                      <div class=ex_text>
-                       <p>{{$expla->explanation}}</p>;    
+                       <p>{!! $expla->explanation !!}</p>  
                      </div>
                 </div>
   </div>

@@ -2,8 +2,7 @@
 
 
 body {
-    font-family: 'メイリオ',sans-serif;
-
+  font-family: 'Yu Gothic UI',sans-serif;
 }
 
 footer {
@@ -16,6 +15,11 @@ footer {
 .navbar-header img{
     margin-top: 5px;
     height: 40px;
+}
+
+.container {
+    min-width: 970px !important;
+    
 }
 
 /*cover*/
@@ -136,10 +140,10 @@ footer {
     writing-mode:vertical-rl;
     width:80px;
     height:190px;
-    background:#FFDBE6;
+    background:#A6A6A6;
 }
 
-/*エクサイズ詳細のレイアウト設定(office)*/
+/*エクサイズ詳細のレイアウト設定*/
 .title_text{
     text-align:center;
     font-family:Yu Gothic UI;
@@ -147,7 +151,8 @@ footer {
     color:#FFFFFF;
     width:682px;
     height:70px;
-    background:#8BD7F5;
+    background:#89CAD9;
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 
@@ -155,10 +160,9 @@ footer {
     text-align:center;
     font-family:Yu Gothic UI;
     font-size: 120%;
-    color:#FFFFFF;
+    color:#A6A6A6;
     width:682px;
     height:150px;
-    background:#8BD7F5;
     margin-top: 5px;
 }
 
@@ -168,66 +172,9 @@ footer {
     
 }
 
-/*エクサイズ詳細のレイアウト設定(cafeteria)*/
-.title_text1{
-    text-align:center;
-    font-family:Yu Gothic UI;
-    font-size: 180%;
-    color:#FFFFFF;
-    width:682px;
-    height:70px;
-    background:#ACCFCC;
-    margin-bottom: 5px;
-}
-
-.ex_text1{
-    text-align:center;
-    font-family:Yu Gothic UI;
-    font-size: 120%;
-    color:#FFFFFF;
-    width:682px;
-    height:150px;
-    background:#ACCFCC;
-    margin-top: 5px;
-}
-
-.images1 {
-    text-align:center;
-    height:320px;
-    
-}
-
-/*エクサイズ詳細のレイアウト設定(way)*/
-.title_text2{
-    text-align:center;
-    font-family:Yu Gothic UI;
-    font-size: 180%;
-    color:#FFFFFF;
-    width:682px;
-    height:70px;
-    background:#8EABD3;
-    margin-bottom: 5px;
-}
-
-.ex_text2{
-    text-align:center;
-    font-family:Yu Gothic UI;
-    font-size: 120%;
-    color:#FFFFFF;
-    width:682px;
-    height:150px;
-    background:#8EABD3;
-    margin-top: 5px;
-}
-
-.images2 {
-    text-align:center;
-    height:320px;
-    
-}
 /*カラー設定*/
 .medium1 {
-    background:#E6F5FF;
+    background:#006E99;
 }
 
 .medium2 {
@@ -235,7 +182,7 @@ footer {
 }   
 
 .navbar {
-    background-color:#CCEBFF;
+    background-color:#7D9DB2;
 }
 
 .footer {
@@ -250,7 +197,41 @@ footer {
 	margin: 0 auto;
 }
 
-.background {
-    
+/*メニュー箇条書き関連*/
+.sample1{
+  counter-reset:list;
+  list-style-type:none;
+  font: 14px/1.6 'arial narrow', sans-serif;
+  padding:0;
 }
-
+.sample1 li{
+  position:relative;
+  margin: 7px 0 7px 0px;
+  padding-left:40px;
+  font-size:14px;
+  font-family:Yu Gothic UI;
+  line-height: 30px;
+  border: 1px solid #FFFFFF;
+  
+}
+.sample1 li a {
+    color: #FFFFFF;
+}
+.sample1 li:before{
+  counter-increment: list;
+  content: counter(list);
+  position: absolute;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: #006E99;
+  line-height:30px;
+  background: #FFFFFF;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
