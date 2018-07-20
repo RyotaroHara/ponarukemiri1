@@ -53,20 +53,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('Exercises/{id}','ExerciseController@menu')->name('Menu');
     
     //battle page
-    Route::get('battle/battle', 'BattleController@cafeteria_genre')->name('battle.battle');
-    Route::get('battle/office', 'BattleController@office_genre')->name('battle.office');
-    Route::get('battle/way', 'BattleController@way_genre')->name('battle.way');
+    Route::get('battle/battle', 'BattlesController@cafeteria_genre')->name('battle.battle');
+    Route::get('battle/office', 'BattlesController@office_genre')->name('battle.office');
+    Route::get('battle/way', 'BattlesController@way_genre')->name('battle.way');
     
     //battle post
-    Route::get('battle', 'BattleController@battle')->name('battle.post');
-    Route::post('battle', 'BattleController@battle');
+    Route::get('battle', 'BattlesController@battle')->name('battle.post');
+    Route::post('battle', 'BattlesController@battle');
     Route::resource('users', 'UsersController');
-    Route::resource('battle', 'BattleController');
+    Route::resource('battle', 'BattlesController');
     
     //fitnessgoods 
     Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnessgoods.ichiba');
     
+   
 });
-
 
 
