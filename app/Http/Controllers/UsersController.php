@@ -25,5 +25,16 @@ class UsersController extends Controller
             'user' => $user,
         ]);
     }
+
+     public function index(Request $request)
+    {
+
+        return redirect('/users/'.$request->user()->id);
+    }
+    public function edit($id)
+    {
+        $info = User::select('Weight') ->where('id',$id)->get();
+        return view('users.edit', ['info'=>$info]);
+        }
 }
 

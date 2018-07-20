@@ -7,16 +7,45 @@
         </div>
         <div class="name text-center">
             <h1>{{ $user->name }}</h1>
+            
+                　  <ul></ul><div class="staus-label">
+
+                    ダイエットする場合でも体調維持の為に最低限摂取しなければいけないカロリーは{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。<br>
+               <a href = "#" class = "list-group-item active col-xs-4 col-xs-offset-4">ダイエット中で運動をしない日の食事のおすすめのP:F:Cバランス</a>
+                <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
+                      P(タンパク質):
+                      @if (($user->sex)==1)
+                        {{ floor((($user->Weight)*(100-($user->fat))/100)*3) }}g                　  
+                　  @else (($user->sex)==2) 
+                　       {{ floor( ($user->Weight)*(100-($user->fat))/100 * 2)  }}g
+                　  @endif
+                </a>
+                <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
+                　   F(脂質):
+                　   @if (($user->sex)==1 )
+                        {{   floor(( ($user->Weight)*(100-($user->fat))/100)*0.9) }} g
+                    @elseif (($user->sex)==2)
+                        {{floor(( ($user->Weight)*(100-($user->fat))/100)*1.3) }} g
+                    @endif
+                </a>
+                <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
+            　      C(炭水化物): 
+            　      @if (($user->sex)==1)
+                　   {{floor( ((370+21.6*($user->Weight)*(100-$user->fat)/100)-((($user->Weight)*(100-($user->fat))/100)*12)-((($user->Weight)*(100-($user->fat))/100)*8.1))/4 ) }}g
+                    @elseif (($user->sex)==2)
+                    {{ floor(((370+21.6*($user->Weight)*(100-$user->fat)/100)-((($user->Weight)*(100-($user->fat))/100)*8)-((($user->Weight)*(100-($user->fat))/100)*11.7))/4  )}}g
+                    @endif
+                </a>
         </div>
         
         <div class="status text-center">
-            <ul>
-                
-                
-                <?php
-$all_cal = 0;
-for ($i=1; $i<200; $i++) {
+        <ul>
+            <li>  
+<?php
+        $all_cal = 0;
+        for ($i=1; $i<200; $i++) {
     
+
     $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
     $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
     $all_cal += $cal*$num;
@@ -30,10 +59,9 @@ print $weight_sa."kg減量まであと".$nokori_cal."kcalだよ";
 print "<br />".$user->year."年".$user->month."月".$user->day."日までに結果が欲しい";
                 ?>
                 
-                    <div class="status-label">{{$user->Weight-$user->IdealWeight}}kg減量まであと{{($user->Weight-$user->IdealWeight)*7200}}kcal!!</div>
-                    <div class=>{{$user->year}}年{{$user->month}}月{{$user->day}}日までに結果が欲しい</div>
                 </li>
                 <li>
+
                     <div class="status-label">あなたの骨格から計算した基礎代謝は <br>
                     
                     @if (($user->sex)==1)
@@ -44,11 +72,12 @@ print "<br />".$user->year."年".$user->month."月".$user->day."日までに結�
                     {{(9.247)*($user->Weight)+(3.098)*($user->height)-(4.33)*($user->age)+447.593}}kcalです。
                     
                     @endif 
+                    <br> <br>
+                    あなたの体脂肪率をもとに計算した基礎代謝は {{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。
                     </div></li>
                     <li>
                     <div class="status-label">
                         あなたの除脂肪体重は{{ ($user->Weight)*(100-($user->fat))/100 }}kg <br> <br>
-                        あなたの体脂肪率をもとに計算した基礎代謝は {{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。<br> <br>
                         運動強度が{{ $user->ExerciseIntensity}}のあなたの一日の消費カロリーは
                 　  @if (($user->ExerciseIntensity)==1)
                 　  
@@ -66,40 +95,57 @@ print "<br />".$user->year."年".$user->month."月".$user->day."日までに結�
                 　  <br>
                 　  </div></li>
 
+
 <html>
 
 <body>
 <form action="/battles" method="post">
-　  <div class="status-label">　
-    エクササイズ選択：<br />
-
+　  <div class="status text-left">　
+　  <a href = "#" class = "list-group-item active">エクササイズ選択</a>
+                <a href = "#" class = "list-group-item">
+    
     {!! Form::open(['route' => 'battles.store']) !!}
-    <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0005 }}">
-    <input type="number" name="num" value="">回
+    <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0005 }}" >
+    <input type="number" name="num" value="" style="width:50px">回
     {!! Form::submit('腕立て') !!}をした。 <br>
-    {!! Form::close() !!}
+    {!! Form::close() !!}</a>
+    <a href = "#" class = "list-group-item">
     {!! Form::open(['route' => 'battles.store']) !!}
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.1 }}">
     <input type="hidden" name="num" value="1">
     {!! Form::submit('4階から9階まで階段であがる') !!} <br>
     {!! Form::close() !!}
+    </a>
+    <a href = "#" class = "list-group-item">
     {!! Form::open(['route' => 'battles.store']) !!}
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0875 }}">
     <input type="hidden" name="num" value="1">
     {!! Form::submit('9階から4階まで階段でおりる') !!}<br>
     {!! Form::close() !!}
+    </a>
+    <a href = "#" class = "list-group-item">
     {!! Form::open(['route' => 'battles.store']) !!}
     <input type="hidden" name="cal" value="2.7">
-    <input type="number" name="num" value="">分
-    {!! Form::submit('電車内でつま先立ちしたよ') !!}<br>
+
+    <input type="number" name="num" value="" style="width:50px">分
+    {!! Form::submit('電車内でつま先立ち') !!}<br>
+
     {!! Form::close() !!}
+    </a>
+    <a href = "#" class = "list-group-item">
     {!! Form::open(['route' => 'battles.store']) !!}    
     <input type="hidden" name="cal" value="{{ ($user->Weight)*0.29 }}">
     <input type="hidden" name="num" value="1">
     {!! Form::submit('二子玉川駅からクリムゾンハウスまで歩く') !!}<br>
     {!! Form::close() !!}
-    
-    
+    </a>
+    <a href = "#" class = "list-group-item">
+    {!! Form::open(['route' => 'battles.store']) !!}    
+    <input type="number" name="cal" value="" style="width:60px">
+    <input type="hidden" name="num" value="1">kcal消費する
+    {!! Form::submit('運動をした') !!}<br>
+    {!! Form::close() !!}
+    </a>    
     
     </div>
 </form>
@@ -193,6 +239,6 @@ echo ' <img src = "images/office/top_office1.jpg" /> ' ;
         </div>
     </div>
     
-
+<a href="{{route('users.edit',['id'=>$user->id]) }}">edit</a>
 
 @endsection
