@@ -16,6 +16,8 @@
         <script src="{{ url('js/footerFixed.js') }}"></script>
     </head>
     <body>
+        
+        
         @include('commons.navbar')
 
         @yield('cover')
