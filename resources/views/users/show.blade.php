@@ -7,37 +7,69 @@
         </div>
         <div class="name text-center">
             <h1>{{ $user->name }}</h1>
-            
-                　  <ul></ul><div class="staus-label">
-
-                    ダイエットする場合でも体調維持の為に最低限摂取しなければいけないカロリーは{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。<br>
-               <a href = "#" class = "list-group-item active col-xs-4 col-xs-offset-4">ダイエット中で運動をしない日の食事のおすすめのP:F:Cバランス</a>
-                <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
+            ダイエットする場合でも体調維持の為に最低限摂取しなければいけないカロリーは{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。<br>
+            　  <div class="staus-label"><ul>
+                    <a href = "#" class = "list-group-item active col-xs-4 col-xs-offset-4">ダイエット中で運動をしない日の食事のおすすめのP:F:Cバランス</a>
+                    <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
                       P(タンパク質):
                       @if (($user->sex)==1)
                         {{ floor((($user->Weight)*(100-($user->fat))/100)*3) }}g                　  
                 　  @else (($user->sex)==2) 
                 　       {{ floor( ($user->Weight)*(100-($user->fat))/100 * 2)  }}g
                 　  @endif
-                </a>
-                <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
+                    </a>
+                    <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
                 　   F(脂質):
                 　   @if (($user->sex)==1 )
                         {{   floor(( ($user->Weight)*(100-($user->fat))/100)*0.9) }} g
                     @elseif (($user->sex)==2)
                         {{floor(( ($user->Weight)*(100-($user->fat))/100)*1.3) }} g
                     @endif
-                </a>
-                <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
+                    </a>
+                    <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
             　      C(炭水化物): 
             　      @if (($user->sex)==1)
                 　   {{floor( ((370+21.6*($user->Weight)*(100-$user->fat)/100)-((($user->Weight)*(100-($user->fat))/100)*12)-((($user->Weight)*(100-($user->fat))/100)*8.1))/4 ) }}g
                     @elseif (($user->sex)==2)
                     {{ floor(((370+21.6*($user->Weight)*(100-$user->fat)/100)-((($user->Weight)*(100-($user->fat))/100)*8)-((($user->Weight)*(100-($user->fat))/100)*11.7))/4  )}}g
                     @endif
-                </a>
-        </div>
-        
+                    </a></ul>
+                    </div>
+                　  <div class="staus-label"><ul> 
+                　  <a href = "#" class = "list-group-item active col-xs-4 col-xs-offset-4">ダイエット中で運動をする日の食事のおすすめのP:F:Cバランス</a>
+                    <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
+                      P(タンパク質):
+                      @if (($user->sex)==1)
+                        {{ floor((($user->Weight)*(100-($user->fat))/100)*3) }}g                　  
+                　  @else (($user->sex)==2) 
+                　       {{ floor( ($user->Weight)*(100-($user->fat))/100 * 2)  }}g
+                　  @endif
+                    </a>
+                    <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
+                　   F(脂質):
+                　   @if (($user->sex)==1 )
+                        {{   floor(( ($user->Weight)*(100-($user->fat))/100)*0.9) }} g
+                    @elseif (($user->sex)==2)
+                        {{floor(( ($user->Weight)*(100-($user->fat))/100)*1.3) }} g
+                    @endif
+                    </a>
+                    <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
+            　      C(炭水化物): 
+            　      @if (($user->sex)==1)
+                　   {{floor( ((370+21.6*($user->Weight)*(100-$user->fat)/100)-((($user->Weight)*(100-($user->fat))/100)*12)-((($user->Weight)*(100-($user->fat))/100)*8.1))*1.15/4 ) }}g
+                    @elseif (($user->sex)==2)
+                    {{ floor(((370+21.6*($user->Weight)*(100-$user->fat)/100)-((($user->Weight)*(100-($user->fat))/100)*8)-((($user->Weight)*(100-($user->fat))/100)*11.7))*1.15/4 )}}g
+                    @endif
+                    </a></div>
+                     </ul>
+                  <div class="staus-label">
+                    <ul>      
+                    <br><br><br>
+                    ※P:F:Cバランスはあくまでも目安です。　<br>
+                    トレーニング等の細かいアドバイスは製作者にお尋ねください。
+                    </ul>
+                        </div>
+            </div>
         <div class="status text-center">
         <ul>
             <li>  

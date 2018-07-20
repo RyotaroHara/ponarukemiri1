@@ -20,10 +20,12 @@ class UsersController extends Controller
         $user = User::find($id);
 
        // $items = \DB::table('items')->join('item_user', 'items.id', '=', 'item_user.item_id')->select('items.*')->where('item_user.user_id', $user->id)->distinct()->paginate(20);
-
-        return view('users.show', [
-            'user' => $user,
-        ]);
+ if ($user->id == \Auth::user()->id)
+             return view('users.show',[
+           'user' => $user, ]);
+         else { return redirect('/users');   }
+         
+    
     }
 
      public function index(Request $request)
