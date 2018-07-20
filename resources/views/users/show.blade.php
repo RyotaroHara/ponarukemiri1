@@ -157,11 +157,16 @@ $sa = $finish - $start;
 $amari = $sa%(24*60*60);
 $hi = ($sa - $amari)/(24*60*60);
 
-print "期日まであと".$hi."日";
+$today = time();
+$re_amari = ($finish - $today)%(24*60*60);
+$re_hi = ($finish - $today - $re_amari)/(24*60*60);
+
+
+print "期日まであと".$re_hi."日";
 
 //1日あたりの消費カロリー（$day_cal）の計算
-$day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)%$hi;
-$day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $day_cal_amari)/$hi;
+$day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $all_cal)%$re_hi;
+$day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $all_cal - $day_cal_amari)/$re_hi;
 
 
 print "<br />今日は".$day_cal."kcal消費しよう";
