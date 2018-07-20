@@ -44,7 +44,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('users', 'UsersController', ['only' => ['show','battle']]);
-    Route::resource('battle', 'BattleController');
+    Route::resource('battle', 'BattlesController');
     
     //To Exercise Pages
     Route::get('place/{name}', 'ExerciseController@place')->name('Place');
@@ -53,9 +53,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('Exercises/{id}','ExerciseController@menu')->name('Menu');
     
     //battle page
-    Route::get('battle/battle', 'BattlesController@cafeteria_genre')->name('battle.battle');
-    Route::get('battle/office', 'BattlesController@office_genre')->name('battle.office');
-    Route::get('battle/way', 'BattlesController@way_genre')->name('battle.way');
+
+    Route::get('battle/battle', 'BattlesController@battle_menu')->name('battle.menu');
     
     //battle post
     Route::get('battle', 'BattlesController@battle')->name('battle.post');

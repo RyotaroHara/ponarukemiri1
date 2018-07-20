@@ -1,10 +1,11 @@
 @charset "utf-8";
 
-/* body */
+
 body {
-    background-image: url("/images/back2.jpg");
     font-family: 'メイリオ',sans-serif;
+
 }
+
 footer {
     margin-top: 40px;
     position: absolute;
@@ -249,7 +250,6 @@ footer {
 	margin: 0 auto;
 }
 
-
-.edit {
+.background {
     
 }
