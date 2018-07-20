@@ -20,7 +20,7 @@
             @endforeach
          
         </div>
-  </div>
+  </div> 
   
   <div class="col-7 col-md-6">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
