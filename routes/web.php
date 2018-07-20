@@ -53,6 +53,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('Exercises/{id}','ExerciseController@menu')->name('Menu');
     
     //battle page
+
     Route::get('battle/battle', 'BattlesController@battle_menu')->name('battle.menu');
     
     //battle post
@@ -64,7 +65,7 @@ Route::group(['middleware' => 'auth'], function () {
     //fitnessgoods 
     Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnessgoods.ichiba');
     
+   
 });
-
 
 

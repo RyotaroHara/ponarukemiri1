@@ -35,8 +35,32 @@ class UsersController extends Controller
     }
     public function edit($id)
     {
-        $info = User::select('Weight') ->where('id',$id)->get();
+        $info = User::select('id', 'Weight','Idealweight','year','month','day','height') ->where('id',$id)->first();
         return view('users.edit', ['info'=>$info]);
         }
-}
 
+
+    public function update(Request $request, $id)
+    {
+        $this -> validate($request, [
+            'Weight' => 'required',
+            'Idealweight' => 'required',
+            'height' => 'required',
+            'year' => 'required',
+            'month' => 'required',
+            'day' => 'required',
+            ]);
+            
+        $info = User::find($id);
+        $info ->Weight = $request -> Weight;
+        $info ->Idealweight = $request -> Idealweight;
+        $info ->height = $request -> height;
+        $info ->year = $request -> year;
+        $info ->month = $request -> month;
+        $info ->day = $request -> day;
+        $info ->save();
+        
+        return redirect('users');
+        
+    }
+}
