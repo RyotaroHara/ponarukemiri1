@@ -21,8 +21,18 @@
                 {!! Form::label('height','身長') !!}
                 {!! Form::text('height', $info -> height) !!}
             </div>
-            
             <div class="content">
+                {!! Form::label('fat', '体脂肪率(%)') !!}
+                {!! Form::number('fat', $info->fat) !!}
+            </div>
+            <div class="content">
+                {!! Form::label('ExerciseIntensity', '運動強度 （1＝ほぼ運動しない　　2＝週1～3回軽い運動する　
+                3＝週3～5回運動する　　4＝アスリート並みの運動をする)') !!}
+               <br> {!! Form::number('ExerciseIntensity', $info->ExerciseIntensity) !!}
+            </div>
+
+            <div class="content">
+                {!! Form::label( '何日までにやせたい？') !!}<br>
                 {!! Form::text('year', $info -> year) !!}
                 {!! Form::label('year','年') !!}
             

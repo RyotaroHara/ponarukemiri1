@@ -35,7 +35,7 @@ class UsersController extends Controller
     }
     public function edit($id)
     {
-        $info = User::select('id', 'Weight','Idealweight','year','month','day','height') ->where('id',$id)->first();
+        $info = User::select('id', 'Weight','Idealweight','year','month','day','height','fat','ExerciseIntensity') ->where('id',$id)->first();
         return view('users.edit', ['info'=>$info]);
         }
 
