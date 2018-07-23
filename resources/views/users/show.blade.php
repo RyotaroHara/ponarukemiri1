@@ -45,17 +45,23 @@
         $all_cal = 0;
         for ($i=1; $i<200; $i++) {
     
-        $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
-        $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
-        $all_cal += $cal*$num;
-        }
-        $nokori_cal = floor((("{$user->Weight}"-"{$user->IdealWeight}")*7200)-$all_cal);
-        $weight_sa=("{$user->Weight}"-"{$user->IdealWeight}");
-        print $weight_sa."kg減量の目標まであと".$nokori_cal."kcalだよ";
-        print "<br />".$user->year."年".$user->month."月".$user->day."日までに結果が欲しい";
-        ?>
-            </li>
-             <li>
+
+    $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
+    $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
+    $all_cal += $cal*$num;
+}
+
+
+
+$nokori_cal = floor((("{$user->Weight}"-"{$user->IdealWeight}")*7200)-$all_cal);
+$weight_sa = "{$user->Weight}"-"{$user->IdealWeight}";
+print $weight_sa."kg減量まであと".$nokori_cal."kcalだよ";
+print "<br />".$user->year."年".$user->month."月".$user->day."日までに結果が欲しい";
+                ?>
+                
+                </li>
+                <li>
+
                     <div class="status-label">あなたの骨格から計算した基礎代謝は <br>
                     
                     @if (($user->sex)==1)
@@ -120,8 +126,10 @@
     <a href = "#" class = "list-group-item">
     {!! Form::open(['route' => 'battles.store']) !!}
     <input type="hidden" name="cal" value="2.7">
+
     <input type="number" name="num" value="" style="width:50px">分
     {!! Form::submit('電車内でつま先立ち') !!}<br>
+
     {!! Form::close() !!}
     </a>
     <a href = "#" class = "list-group-item">
@@ -157,21 +165,23 @@ $sa = $finish - $start;
 $amari = $sa%(24*60*60);
 $hi = ($sa - $amari)/(24*60*60);
 
-$today = time();
-$re_amari = ($finish - $today)%(24*60*60);
-$re_hi = ($finish - $today - $re_amari)/(24*60*60);
 
+$re_sa = $finish - time();
+$re_amari = $re_sa%(24*60*60);
+$re_hi = ($re_sa - $re_amari)/(24*60*60);
 
 print "期日まであと".$re_hi."日";
 
+
 //1日あたりの消費カロリー（$day_cal）の計算
-$day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $all_cal)%$re_hi;
-$day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $all_cal - $day_cal_amari)/$re_hi;
+$day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)%$re_hi;
+$day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $day_cal_amari)/$re_hi;
+$re_day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $all_cal)%$re_hi;
+$re_day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $all_cal - $re_day_cal_amari )/$re_hi;
+
+print "<br />今日は".floor($re_day_cal)."kcal消費しよう";
 
 
-print "<br />今日は".$day_cal."kcal消費しよう";
-
-print "<br />今日のノルマまで、あと".$day_cal."kcal";
 //今日の範囲を算出
 //$today_amari = time()%(24*60*60);
 //$today_start = time()-$today_amari;
@@ -184,17 +194,17 @@ $today = date( "Y-m-d" , $timestamp ) ;
 //今日消費したカロリー（$sum_cal）の計算　
 $sum_cal = 0;
 
-for ($i=1; $i<100; $i++) {
+for ($i=1; $i<200; $i++) {
 
     $cal = DB::table('battles')->where('user_id',"$user->id")->whereDate('created_at', '=', "$today")->where('id',"$i")->value('cal');
     $num = DB::table('battles')->where('user_id',"$user->id")->whereDate('created_at', '=', "$today")->where('id',"$i")->value('num');
     $sum_cal += $cal*$num;
 }
 print "<br />今日は".floor($sum_cal)."kcal消費したよ";
-
+//print "<br />今日のノルマまで、あと".floor($re_day_cal-$sum_cal)."kcal";
 //HPゲージの作成
-$damage = $sum_cal*100/$day_cal;
-$nokori = $day_cal - $sum_cal;
+$damage = $sum_cal*500/$re_day_cal;
+$nokori = $re_day_cal - $sum_cal;
 if ($nokori>0) {
     print "<br />あと".floor($nokori)."kcal";
 }
@@ -202,17 +212,10 @@ else{
     print "<br />ノルマ達成！今日は寝て過ごそう！";
 }
 ?>
-<meter class="vertical" min="0" max="100" value="<?php print 100 - $damage?>">100%</meter>
+<meter class="vertical" min="0" max="500" value="<?php print 500 - $damage?>">100%</meter>
 
 <?php
 
-$all_cal = 0;
-for ($i=1; $i<100; $i++) {
-    
-    $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
-    $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
-    $all_cal += $cal*$num;
-}
 
 $level = floor($all_cal/((("{$user->Weight}"-"{$user->IdealWeight}")*7200)/100));
 
@@ -224,15 +227,12 @@ print "<br />今".$level."レベルだよ";
 
 
 <?php if($level > 25){
-echo ' <img src = "images/cafeteria/otameshi.jpg" /> ' ;
+//echo ' <img src = "images/cafeteria/otameshi.jpg" /> ' ;
 }else{
-echo ' <img src = "images/office/top_office1.jpg" /> ' ;
+//echo ' <img src = "images/office/top_office1.jpg" /> ' ;
 }
 ?>
-
-<img class="card-img-top" src="{{ asset('images/cafeteria/micky.jpg') }}" alt="otameshi" style="width:337px;">
-<img class="logo" src="/ponarukemiri1/nana2.jpg" alt="nana2">
-　　　　　　　   　　
+　　　　   　　
                 </li>
             </ul>
         </div>
