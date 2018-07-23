@@ -20,15 +20,15 @@
                     </a>
                     <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
                 　   F(脂質):
-                　   @if (($user->sex)==1 )
+                　  @if (($user->sex)==1 )
                         {{   floor(( ($user->Weight)*(100-($user->fat))/100)*0.9) }} g
                     @elseif (($user->sex)==2)
                         {{floor(( ($user->Weight)*(100-($user->fat))/100)*1.3) }} g
                     @endif
                     </a>
                     <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
-            　      C(炭水化物): 
-            　      @if (($user->sex)==1)
+            　       C(炭水化物): 
+            　       @if (($user->sex)==1)
                 　   {{floor( ((370+21.6*($user->Weight)*(100-$user->fat)/100)-((($user->Weight)*(100-($user->fat))/100)*12)-((($user->Weight)*(100-($user->fat))/100)*8.1))/4 ) }}g
                     @elseif (($user->sex)==2)
                     {{ floor(((370+21.6*($user->Weight)*(100-$user->fat)/100)-((($user->Weight)*(100-($user->fat))/100)*8)-((($user->Weight)*(100-($user->fat))/100)*11.7))/4  )}}g
