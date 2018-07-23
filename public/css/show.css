@@ -6,31 +6,31 @@ body {
     margin-left: auto;
 
 }
-
+img {
+    max-width: 100%;
+    
+}
 footer {
     margin-top: 40px;
     position: absolute;
     bottom: 0;
 }
 
-
-.status-label {
-    list-style: none;
-    float:left;
-    width:50%;
-    margin:0px;
+.status-label{
+    margin:0;
+    padding:2;
+}
+.status-label3{
+    margin:0;
+    padding:2;
     
 }
-
-
-.status-label2  {
-   float:left;
-   width:50%;
-   height:100px;
-   padding:0px;
-}
-
-.status-label3 {
-    float:right;
-    margin:0px;
+.nana{
+    margin:0;
+    padding:0;
+    height:50%;}
+    
+#sidebar {
+    width: 220px;
+    float: right;
 }
