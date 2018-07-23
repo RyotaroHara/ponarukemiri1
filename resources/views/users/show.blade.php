@@ -208,11 +208,17 @@ print $weight_sa."kg減量まであと".$nokori_cal."kcalだよ";
 // $amari = $sa%(24*60*60);
 // $hi = ($sa - $amari)/(24*60*60);
 
+
 // $re_sa = $finish - time();
 // $re_amari = $re_sa%(24*60*60);
 // $re_hi = ($re_sa - $re_amari)/(24*60*60);
 
+$re_sa = $finish - time();
+$re_amari = $re_sa%(24*60*60);
+$re_hi = ($re_sa - $re_amari)/(24*60*60);
+
 // print "期日まであと".$re_hi."日";
+
 
 //1日あたりの消費カロリー（$day_cal）の計算
 $day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200)%$re_hi;
@@ -220,9 +226,9 @@ $day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $day_cal_amari)/$r
 $re_day_cal_amari = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $all_cal)%$re_hi;
 $re_day_cal = (("{$user->Weight}"-"{$user->IdealWeight}")*7200 - $all_cal - $re_day_cal_amari )/$re_hi;
 
-print "<br />今日は".$day_cal."kcal消費しよう";
+print "<br />今日は".floor($re_day_cal)."kcal消費しよう";
 
-print "<br />今日のノルマまで、あと".$day_cal."kcal";
+
 //今日の範囲を算出
 //$today_amari = time()%(24*60*60);
 //$today_start = time()-$today_amari;
@@ -242,10 +248,10 @@ for ($i=1; $i<200; $i++) {
     $sum_cal += $cal*$num;
 }
 print "<br />今日は".floor($sum_cal)."kcal消費したよ";
-
+//print "<br />今日のノルマまで、あと".floor($re_day_cal-$sum_cal)."kcal";
 //HPゲージの作成
-$damage = $sum_cal*500/$day_cal;
-$nokori = $day_cal - $sum_cal;
+$damage = $sum_cal*500/$re_day_cal;
+$nokori = $re_day_cal - $sum_cal;
 if ($nokori>0) {
     print "<br />あと".floor($nokori)."kcal";
 }
@@ -266,7 +272,6 @@ print "<br />今".$level."レベルだよ";
 
 
 
-
 @if ($level > 25)
 <img src="{{ url('images/#') }}">
 @else
@@ -275,9 +280,6 @@ print "<br />今".$level."レベルだよ";
 @endif
 
 
-
-　　　　　　　   　　
-                
             </ul>
         </div>
     </div>
