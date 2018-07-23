@@ -32,8 +32,7 @@ class BattlesController extends Controller
   
     public function battle_menu($userId)
     {
-        $user = User::select('Weight', 'name', 'IdealWeight')->where('id', $userId)->get();
-        
+        $user = User::select('Weight', 'name', 'IdealWeight')->where('id', $userId)->get()->first();
         return view('battle.basic page.cafeteria battle', ['user' => $user]);
     }
     
@@ -55,7 +54,7 @@ class BattlesController extends Controller
             'cal' => $request->cal,
             'num' => $request->num,
         ]);
-        return redirect('/users/'.$request->user()->id);
+        return redirect('/battle/menu/'.$request->user()->id);
     }
 
 }
