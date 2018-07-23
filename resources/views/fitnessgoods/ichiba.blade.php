@@ -1,43 +1,24 @@
 @extends('layouts.app')
+
 @section('content')
-@if(Auth::check())
-
-<div class="battle_background" alt="otameshi" >
-
-  <div class="container">
-    <div class="Hp">
-      <div class="col-sm-4">
-        One of three columns
-      </div>
-      <div class="col-sm-4">
-        One of three columns
-      </div>
-      <div class="col-sm-4">
-        One of three columns
-      </div>
+    <div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      1 of 2
+    </div>
+    <div class="col-lg-4">
+      2 of 2
     </div>
   </div>
-  
-  <?php
-  print $_SERVER['REQUEST_URI'];
-  ?>
-    
-  
-  
-    <div class="row align-items-end">
-      <div class="col-sm-8" style="text-align:center;">
-        One of three columns
-      </div>
-      <div class="col-sm-4">
-        One of three columns
-      </div>
-    
+  <div class="row">
+    <div class="col-lg-5" style="margin-top:360px;padding:10px; width:400px; height:220px; background-color:blue;">
+      1 of 3
     </div>
-  
-
+    <div class="col-lg-5" style="margin-top:360px;margin-left:10px;padding:10px; width:700px; height:220px; background-color:blue;">
+      2 of 3
+    </div>
+    
+  </div>
 </div>
 
-
-
-@endif
 @endsection

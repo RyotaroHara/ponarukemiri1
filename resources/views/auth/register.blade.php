@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="form-group col-xs-4">
-                        {!! Form::label('year', 'year') !!}
+                        {!! Form::label('year', 'year (西暦)') !!}
                         {!! Form::number('year', old('year'), ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group col-xs-4">

@@ -2,9 +2,10 @@
 
 
 body {
-    background-image: url("/images/back2.jpg");
     font-family: 'メイリオ',sans-serif;
-} 
+
+}
+
 footer {
     margin-top: 40px;
     position: absolute;
@@ -249,7 +250,6 @@ footer {
 	margin: 0 auto;
 }
 
-.battle_background {
-    width:1000px;
-    background-image: url("/images/office_battle.jpg");
+.background {
+    
 }
