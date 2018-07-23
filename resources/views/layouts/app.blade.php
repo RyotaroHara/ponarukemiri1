@@ -18,13 +18,19 @@
     </head>
     
         <!-- URLによって表示する背景画像を変える-->
-        <?php 
-        $change_image="";
-        switch ($_SERVER["REQUEST_URI"]) {
-            case '/':   $change_image = 'url(../images/back2.jpg)';  break;
-            case '/battle/menu/3': $change_image = 'url(../images/office_battle.jpg)';  break;}
+        <?php
+        $change_image = "";
+        $url = ($_SERVER["REQUEST_URI"]);
+        if (preg_match('</battle/menu>',$url)) {$change_image = 'url(../images/office_battle.jpg)';}
+        if (preg_match('</place>',$url)) {$change_image = 'url(../images/back2.jpg)';}
+        if (preg_match('</Exercise>',$url)) {$change_image = 'url(../images/back2.jpg)';}
+        if (preg_match('</>',$url)) {$change_image = 'url(../images/TopMenu-01.png)';}
+        
+        
+        print $_SERVER["REQUEST_URI"];
+        
         ?>
-    
+        
     <body class="background" style="background-image: <?php echo $change_image ?>;">
         @include('commons.navbar')
 
