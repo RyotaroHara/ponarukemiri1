@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+body {
+    font-family: 'メイリオ',sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+footer {
+    margin-top: 40px;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.status-label {
+    list-style: none;
+    float:left;
+    width:50%;
+    margin:0px;
+    
+}
+
+
+.status-label2  {
+   float:left;
+   width:50%;
+   height:100px;
+   padding:0px;
+}
+
+.status-label3 {
+    float:right;
+    margin:0px;
+}

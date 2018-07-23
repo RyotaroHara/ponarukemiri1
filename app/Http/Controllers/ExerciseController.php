@@ -21,7 +21,7 @@ public function place($name)
     
 public function menu($id)
     {
-        $expla = Exercise::select('exe_name', 'explanation')->where('id', $id)->first();
+        $expla = Exercise::select('exe_name', 'explanation','pic_name')->where('id', $id)->first();
         $place = Exercise::select('place')->where('id', $id)->first();
         $place_info = $place->place;
         

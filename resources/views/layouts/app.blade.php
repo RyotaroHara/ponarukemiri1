@@ -13,17 +13,24 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
+         <link rel="stylesheet" href="{{ secure_asset('css/show.css') }}">
         <script src="{{ url('js/footerFixed.js') }}"></script>
     </head>
     
         <!-- URLによって表示する背景画像を変える-->
-        <?php 
-        $change_image="";
-        switch ($_SERVER["REQUEST_URI"]) {
-            case '/':   $change_image = 'url(../images/back2.jpg)';  break;
-            case '/battle/battle': $change_image = 'url(../images/office_battle.jpg)';  break;}
+        <?php
+        $change_image = "";
+        $url = ($_SERVER["REQUEST_URI"]);
+        if (preg_match('</battle/menu>',$url)) {$change_image = 'url(../images/office_battle.jpg)';}
+        if (preg_match('</place>',$url)) {$change_image = 'url(../images/back2.jpg)';}
+        if (preg_match('</Exercise>',$url)) {$change_image = 'url(../images/back2.jpg)';}
+        if (preg_match('</>',$url)) {$change_image = 'url(../images/TopMenu-01.png)';}
+        
+        
+        print $_SERVER["REQUEST_URI"];
+        
         ?>
-    
+        
     <body class="background" style="background-image: <?php echo $change_image ?>;">
         @include('commons.navbar')
 

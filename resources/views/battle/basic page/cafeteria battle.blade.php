@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if(Auth::check())
     <div class="container">
   <div class="row">
     <div class="col-lg-4">
@@ -11,8 +13,14 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-5" style="margin-top:360px;padding:10px; width:400px; height:220px; background-color:blue;">
-      1 of 3
+    <div class="col-lg-5" style="margin-top:360px;padding:10px; width:400px; height:220px; background-color:skyblue;">
+      <?php print $user; ?>
+      
+     
+      
+      
+      
+      
     </div>
     <div class="col-lg-5" style="margin-top:360px;margin-left:10px;padding:10px; width:700px; height:220px; background-color:blue;">
       2 of 3
@@ -21,4 +29,7 @@
   </div>
 </div>
 
+@endif
+
 @endsection
+

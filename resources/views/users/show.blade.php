@@ -6,9 +6,10 @@
             <img src="{{ Gravatar::src($user->name, 100) . '&d=mm' }}" alt="" class="img-circle">
         </div>
         <div class="name text-center">
+            <div id="wrapper">
             <h1>{{ $user->name }}</h1>
             ダイエットする場合でも体調維持の為に最低限摂取しなければいけないカロリーは{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。<br>
-            　  <div class="staus-label"><ul>
+            　  <div class="status-label"><ul>
                     <a href = "#" class = "list-group-item active col-xs-4 col-xs-offset-4">ダイエット中で運動をしない日の食事のおすすめのP:F:Cバランス</a>
                     <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
                       P(タンパク質):
@@ -35,7 +36,7 @@
                     @endif
                     </a></ul>
                     </div>
-                　  <div class="staus-label"><ul> 
+                　  <div class="status-label2"><ul> 
                 　  <a href = "#" class = "list-group-item active col-xs-4 col-xs-offset-4">ダイエット中で運動をする日の食事のおすすめのP:F:Cバランス</a>
                     <a href = "#" class = "list-group-item col-xs-4 col-xs-offset-4">
                       P(タンパク質):
@@ -62,13 +63,14 @@
                     @endif
                     </a></div>
                      </ul>
-                  <div class="staus-label">
+                  <div class="status-label3">
                     <ul>      
                     <br><br><br>
                     ※P:F:Cバランスはあくまでも目安です。　<br>
                     トレーニング等の細かいアドバイスは製作者にお尋ねください。
                     </ul>
                         </div>
+                    </div>    
             </div>
         <div class="status text-center">
         <ul>
@@ -186,7 +188,7 @@ print "<br />".$user->year."年".$user->month."月".$user->day."日までに結�
                 </li>
                 
                 <li>
-                     <div class="staus-label">
+                     <div class="status-label">
 
 
 <?php
