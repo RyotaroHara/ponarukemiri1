@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-4 col-md-1">
         <div class=a>
-            @include('Exercise.tab.present location.P_tab_office')
+            @include('Exercise.tab.normal.tab_office')
             @include('Exercise.tab.normal.tab_way')
             @include('Exercise.tab.normal.tab_cafeteria')
         </div>

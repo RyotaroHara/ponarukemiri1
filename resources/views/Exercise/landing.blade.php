@@ -11,7 +11,7 @@
         <div class=link change>
             @include('Exercise.tab.normal.tab_office')
             @include('Exercise.tab.normal.tab_way')
-            @include('Exercise.tab.present location.P_tab_cafeteria')
+            @include('Exercise.tab.normal.tab_cafeteria')
         </div>
   </div>
   <div class="col-7 col-md-3">
