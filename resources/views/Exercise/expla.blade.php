@@ -32,7 +32,7 @@
                 
                  <div class=images>
                 
-                   <img class="card-img-top" src="{{ asset("images/".$expla->pic_name) }}" alt="otameshi" style="width:430px;">
+                   <img class="card-img-top2" src="{{ asset("images/".$expla->pic_name) }}" alt="otameshi" style="width:430px;">
                  </div>
                      <div class=ex_text>
                        <p>{!! $expla->explanation !!}</p>  
