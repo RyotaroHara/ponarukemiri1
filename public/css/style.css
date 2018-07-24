@@ -185,6 +185,9 @@ footer {
     background:#FFFFFF;
 }   
 
+.medium3 {
+    margin-top: 50px;
+}
 .navbar {
     background-color:#FBB9FF;
 }
@@ -196,6 +199,7 @@ footer {
 /*画像設定*/
 .card-img-top {
    text-align:center;    
+}
 }
 .row {
 	margin: 0 auto;
