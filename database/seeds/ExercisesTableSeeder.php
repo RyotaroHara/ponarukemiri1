@@ -61,7 +61,7 @@ class ExercisesTableSeeder extends Seeder
             
          $exercise= new \App\Exercise([
             'id'=>'5',
-            'pic_name'=>'',
+            'pic_name'=>'5.jpg',
             'exe_name'=>'いただきますでバストアップ',   
             'explanation'=>'その名の通り、いただきますをしながらバストアップを目指しましょう。<br>
                        やり方は簡単、いただきますのポーズをしながら
@@ -95,7 +95,7 @@ class ExercisesTableSeeder extends Seeder
             
          $exercise= new \App\Exercise([
             'id'=>'8',
-            'pic_name'=>'',
+            'pic_name'=>'8.jpg',
             'exe_name'=>'太ももの引き締め',   
             'explanation'=>'浅めに腰かけ、膝にクッションや雑誌を挟んでみましょう！<br>
                            これだけで内ももの引き締めに効果があります。<br>
@@ -106,7 +106,7 @@ class ExercisesTableSeeder extends Seeder
             
          $exercise= new \App\Exercise([
             'id'=>'9',
-            'pic_name'=>'',
+            'pic_name'=>'9.jpg',
             'exe_name'=>'ヒップアップ',   
             'explanation'=>'お尻の穴を締めるように意識して、全体に力を入れて30秒キープしましょう！',
             'cal'=>' ',
@@ -161,7 +161,7 @@ class ExercisesTableSeeder extends Seeder
             
          $exercise= new \App\Exercise([
             'id'=>'14',
-            'pic_name'=>'',
+            'pic_name'=>'14.jpg',
             'exe_name'=>'頭のマッサージ',   
             'explanation'=>'目が疲れた時は、頭のマッサージをしてみましょう。頭皮が固くなっていたら、疲労が蓄積している証拠です。<br>
                         頭皮全体を柔らかくする様にマッサージしましょう。　<br>
@@ -173,7 +173,7 @@ class ExercisesTableSeeder extends Seeder
         
          $exercise= new \App\Exercise([
             'id'=>'15',
-            'pic_name'=>'',
+            'pic_name'=>'15.jpg',
             'exe_name'=>'PC斜め打ち',   
             'explanation'=>'PCに対して正面に座るのではなく、全身を椅子ごと斜めに向けましょう。<br>
                         その後、姿勢を正し、腹筋に力を入れるよう意識してひねりながら作業をすると、腹斜筋が鍛えられ血行も促進されます。',
@@ -205,7 +205,7 @@ class ExercisesTableSeeder extends Seeder
             
         $exercise= new \App\Exercise([
             'id'=>'19',
-            'pic_name'=>'',
+            'pic_name'=>'19.jpg',
             'exe_name'=>'電車でのつま先立ち',   
             'explanation'=>'つり革や手すりにつかまり、最寄り駅から二子玉川駅まで
                        つま先立ちでヒラメ筋と体幹とおしりを鍛えましょう。<br>
@@ -230,7 +230,7 @@ class ExercisesTableSeeder extends Seeder
             
          $exercise= new \App\Exercise([
             'id'=>'21',
-            'pic_name'=>'',
+            'pic_name'=>'21.jpg',
             'exe_name'=>'内ももシェイプアップ',   
             'explanation'=>'座った状態で足先をクロスし、膝と膝で押し合います。<br>
                       エクササイズをしているように見えないので、公共の場でも安心です。<br>
