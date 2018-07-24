@@ -32,20 +32,14 @@
 　   <div class = "list-group-item active">エクササイズ選択</div>
         <div class = "list-group-item">
         {!! Form::open(['route' => 'battles.store']) !!}
-        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0005 }}" >
-        <input type="number" name="num" value="" style="width:50px">回
-        {!! Form::submit('腕立て') !!}をした。 <br>
-        {!! Form::close() !!}</div>
-        <div class = "list-group-item">
-        {!! Form::open(['route' => 'battles.store']) !!}
-        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.1 }}">
+        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.1*1.05 }}">
         <input type="hidden" name="num" value="1">
         {!! Form::submit('4階から9階まで階段であがる') !!} <br>
         {!! Form::close() !!}
         </div>
         <div class = "list-group-item">
         {!! Form::open(['route' => 'battles.store']) !!}
-        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0875 }}">
+        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0875*1.05 }}">
         <input type="hidden" name="num" value="1">
         {!! Form::submit('9階から4階まで階段でおりる') !!}<br>
         {!! Form::close() !!}
@@ -59,9 +53,23 @@
         </div>
         <div class = "list-group-item">
         {!! Form::open(['route' => 'battles.store']) !!}    
-        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.29 }}">
+        <input type="hidden" name="cal" value="{{ ($user->Weight)*10/60*2.3*1.05 }}">
+        <input type="hidden" name="num" value="1">
+        {!! Form::submit('10分間ストレッチをした') !!}<br>
+        {!! Form::close() !!}
+        </div>
+        <div class = "list-group-item">
+        {!! Form::open(['route' => 'battles.store']) !!}    
+        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.29*1.05 }}">
         <input type="hidden" name="num" value="1">
         {!! Form::submit('二子玉川駅からクリムゾンハウスまで歩く') !!}<br>
+        {!! Form::close() !!}
+        </div>
+        <div class = "list-group-item">
+        {!! Form::open(['route' => 'battles.store']) !!}    
+        <input type="hidden" name="cal" value="{{ 18/60*3 }}">
+        <input type="hidden" name="num" value="1">
+        {!! Form::submit('お腹の引き締め') !!}<br>
         {!! Form::close() !!}
         </div>
         <div class = "list-group-item">
@@ -70,8 +78,33 @@
         <input type="hidden" name="num" value="1">kcal消費する
         {!! Form::submit('運動をした') !!}<br>
         {!! Form::close() !!}
-        </div>    
-      </div>
+        </div>
+        <div class = "list-group-item">裏技</div>    
+        <div class = "list-group-item">
+        {!! Form::open(['route' => 'battles.store']) !!}    
+        <input type="hidden" name="cal" value="{{ ($user->Weight)*10/60*6*1.05 }}">
+        <input type="hidden" name="num" value="1">
+        {!! Form::submit('10分間軽いジョギングした') !!}<br>
+        {!! Form::close() !!}
+        
+        {!! Form::open(['route' => 'battles.store']) !!}    
+        <input type="hidden" name="cal" value="{{ ($user->Weight)*10/60*1.5*1.05 }}">
+        <input type="hidden" name="num" value="1">
+        {!! Form::submit('食事を10分ですませた') !!}<br>
+        {!! Form::close() !!}
+
+        {!! Form::open(['route' => 'battles.store']) !!}    
+        <input type="hidden" name="cal" value="{{ ($user->Weight)*30/60*1.3*1.05 }}">
+        <input type="hidden" name="num" value="1">
+        {!! Form::submit('30分間必死にタイピング練習をした') !!}<br>
+        {!! Form::close() !!}
+        
+        {!! Form::open(['route' => 'battles.store']) !!}
+        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0005*1.05 }}" >
+        <input type="number" name="num" value="" style="width:50px">回
+        {!! Form::submit('腕立て') !!}をした。 <br>
+        {!! Form::close() !!}</div>
+         </div>
     </div>  
 </form>
     
