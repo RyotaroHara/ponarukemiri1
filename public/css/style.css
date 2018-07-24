@@ -161,8 +161,8 @@ footer {
     color:#FFFFFF;
     width:682px;
     height:70px;
-    background:#B1CFE8;
-    border: dashed 2px #5b8bd0;/*点線*/
+    background:#7D5C67;
+    border: dashed 2px #9C9C9B;/*点線*/
     margin-top: 10px;
     margin-bottom: 5px;
 }
@@ -185,7 +185,7 @@ footer {
 
 /*カラー設定*/
 .medium1 {
-    background:#006E99;
+    background:#ACC9FF;
 }
 
 .medium2 {
