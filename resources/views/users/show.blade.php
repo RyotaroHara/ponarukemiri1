@@ -3,7 +3,7 @@
 @section('content')
     <div class="user-profile">
         <div class="icon text-center">
-            <img src="{{ Gravatar::src($user->name, 100) . '&d=mm' }}" alt="" class="img-circle">
+            <img src="{{ url('images/HARA2.jpg') }}" alt="" class="img-circle">
         </div>
         <div class="name text-center">
            
@@ -25,11 +25,11 @@ print "生まれ変わるまであと".$re_hi."日";
 print "(".$user->year."/".$user->month."/".$user->day."まで)";
                 
 ?><br></h2>
-            
-            ※ダイエットする場合でも体調維持の為に最低限摂取しなければいけないカロリーは{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。
-            　 <aside id="sidebar">
-            　  <div class="status-label">
-                    <div  class = "list-group-item active ">【運動をしない日】<br>おすすめのP:F:Cバランス</div>
+         <div>
+             ※ダイエットする場合でも体調維持の為に最低限摂取しなければいけないカロリーは{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。
+         </div>
+             <div class="status-label col-sm-4 col-xs-12">
+                <div  class = "list-group-item active ">【運動をしない日】<br>おすすめのP:F:Cバランス</div>
                     <div  class = "list-group-item ">
                       P(タンパク質):
                       @if (($user->sex)==1)
@@ -57,9 +57,9 @@ print "(".$user->year."/".$user->month."/".$user->day."まで)";
                     <div class = "list-group-item">
                     Total:{{ floor(370+21.6*($user->Weight)*(100-$user->fat)/100) }}kcal
                     </div>
-                </div>
-                　  <div class="status-label2 ">
-                　  <div  class = "list-group-item active">【運動をする日】<br>おすすめのP:F:Cバランス</div>
+            </div>
+             <div class="status-label2 col-sm-4 col-xs-12">
+                 <div  class = "list-group-item active">【運動をする日】<br>おすすめのP:F:Cバランス</div>
                     <div  class = "list-group-item ">
                       P(タンパク質):
                       @if (($user->sex)==1)
@@ -87,38 +87,40 @@ print "(".$user->year."/".$user->month."/".$user->day."まで)";
                     <div class="list-group-item">
                         Total:{{ floor(370+21.6*($user->Weight)*(100-$user->fat)/100*1.1) }}kcal
                     </div>
-                </div>
+                
+            </div>
                      
-                  <div class="status-label3 ">
+                 <div class="status-label3 col-sm-4 col-xs-12">
                       
                     <br><br><br>
                     ※P:F:Cバランスはあくまでも目安です。　<br>
                     トレーニング等の細かいアドバイスは製作者にお尋ねください。
                     
-                        </div>
+                 </div>
                 
             </div>
-    <div class ="nana">    
-        <div class="status text-center">
+   
+ <div class ="nana">    
+     <div class="status text-center">
         <ul>
             <li>  
         <?php
         $all_cal = 0;
         for ($i=1; $i<200; $i++) {
     
-
-    $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
-    $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
-    $all_cal += $cal*$num;
-}
-$nokori_cal = floor((("{$user->Weight}"-"{$user->IdealWeight}")*7200)-$all_cal);
-$weight_sa = "{$user->Weight}"-"{$user->IdealWeight}";
-print $weight_sa."kg減量まであと".$nokori_cal."kcalだよ";
-// print "<br />".$user->year."年".$user->month."月".$user->day."日までに結果が欲しい";
-                ?>
-                
-                </li>
-                <li>
+    
+        $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
+        $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
+        $all_cal += $cal*$num;
+        }
+        $nokori_cal = floor((("{$user->Weight}"-"{$user->IdealWeight}")*7200)-$all_cal);
+        $weight_sa = "{$user->Weight}"-"{$user->IdealWeight}";
+        print $weight_sa."kg減量まであと".$nokori_cal."kcalだよ";
+        // print "<br />".$user->year."年".$user->month."月".$user->day."日までに結果が欲しい";
+        ?>
+                        
+            </li>
+             <li>
 
                     <div class="status-label">
                     <!--あなたの骨格から計算した基礎代謝は <br>-->
@@ -129,8 +131,9 @@ print $weight_sa."kg減量まであと".$nokori_cal."kcalだよ";
                     <!--@endif -->
                     <!--<br> <br>-->
                     あなたの体脂肪率をもとに計算した基礎代謝は {{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。
-                    </div></li>
-                    <li>
+                    </div>
+            </li>
+             <li>
                     <div class="status-label">
                         <!--あなたの除脂肪体重は{{ ($user->Weight)*(100-($user->fat))/100 }}kg <br> -->
                     運動強度が{{ $user->ExerciseIntensity}}のあなたの一日の消費カロリーは
@@ -144,60 +147,26 @@ print $weight_sa."kg減量まであと".$nokori_cal."kcalだよ";
                     {{ floor(370+21.6*($user->Weight)*(100-$user->fat)/100*1.9) }}kcalです。
                 　  @endif        
                 　  <br>
-                　  </div></li>
-            </div>
+                　  </div>
+                </li>
+            </ul>
         </div>
     </div>
-    </aside>
     
-　  <div class="status text-left col-sm-6 col-xs-12">　
-　      <div class = "list-group-item active">エクササイズ選択</div>
-        <div class = "list-group-item">
-        {!! Form::open(['route' => 'battles.store']) !!}
-        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0005 }}" >
-        <input type="number" name="num" value="" style="width:50px">回
-        {!! Form::submit('腕立て') !!}をした。 <br>
-        {!! Form::close() !!}</div>
-        <div class = "list-group-item">
-        {!! Form::open(['route' => 'battles.store']) !!}
-        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.1 }}">
-        <input type="hidden" name="num" value="1">
-        {!! Form::submit('4階から9階まで階段であがる') !!} <br>
-        {!! Form::close() !!}
-        </div>
-        <div class = "list-group-item">
-        {!! Form::open(['route' => 'battles.store']) !!}
-        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.0875 }}">
-        <input type="hidden" name="num" value="1">
-        {!! Form::submit('9階から4階まで階段でおりる') !!}<br>
-        {!! Form::close() !!}
-        </div>
-        <div class = "list-group-item">
-        {!! Form::open(['route' => 'battles.store']) !!}
-        <input type="hidden" name="cal" value="2.7">
-        <input type="number" name="num" value="" style="width:50px">分
-        {!! Form::submit('電車内でつま先立ち') !!}<br>
-        {!! Form::close() !!}
-        </div>
-        <div class = "list-group-item">
-        {!! Form::open(['route' => 'battles.store']) !!}    
-        <input type="hidden" name="cal" value="{{ ($user->Weight)*0.29 }}">
-        <input type="hidden" name="num" value="1">
-        {!! Form::submit('二子玉川駅からクリムゾンハウスまで歩く') !!}<br>
-        {!! Form::close() !!}
-        </div>
-        <div class = "list-group-item">
-        {!! Form::open(['route' => 'battles.store']) !!}    
-        <input type="number" name="cal" value="" style="width:60px">
-        <input type="hidden" name="num" value="1">kcal消費する
-        {!! Form::submit('運動をした') !!}<br>
-        {!! Form::close() !!}
-        </div>    
-    </div>
-
-                
-                
-     <div class="col-sm-3">
+     <div class="col-sm-6">
+     <h1><?php
+        $all_cal = 0;
+        for ($i=1; $i<200; $i++) {
+    
+    $cal = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('cal');
+    $num = DB::table('battles')->where('user_id',"$user->id")->where('id',"$i")->value('num');
+    $all_cal += $cal*$num;
+}
+    $level = floor($all_cal/((("{$user->Weight}"-"{$user->IdealWeight}")*7200)/100));
+    print "<br />今".$level."レベルだよ";
+    ?>  </h1>
+         
+     <div class="col-sm-12">
 
 
 <?php
@@ -261,26 +230,12 @@ else{
 ?>
 <meter class="vertical" min="0" max="500" value="<?php print 500 - $damage?>">100%</meter>
 
-<?php
-
-
-$level = floor($all_cal/((("{$user->Weight}"-"{$user->IdealWeight}")*7200)/100));
-
-print "<br />今".$level."レベルだよ";
-
-?>
 
 
 
-@if ($level > 25)
-<img src="{{ url('images/#') }}">
-@else
-<img src="{{ url('images/#') }}">
-
-@endif
 
 
-            </ul>
+            
         </div>
     </div>
     
