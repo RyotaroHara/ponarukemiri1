@@ -106,8 +106,8 @@ footer {
     display: table;
 }
 .user-profile .status ul li {
-    width: 120px;
-    padding: 5px 0;
+    width: 33%;
+    padding: 5px 10px;
     border-right: 1px solid #ddd;
     display: table-cell;
     vertical-align: middle;
@@ -135,7 +135,7 @@ footer {
     background:#DDDDDD;
 }
 
-.tab_box_present {
+.tab:hover {
     padding:30px;
     text-align:center;
     writing-mode:vertical-rl;

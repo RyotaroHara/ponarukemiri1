@@ -57,11 +57,11 @@ Route::group(['middleware' => 'auth'], function () {
 
     
     //battle post
-    Route::get('battle', 'BattlesController@battle')->name('battle.post');
-    Route::post('battle', 'BattlesController@battle');
+
     Route::resource('users', 'UsersController');
     Route::resource('battle', 'BattlesController');
-    
+    Route::get('battle', 'BattlesController@battle')->name('battle.post');
+    Route::post('battle', 'BattlesController@battle');    
     //fitnessgoods 
     Route::get('fitnessgoods/ichiba', 'FitnessgoodsController@ichiba')->name('fitnessgoods.ichiba');
     
