@@ -6,14 +6,20 @@ body {
     margin-left: auto;
 
 }
-img {
-    max-width: 100%;
-    
-}
+
 footer {
     margin-top: 40px;
     position: absolute;
     bottom: 0;
+}
+
+.icon.text-center{
+   width: 25%;
+   margin:0 auto;
+}
+
+.img-circle{
+    max-width:100%;
 }
 
 .status-label{
@@ -34,3 +40,4 @@ footer {
     width: 220px;
     float: right;
 }
+
