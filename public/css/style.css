@@ -134,7 +134,7 @@ footer {
     background:#DDDDDD;
 }
 
-.tab_box_present {
+.tab:hover {
     padding:30px;
     text-align:center;
     writing-mode:vertical-rl;
