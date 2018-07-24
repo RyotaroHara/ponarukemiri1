@@ -51,7 +51,7 @@ footer {
     font-weight:bold;
     letter-spacing: 0.15em;
     color: #FFF;
-    background: #6eb7ff;
+    /*background: #6eb7ff;*/
     border-bottom: solid 6px #3f87ce;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
