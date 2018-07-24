@@ -2,3 +2,7 @@ body {
   background-image: url("/images/back2.jpg");
   font-family: 'メイリオ', sans-serif;
 }
+
+meter{
+    
+  max-width:100000px}
