@@ -10,7 +10,7 @@
                
                 
                  @if (!Auth::check())
-                    <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg" style="margin-left:170px;margin-top:450px;">
+                    <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg" style="margin-left:0px;margin-top:450px;">
                         Start Exercise</a>
                         
                     <a href="{{ route('login') }}" class="btn btn-success btn-lg" style="margin-left:30px;margin-top:450px;">
