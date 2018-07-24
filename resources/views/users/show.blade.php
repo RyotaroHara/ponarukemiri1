@@ -55,7 +55,7 @@ print "(".$user->year."/".$user->month."/".$user->day."まで)";
                     @endif
                     </div>
                     <div class = "list-group-item">
-                    Total:{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kcal
+                    Total:{{ floor(370+21.6*($user->Weight)*(100-$user->fat)/100) }}kcal
                     </div>
                 </div>
                 　  <div class="status-label2 ">
@@ -85,7 +85,7 @@ print "(".$user->year."/".$user->month."/".$user->day."まで)";
                     @endif
                     </div>
                     <div class="list-group-item">
-                        Total:{{ 370+21.6*($user->Weight)*(100-$user->fat)/100*1.1 }}kcal
+                        Total:{{ floor(370+21.6*($user->Weight)*(100-$user->fat)/100*1.1) }}kcal
                     </div>
                 </div>
                      
