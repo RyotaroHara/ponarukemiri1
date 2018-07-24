@@ -3,6 +3,8 @@ body {
   font-family: 'メイリオ', sans-serif;
 }
 
-meter{
-    
-  max-width:100000px}
+img {
+  max-width:100%;
+}
+  
+  

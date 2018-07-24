@@ -8,7 +8,7 @@
 @if(Auth::check())
     <div class="container">
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-sm-4">
      <h1><?php
         $all_cal = 0;
         for ($i=1; $i<200; $i++) {
@@ -21,7 +21,9 @@
     print "<br />今".$level."レベルだよ";
     ?>  </h1>
                 
-<div> IMAGE</div>
+<div> 
+<img src="{{ url('images/HARA2.jpg') }}">
+</div>
                 
                 
                 
@@ -74,19 +76,12 @@
 </form>
     
     <div class="status text-right ">
-      
-      MONSTER KANA<br>
-      @if ($level > 25)
-      <img src="{{ url('images/fatman.jpg') }}"> 
-      @else
-      <img src="{{ url('images/fatman.jpg') }}">
-      @endif
-    
-    <br>
-    <div> 
-    のこりＨＰ
-         <meter min=0 max=100 value=<?php 
-$finish = strtotime("{$user->year}-{$user->month}-{$user->day}");
+      <h1>
+        Fat Man
+        
+      </h1>
+<?php
+      $finish = strtotime("{$user->year}-{$user->month}-{$user->day}");
 $re_sa = $finish - time();
 $re_amari = $re_sa%(24*60*60);
 $re_hi = ($re_sa - $re_amari)/(24*60*60);
@@ -109,10 +104,18 @@ $damage = $sum_cal*100/$re_day_cal;
       
 
 //echo $today;
-//今日消費したカロリー（$sum_cal）の計算　
-
-          print 100 - $damage;    ?> style="width: 200px;" low="20" high="80" optimum="90" >50%</meter>
- <?php  print floor(100 - $damage) ?>/100
+//今日消費したカロリー（$sum_cal）の計算　?>
+      @if ($damage>100)
+      <img src="{{ url('images/Beat fat.jpg') }}"> 
+      @else
+      <img src="{{ url('images/fatman.jpg') }}">
+      @endif
+    
+    <br>
+    <div> 
+    のこりＨＰ
+         <meter min=0 max=100 value=<?php  print 100 - $damage;    ?> style="width: 200px;" low="20" high="80" optimum="90" >50%</meter>
+ <?php if (floor(100-$damage)<0)print 0; else print floor(100 - $damage) ?>/100
     </div>
     </div>        
      
