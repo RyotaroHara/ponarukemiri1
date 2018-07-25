@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/title3.png") }}" alt="OFFICE EXERCISE"></a>
+                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/logo4.jpg") }}" alt="OFFICE EXERCISE"></a>
             </div>
        
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
