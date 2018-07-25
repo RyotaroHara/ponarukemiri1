@@ -29,7 +29,7 @@
   <div class="col-7 col-md-8">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
              <div class=medium3> 
-             <img class="card-img-top" src="{{ asset('images/common1.png') }}" alt="explanation" style="width:700px;"> 
+             <img class="card-img-top" src="{{ asset('images/common1.png') }}" alt="explanation" style="width:680px;"> 
              </div>        
         </div>
   </div>
