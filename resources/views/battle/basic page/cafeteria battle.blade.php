@@ -133,7 +133,7 @@ $day_nokori = $re_day_cal - $sum_cal;
     </div>
     <br>
     <div>
-    　<?php print "あと".floor($day_nokori)."kcalで倒せそうだ！" ?>
+    　<?php if(floor($day_nokori)<0)print "今日はふぃにしゅん。うれぴこ。寝て過ごすンゴ。";else print "あと".floor($day_nokori)."kcalで倒せそうだ！" ;?>
     </div> 
     </div>
     </div>
