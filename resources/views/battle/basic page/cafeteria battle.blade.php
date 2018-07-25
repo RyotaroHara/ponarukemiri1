@@ -29,7 +29,7 @@
     $nokori_cal = floor((("{$user->Weight}"-"{$user->IdealWeight}")*7200)-$all_cal);
     $weight_sa = "{$user->Weight}"-"{$user->IdealWeight}";
     if($level>99)
-    print "<br />100レベルおめでとう。<br />鏡を見てごらん。<br />理想の君に出会えるから。";
+    print "<br />100レベル<br />おめでとう。<br />鏡を見てごらん。<br />理想の君に<br />出会えるから。";
     else
     print "<br />今".$level."レベルだよ";
     ?>  </h1>
@@ -39,6 +39,9 @@
 </div>
 <div> 
      <?php
+     if ($nokori_cal < 0)
+     print "おつぽよ";
+     else
      print "100レベルまであと".$nokori_cal."kcal";
      ?>
 </div>
@@ -123,6 +126,8 @@ $day_nokori = $re_day_cal - $sum_cal;
 //echo $today;
 //今日消費したカロリー（$sum_cal）の計算　?>
       @if ($damage>100)
+      <img src="{{ url('images/Beat fat.jpg') }}"> 
+      @elseif (0>$damage)
       <img src="{{ url('images/Beat fat.jpg') }}"> 
       @else
       <img src="{{ url('images/fatman.jpg') }}">
