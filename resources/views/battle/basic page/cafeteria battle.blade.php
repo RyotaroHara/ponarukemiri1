@@ -78,6 +78,13 @@
         {!! Form::submit('二子玉川駅からクリムゾンハウスまで歩く') !!}<br>(体重×0.29kcal/push) <br>
         {!! Form::close() !!}
         </div>
+        <div class = "list-group-item">
+        {!! Form::open(['route' => 'battles.store']) !!}    
+        <input type="hidden" name="cal" value="{{ ($user->Weight)*10/60*2.3*1.05 }}">
+        <input type="hidden" name="num" value="1">
+        {!! Form::submit('10分間ストレッチをした') !!}<br>(体重×0.4kcal/push)<br>
+        {!! Form::close() !!}
+        </div>
         
         <div class = "list-group-item">
         {!! Form::open(['route' => 'battles.store']) !!}    
@@ -127,13 +134,13 @@ $day_nokori = $re_day_cal - $sum_cal;
       @endif
     <br>
     <div> 
-    のこりＨＰ
-         <meter min=0 max=100 value=<?php if(100 - $damage>100) print 0 ; elseif(100 - $damage<0) print 0; else print 100 - $damage;    ?> style="width: 200px;" low="20" high="80" optimum="90" >50%</meter>
+    残りＨＰ
+         <meter min=0 max=100 value=<?php if(100 - $damage>100) print 0 ; elseif(100 - $damage<0) print 0; else print 100 - $damage;    ?> style="width: 400px;" low="20" high="80" optimum="90" >50%</meter>
  <?php if (floor(100-$damage)<0)print 0;elseif (floor(100-$damage)>100)print 0;else print floor(100 - $damage) ?>/100
     </div>
     <br>
     <div>
-    　<?php if(floor($day_nokori)<0)print "今日はふぃにしゅん。うれぴこ。寝て過ごすンゴ。";else print "あと".floor($day_nokori)."kcalで倒せそうだ！" ;?>
+    　<?php if(floor($day_nokori)<0)print "<span style='font-size:30px'>Congratulation!!今日は寝て過ごそう！</span>";else print "あと".floor($day_nokori)."kcalで倒せそうだ！" ;?>
     </div> 
     </div>
     </div>
