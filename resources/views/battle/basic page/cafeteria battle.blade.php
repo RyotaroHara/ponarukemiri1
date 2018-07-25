@@ -78,6 +78,7 @@
         {!! Form::submit('二子玉川駅からクリムゾンハウスまで歩く') !!}<br>(体重×0.29kcal/push) <br>
         {!! Form::close() !!}
         </div>
+        
         <div class = "list-group-item">
         {!! Form::open(['route' => 'battles.store']) !!}    
         <input type="number" name="cal" value="" style="width:60px">
