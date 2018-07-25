@@ -78,7 +78,8 @@ class ExercisesTableSeeder extends Seeder
             'id'=>'6',
             'pic_name'=>'6.jpg',
             'exe_name'=>'小顔になるExercise',   
-            'explanation'=>'歯茎をなぞるようにして、舌をぐるぐる回しましょう。<br>
+            'explanation'=>'<br>
+                           歯茎をなぞるようにして、舌をぐるぐる回しましょう。<br>
                            左右20回ずつから始めると、習慣づけることができます。<br>
                            回数を重ねるごとに、リフトラインがシェイプアップされていきます。<br>
                            デスクワークでの短い休憩時間中におすすめです。',
@@ -198,7 +199,7 @@ class ExercisesTableSeeder extends Seeder
             'id'=>'16',
             'pic_name'=>'16.jpg',
             'exe_name'=>'階段を上る',   
-            'explanation'=>'階段を上る時は、前かがみにならないよう背筋をまっすぐに伸ばし、
+            'explanation'=>'<br>階段を上る時は、前かがみにならないよう背筋をまっすぐに伸ばし、
                       目線は下げずに前を見ます。<br>
                       膝を高く上げ、足の付け根ではなく骨盤を意識して
                       太ももを引き上げるイメージで上りましょう。',
@@ -210,7 +211,7 @@ class ExercisesTableSeeder extends Seeder
             'id'=>'17',
             'pic_name'=>'16.jpg',
             'exe_name'=>'階段を下る',   
-            'explanation'=>'下る時も背筋をまっすぐにすることを意識しながら、つま先から降ろします。<br>
+            'explanation'=>'<br>下る時も背筋をまっすぐにすることを意識しながら、つま先から降ろします。<br>
                        階段を踏み外さないよう目線はしっかり足元を見つつ、姿勢に気を付けましょう。<br>
                        食事後などにエレベーターではなく、階段を使うことを習慣にしましょう。',
             'cal'=>' ',
