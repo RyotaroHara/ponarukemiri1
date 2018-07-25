@@ -26,7 +26,8 @@ print "(".$user->year."/".$user->month."/".$user->day."まで)";
                 
 ?><br></h2>
          <div>
-             ※ダイエットする場合でも体調維持の為に最低限摂取しなければいけないカロリーは{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。
+             ※ダイエットする場合でも体調維持の為に最低限摂取しなければいけないカロリーは{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kcal
+            
          </div>
              <div class="status-label col-sm-4 col-xs-12">
                 <div  class = "list-group-item active ">【運動をしない日】<br>おすすめのP:F:Cバランス</div>
@@ -228,7 +229,7 @@ else{
     print "<br />ノルマ達成！今日は寝て過ごそう！";
 }
 ?>
-<meter class="vertical" min="0" max="500" value="<?php print 500 - $damage?>">100%</meter>
+<meter class="vertical" min="0" max="500" value="<?php print 500 - floor($damage)?>">100%</meter>
 
 
 
