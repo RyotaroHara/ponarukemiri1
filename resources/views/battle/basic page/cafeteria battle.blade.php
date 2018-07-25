@@ -116,7 +116,7 @@ for ($i=1; $i<200; $i++) {
     }
     
 $damage = $sum_cal*100/$re_day_cal;
-      
+$day_nokori = $re_day_cal - $sum_cal;
 
 //echo $today;
 //今日消費したカロリー（$sum_cal）の計算　?>
@@ -125,16 +125,18 @@ $damage = $sum_cal*100/$re_day_cal;
       @else
       <img src="{{ url('images/fatman.jpg') }}">
       @endif
-    
     <br>
     <div> 
     のこりＨＰ
          <meter min=0 max=100 value=<?php  print 100 - $damage;    ?> style="width: 200px;" low="20" high="80" optimum="90" >50%</meter>
  <?php if (floor(100-$damage)<0)print 0; else print floor(100 - $damage) ?>/100
     </div>
-    </div>        
-     
-        </div>
+    <br>
+    <div>
+    　<?php print "あと".$day_nokori."kcalで倒せそうだ！" ?>
+    </div> 
+    </div>
+    </div>
     </div>
 </form>
 </body>
