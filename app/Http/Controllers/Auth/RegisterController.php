@@ -86,4 +86,9 @@ class RegisterController extends Controller
             'ExerciseIntensity'=>$data['ExerciseIntensity'],
         ]);
     }
+    
+    public function username()
+    {
+        return 'name';
+    }
 }
