@@ -248,7 +248,7 @@
 <br>
 </div>
 
-
 <a href="{{route('users.edit',['id'=>$user->id]) }}">Edit MyStatus</a>   
+
 
 @endsection
