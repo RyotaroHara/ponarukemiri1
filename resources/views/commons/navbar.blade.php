@@ -23,8 +23,8 @@
                                 <ul class="dropdown-menu">
                                 <li><a href="{{ route('Place', ['name' => 'cafeteria']) }}">カフェテリア</a></li>
                                 <li><a href="{{ route('Place', ['name' => 'way']) }}">移動中</a></li>
-                                <li><a href="{{ route('Place', ['name' => 'office']) }}">OFFICE</a></li>
-                                <li><a href="{{ route('battle.menu', ['id' => Auth::user()->id]) }}">Battle</a></li>
+                                <li><a href="{{ route('Place', ['name' => 'office']) }}">オフィス</a></li>
+                                <li><a href="{{ route('battle.menu', ['id' => Auth::user()->id]) }}">バトル</a></li>
                                 
                                 </ul>
                             </li>
