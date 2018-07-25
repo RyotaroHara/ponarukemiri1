@@ -28,7 +28,9 @@
     $level = floor($all_cal/((("{$user->Weight}"-"{$user->IdealWeight}")*7200)/100));
     $nokori_cal = floor((("{$user->Weight}"-"{$user->IdealWeight}")*7200)-$all_cal);
     $weight_sa = "{$user->Weight}"-"{$user->IdealWeight}";
-    
+    if($level>99)
+    print "<br />100レベルおめでとう。<br />鏡を見てごらん。<br />理想の君に出会えるから。";
+    else
     print "<br />今".$level."レベルだよ";
     ?>  </h1>
                 
