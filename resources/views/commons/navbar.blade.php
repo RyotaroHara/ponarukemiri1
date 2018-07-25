@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/title2.png") }}" alt="OFFICE EXERCISE"></a>
+                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/title3.png") }}" alt="OFFICE EXERCISE"></a>
             </div>
        
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,7 +36,7 @@
                             <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                <li><a href="{{ route('fitnessgoods.ichiba') }}">楽天市場</a></li>
+                                <li><a href=https://www.rakuten.co.jp/category/200170/?l-id=top_normal_gmenu_d_sports_003>楽天市場</a></li>
                                 </ul>
                             </li>
 

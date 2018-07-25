@@ -11,7 +11,7 @@
         <div class=link change>
             @include('Exercise.tab.normal.tab_office')
             @include('Exercise.tab.normal.tab_way')
-            @include('Exercise.tab.present location.P_tab_cafeteria')
+            @include('Exercise.tab.normal.tab_cafeteria')
         </div>
   </div>
   <div class="col-7 col-md-3">
@@ -28,7 +28,9 @@
   
   <div class="col-7 col-md-8">
         <div class=medium2 style="padding:10px;width:700px;height:570px;">
-         
+             <div class=medium3> 
+             <img class="card-img-top" src="{{ asset('images/common1.png') }}" alt="explanation" style="width:700px;"> 
+             </div>        
         </div>
   </div>
   
