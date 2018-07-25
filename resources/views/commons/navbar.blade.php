@@ -16,16 +16,24 @@
                         @if (Auth::check())
                             <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                                バトル
+                            <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                <li><a href="{{ route('battle.menu', ['id' => Auth::user()->id]) }} ">バトル</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
                                 エクササイズ場所
                             <span class="caret"></span>
-                                </a>
+                            
                                 <ul class="dropdown-menu">
-                                <li><a href="{{ route('Place', ['name' => 'cafeteria']) }}">カフェテリア</a></li>
-                                <li><a href="{{ route('Place', ['name' => 'way']) }}">移動中</a></li>
                                 <li><a href="{{ route('Place', ['name' => 'office']) }}">オフィス</a></li>
-                                <li><a href="{{ route('battle.menu', ['id' => Auth::user()->id]) }}">バトル</a></li>
-                                
+                                <li><a href="{{ route('Place', ['name' => 'way']) }}">移動中</a></li>
+                                <li><a href="{{ route('Place', ['name' => 'cafeteria']) }}">カフェテリア</a></li>
                                 </ul>
                             </li>
 
