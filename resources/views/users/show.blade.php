@@ -34,13 +34,14 @@
                 $re_amari = $re_sa%(24*60*60);
                 $re_hi = ($re_sa - $re_amari)/(24*60*60);
                 
+
             print "生まれ変わるまであと".$re_hi."日";
                 print "(".$user->year."/".$user->month."/".$user->day."まで)";
                                 
                 ?><br>
         </h2>
          <div class=hara>
-             ※ダイエットする場合でも体調維持の為に最低限摂取しなければいけないカロリーは{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kaclです。
+             ※ダイエットする場合でも体調維持の為に最低限摂取しなければいけないカロリーは{{ 370+21.6*($user->Weight)*(100-$user->fat)/100 }}kcalです。
          </div>
          <div class=cal>
              <div class="status text-center">
@@ -245,6 +246,7 @@
         </div>
     </div>
     
+
 <br>
 </div>
 

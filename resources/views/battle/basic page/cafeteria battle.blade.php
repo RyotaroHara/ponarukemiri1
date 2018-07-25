@@ -129,11 +129,11 @@ $day_nokori = $re_day_cal - $sum_cal;
     <div> 
     のこりＨＰ
          <meter min=0 max=100 value=<?php  print 100 - $damage;    ?> style="width: 200px;" low="20" high="80" optimum="90" >50%</meter>
- <?php if (floor(100-$damage)<0)print 0; else print floor(100 - $damage) ?>/100
+ <?php if (floor(100-$damage)<0)print 0;elseif (floor(100-$damage)<0)print 0;else print floor(100 - $damage) ?>/100
     </div>
     <br>
     <div>
-    　<?php print "あと".$day_nokori."kcalで倒せそうだ！" ?>
+    　<?php print "あと".floor($day_nokori)."kcalで倒せそうだ！" ?>
     </div> 
     </div>
     </div>
