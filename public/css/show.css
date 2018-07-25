@@ -23,21 +23,34 @@ footer {
 }
 
 .status-label{
-    margin:0;
+    margin:0 auto;
     padding:2;
 }
-.status-label3{
-    margin:0;
+.status-label2{
+    margin:0 auto;
     padding:2;
+}
     
+.status-label4{
+    font-size:20px;
 }
+    
+
 .nana{
     margin:0;
     padding:0;
-    height:50%;}
+    height:50%;
     
-#sidebar {
-    width: 220px;
-    float: right;
 }
 
+.hara {
+    font-size:20px;
+}
+    
+.cal {
+    font-size:20px;
+}
+
+a {
+    font-size:20px;
+}
