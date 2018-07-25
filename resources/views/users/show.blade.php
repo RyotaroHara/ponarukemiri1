@@ -249,6 +249,6 @@
 </div>
 
 
-<a href="{{route('users.edit',['id'=>$user->id]) }}">MyProfile Edit</a>   
+<a href="{{route('users.edit',['id'=>$user->id]) }}">Edit MyStatus</a>   
 
 @endsection
