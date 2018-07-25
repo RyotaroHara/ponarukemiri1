@@ -13,8 +13,8 @@
             </div>
             
             <div class="content">
-                {!! Form::label('Idealweight','理想体重') !!}
-                {!! Form::text('Idealweight', $info -> IdealWeight) !!}
+                {!! Form::label('IdealWeight','理想体重') !!}
+                {!! Form::text('IdealWeight', $info -> IdealWeight) !!}
             </div>
             
             <div class="content">

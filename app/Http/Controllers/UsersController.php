@@ -44,7 +44,7 @@ class UsersController extends Controller
     {
         $this -> validate($request, [
             'Weight' => 'required',
-            'Idealweight' => 'required',
+            'IdealWeight' => 'required',
             'height' => 'required',
             'year' => 'required',
             'month' => 'required',
@@ -53,7 +53,7 @@ class UsersController extends Controller
             
         $info = User::find($id);
         $info ->Weight = $request -> Weight;
-        $info ->Idealweight = $request -> Idealweight;
+        $info ->IdealWeight = $request -> IdealWeight;
         $info ->height = $request -> height;
         $info ->year = $request -> year;
         $info ->month = $request -> month;
